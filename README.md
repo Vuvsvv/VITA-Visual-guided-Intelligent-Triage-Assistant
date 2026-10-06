@@ -36,25 +36,16 @@
 | `taiwanese_tts` | 中文字 | 台語語音 + 台羅 | Gemini + Chatterbox（LoRA 微調，模型 B） | 8003 |
 | `chinese_tts` | 中文字 | 台灣國語語音 | MediaTek-Research/BreezyVoice-300M | 8004 |
 
-> **v5.0.0 起**，台語 TTS 的底層從 GPT-SoVITS 換成 **Chatterbox**（英文基底 + LoRA 微調，模型 B）。
+> **v5.0.0 起**
 > 這個服務本身仍只是一個 HTTP client（不載入任何模型、requirements 裡沒有 torch），
 > 真正吃 GPU 的 Chatterbox 引擎（`services/taiwanese_tts/engine/cb_server.py`）留在宿主機跑。
-> 完整變更見下方〈v5.0.0 變更紀錄〉。
+
 
 > **中文 ASR 已移除。** 前端的國語辨識改用 Android 系統內建的語音輸入，
 > 延遲遠低於自架 Whisper，且不佔用顯示記憶體。台語辨識沒有堪用的現成方案，
 > 因此保留自建服務 —— 資源集中在真正需要突破的地方。
 
-## v5.0.0 變更紀錄（台語 TTS：GPT-SoVITS → Chatterbox）
 
-### 為什麼換
-
-GPT-SoVITS 是中國開發者的專案，不符合比賽「不得使用來源自中國或中資之開源模型」的規定，
-改用 Resemble AI（美國／加拿大）釋出、MIT 授權的 **Chatterbox**。
-
-> ⚠️ **合規仍待確認**：Chatterbox 的語音解碼模組（S3Gen）架構衍生自阿里巴巴的 CosyVoice，
-> 執行時也依賴 S3Tokenizer 套件，是否符合規定需由主辦單位判斷。
-> 引擎以 HTTP 與本服務隔離，萬一需要更換，只要換掉引擎、本服務不用動。
 
 ### 使用的模型
 
@@ -91,7 +82,7 @@ GPT-SoVITS 是中國開發者的專案，不符合比賽「不得使用來源自
 
 ### 前處理變更
 
-- **Gemini 指令**：`prompts/taigi_hanji.txt` → `prompts/taigi_tailo.txt`。原本 9 條規則語意保留，第 3 條「專科名保留中文」改為「專科名用台語讀音」（Chatterbox 看不懂漢字）。舊檔保留未刪，已不再使用。
+- **Gemini 指令**：`prompts/taigi_hanji.txt` → `prompts/taigi_tailo.txt`。原本 9 條規則語意保留，第 3 條「專科名保留中文」改為「專科名用台語讀音」舊檔保留未刪，已不再使用。
 - **台羅正規化**（新增）：全形標點 → 半形、調號 → 數字調（Gemini 偶爾不照指示）、去除引號括號。
 - **漢字檢查**（新增）：Gemini 輸出夾帶漢字時附提示重試一次，仍失敗回 500；`skip_gemini` 的輸入含漢字回 400；引擎本身也拒收漢字。
 - **本地字典預設停用**：`taigi_dict.json` 的 598 筆值都是台語漢字，Chatterbox 用不到。重新啟用時只接受 100% 覆蓋（移除 v4.x 的 0.75 寬容門檻）。
@@ -254,27 +245,6 @@ if resp.status_code != 200:
     raise RuntimeError(body.get("error") or body.get("detail") or body)
 ```
 
-### 已棄用欄位
-
-`taiwanese_tts` 回應中的 **`taigi_hanji` 自 v5.0.0 起已 deprecated、一律為空字串**：
-前處理改為直接產生台羅（Chatterbox 看不懂漢字），不再有台語漢字這個中間產物。
-欄位只為了相容舊呼叫端而保留，預計於 **v6.0.0 移除**。
-
-反過來，**`tailo_romanization` 在 v5.0.0 恢復名實相符**，裝的是送進模型的本調台羅數字調。
-（v4.x 時它裝的是台語漢字，文件曾建議改用 `taigi_hanji` —— 這個建議在 v5.0.0 已經反轉。）
-新的呼叫端請一律使用 **`tailo_romanization`**。
-
-## 網路暴露面
-
-**只有網關的 `:8000` 應該對外。** 8001／8003／8004 那三個微服務**沒有任何 API Key 檢查** ——
-它們的設計前提是「只有網關會來找」，所以對外開放等於讓人繞過認證直接呼叫模型，
-其中 `:8003` 背後接的是 Gemini，會直接花掉你的額度。
-
-| Port | 是什麼 | 對外 |
-|---|---|---|
-| 8000 | API 網關（有 API Key 認證） | ✅ 開放 |
-| 8001, 8003, 8004 | 三個微服務（**無認證**） | ❌ 只綁 `127.0.0.1` |
-| 9881 | Chatterbox 引擎（**無認證**） | ❌ 防火牆擋掉 |
 
 - **Docker**：`docker-compose.yml` 已把三個微服務綁在 `127.0.0.1`。
   要除錯就在宿主機上 `curl http://127.0.0.1:8003/`，或開 SSH tunnel。
