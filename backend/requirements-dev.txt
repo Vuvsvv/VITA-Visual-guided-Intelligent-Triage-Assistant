@@ -1,0 +1,5 @@
+# Development and test helpers.
+-r requirements.txt
+
+httpx>=0.27.0
+pytest>=9.1.1

@@ -1,0 +1,579 @@
+{
+  "catalog_id": "ttas_ai_evidence_catalog_v1",
+  "purpose": "提供 Turn Interpreter 可讀的中文 TTAS 證據概念說明；不包含 TTAS 級數、不取代 active_rules.json，也不是關鍵字清單。",
+  "design_principles": [
+    "醫療判級仍只由 backend/knowledge/ttas/active_rules.json 的 enabled 規則與 deterministic evaluator 決定。",
+    "此 catalog 只教 AI『患者原話中的哪種語意可整理成哪個 evidence field』。",
+    "catalog 的中文描述是語意概念，不是關鍵字；患者可用不同自然說法，只要語意直接等價且有 grounded source_text 即可抽取。",
+    "不得因相似症狀推測病因、診斷或臨床 modifier。",
+    "數值欄位只可由患者直接提供的數值或 trusted structured fact 取得，不得由文字描述自行換算。",
+    "prompt 只顯示目前 implementation_status=enabled 的規則實際用到的 evidence fields。",
+    "若未來 enabled rule 新增了 catalog 沒有的 field，loader 應 fail closed，要求先補 catalog，而不是讓 AI 自行猜欄位語意。"
+  ],
+  "confidence_contract": {
+    "meaning": "confidence 只表示『患者本輪原文有多明確支持這個結構化事實』，不是病情嚴重度、疾病機率或 TTAS 級數機率。",
+    "high_confidence": "原文直接、明確、幾乎沒有其他合理解讀。",
+    "ambiguous": "原文可能與該概念相關，但缺少足夠直接支持時，不要硬猜 available；可省略或在使用者明確表示不確定時輸出 ambiguous/unknown。",
+    "forbidden": "不得用降低 confidence 的方式替患者補出原文沒有的數值、病因、診斷、臨床分類或 TTAS level。"
+  },
+  "fields": {
+    "gcs": {
+      "label_zh": "GCS 數值",
+      "meaning_zh": "患者直接提供或 trusted structured context 提供的 Glasgow Coma Scale（GCS）數值。",
+      "do_not_infer_zh": "不得從『昏迷、叫不醒、意識混亂』等自然語言自行換算 GCS 分數。",
+      "evidence_kind": "numeric_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_general"
+        ],
+        "official_locators": [
+          "成人總表表一意識；兒童現行總表亦同級"
+        ],
+        "rule_ids": [
+          "TTAS-MOD-UNCONSCIOUS",
+          "TTAS-MOD-ALTERED-CONSCIOUSNESS"
+        ],
+        "legacy_prompt_phrase": "舊版曾描述無意識／意識混亂，但新版不得把文字敘述自行換算成 GCS。",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "temperature_c": {
+      "label_zh": "體溫（攝氏）",
+      "meaning_zh": "患者直接提供的攝氏體溫數值。",
+      "do_not_infer_zh": "不得把『很燒、覺得冷、身體很熱』自行換算成數字。",
+      "evidence_kind": "numeric_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_general",
+          "mohw_ttas_107_general_patch"
+        ],
+        "official_locators": [
+          "成人總表表一體溫；兒童現行總表亦同級",
+          "107總表兒童體溫：小於3個月",
+          "107總表兒童體溫：大於3歲免疫功能缺陷"
+        ],
+        "rule_ids": [
+          "TTAS-MOD-TEMP-HIGH-EXTREME",
+          "TTAS-MOD-TEMP-LOW-EXTREME",
+          "TTAS-PED-FEVER-LT3M",
+          "TTAS-PED-FEVER-GT3Y-IMMUNE"
+        ],
+        "legacy_prompt_phrase": "體溫 >41°C 或 <32°C",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "fever": {
+      "label_zh": "有無發燒",
+      "meaning_zh": "患者本輪明確表示有發燒或明確否認發燒。",
+      "do_not_infer_zh": "不要把『覺得熱、畏寒、臉紅』等沒有明確說發燒的描述直接視為 fever=true。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_general"
+        ],
+        "official_locators": [
+          "成人總表表一體溫"
+        ],
+        "rule_ids": [
+          "TTAS-MOD-ADULT-FEVER-IMMUNOCOMPROMISED"
+        ],
+        "legacy_prompt_phrase": "免疫功能不全且發燒",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "immune_compromised": {
+      "label_zh": "免疫功能不全／免疫低下狀態",
+      "meaning_zh": "患者本輪明確陳述自己有免疫功能不全、免疫低下，或 trusted structured profile 已提供此事實。",
+      "do_not_infer_zh": "不得僅因某疾病名稱、藥物名稱、化療或年齡自行推導免疫功能不全，除非患者原話或 trusted fact 已明確提供。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_general",
+          "mohw_ttas_107_general_patch"
+        ],
+        "official_locators": [
+          "成人總表表一體溫",
+          "107總表兒童體溫：大於3歲免疫功能缺陷"
+        ],
+        "rule_ids": [
+          "TTAS-MOD-ADULT-FEVER-IMMUNOCOMPROMISED",
+          "TTAS-PED-FEVER-GT3Y-IMMUNE"
+        ],
+        "legacy_prompt_phrase": "免疫功能不全且發燒",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "age_months": {
+      "label_zh": "月齡",
+      "meaning_zh": "患者明確提供的月齡數值。",
+      "do_not_infer_zh": "不得由外觀、稱呼或症狀猜月齡。",
+      "evidence_kind": "numeric_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_107_general_patch"
+        ],
+        "official_locators": [
+          "107總表兒童體溫：小於3個月"
+        ],
+        "rule_ids": [
+          "TTAS-PED-FEVER-LT3M"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "age_years": {
+      "label_zh": "年齡（歲）",
+      "meaning_zh": "患者明確提供的歲數，或 trusted structured profile 的年齡。",
+      "do_not_infer_zh": "不得從自由文字以 Backend regex 猜測；AI 也不得用『大人、小孩、老人』換算成歲數。",
+      "evidence_kind": "numeric_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_107_general_patch"
+        ],
+        "official_locators": [
+          "107總表兒童體溫：大於3歲免疫功能缺陷"
+        ],
+        "rule_ids": [
+          "TTAS-PED-FEVER-GT3Y-IMMUNE"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "tearing_pain": {
+      "label_zh": "撕裂樣疼痛性質",
+      "meaning_zh": "患者明確描述疼痛具有撕裂、像被撕開等性質；此欄位只描述疼痛性質。",
+      "do_not_infer_zh": "不得因疼痛很劇烈、很突然或很痛就自行標成 tearing_pain=true；也不要由此欄位自行判定疾病。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0202 胸痛/胸悶"
+        ],
+        "rule_ids": [
+          "TTAS-A020211"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "official locator 來自目前 active_rules.json；中文欄位說明依現有 field 名稱做語意解釋，並非聲稱是衛福部原文逐字句。"
+      }
+    },
+    "missed_period_with_abdominal_pain": {
+      "label_zh": "經期逾期且腹痛",
+      "meaning_zh": "患者本輪原文明確同時支持『經期逾期／月經沒來』與『腹痛』兩件事。",
+      "do_not_infer_zh": "只提到經期逾期或只提到腹痛其中一項時，不得輸出 true。不得自行推測懷孕。",
+      "evidence_kind": "composite_direct_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0301 腹痛"
+        ],
+        "rule_ids": [
+          "TTAS-A030115"
+        ],
+        "legacy_prompt_phrase": "經期逾期且腹痛",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "coffee_ground_emesis_or_melena": {
+      "label_zh": "咖啡色／咖啡渣樣嘔吐物或黑便",
+      "meaning_zh": "患者明確描述咖啡色／咖啡渣樣嘔吐物，或明確描述黑便。",
+      "do_not_infer_zh": "不要把一般噁心、一般嘔吐、深色食物或腹痛自行視為此 evidence。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0307 噁心/嘔吐"
+        ],
+        "rule_ids": [
+          "TTAS-A030712"
+        ],
+        "legacy_prompt_phrase": "咖啡色嘔吐物或黑便",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "vomiting_pattern": {
+      "label_zh": "嘔吐型態",
+      "meaning_zh": "描述患者本輪明確提供的嘔吐型態；目前 enabled 規則使用 acute_persistent。",
+      "do_not_infer_zh": "一次性嘔吐、想吐、已停止或慢性反覆，不得自行升格成 acute_persistent。",
+      "evidence_kind": "direct_enum_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0307 噁心/嘔吐"
+        ],
+        "rule_ids": [
+          "TTAS-A030713"
+        ],
+        "legacy_prompt_phrase": "無法控制的腹瀉或嘔吐",
+        "basis_note": "舊版措辭只作 recall 參考；新版 value 必須依目前 schema/active rule 的 acute_persistent 語意輸出，不能沿用舊版『腹瀉』一起判。"
+      }
+    },
+    "hematemesis_amount": {
+      "label_zh": "吐血量／急性吐血狀態",
+      "meaning_zh": "患者明確描述吐血，且原文足以支持目前 schema 的 obvious_or_acute 或 small 分類。",
+      "do_not_infer_zh": "不得從黑便、一般嘔吐、咖啡色食物或『胃不舒服』推導吐血。",
+      "evidence_kind": "direct_enum_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0309 吐血"
+        ],
+        "rule_ids": [
+          "TTAS-A030910"
+        ],
+        "legacy_prompt_phrase": "大量血便、黑便、嘔血",
+        "basis_note": "value 名稱來自現有 schema/active rule；catalog 不新增新的量化醫療門檻。"
+      }
+    },
+    "hematochezia_or_melena_amount": {
+      "label_zh": "血便／黑便量",
+      "meaning_zh": "患者明確描述血便或黑便，且原文足以支持目前 schema 的 large / medium / small 分類。",
+      "do_not_infer_zh": "不得自行用主觀嚴重度替患者補出量級；若原文不足以分量，省略或標 ambiguous。",
+      "evidence_kind": "direct_enum_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0310 血便/黑便"
+        ],
+        "rule_ids": [
+          "TTAS-A031010",
+          "TTAS-A031015",
+          "TTAS-A031017"
+        ],
+        "legacy_prompt_phrase": "大量血便、黑便、嘔血",
+        "basis_note": "量級的可接受值來自現有 schema/active rules；catalog 不新增官方資料包以外的量化 threshold。"
+      }
+    },
+    "sudden_or_worst_headache": {
+      "label_zh": "突發或最嚴重的頭痛",
+      "meaning_zh": "患者明確說明頭痛是突然發生，或明確表達為前所未有／最嚴重的頭痛。",
+      "do_not_infer_zh": "一般頭痛、持續頭痛或『很痛』但沒有突發／最嚴重語意時，不得直接輸出 true。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0404 頭痛"
+        ],
+        "rule_ids": [
+          "TTAS-A040410"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "中文語意說明依目前 field 名稱與官方 locator 組合，非宣稱為官方逐字句。"
+      }
+    },
+    "acute_visual_disturbance": {
+      "label_zh": "突發性視覺改變",
+      "meaning_zh": "患者明確描述突發的視覺改變。",
+      "do_not_infer_zh": "單純眼痛、眼乾、慢性近視、既有視力差而沒有『急性／突發改變』時，不得輸出 true。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0404 頭痛"
+        ],
+        "rule_ids": [
+          "TTAS-A040411"
+        ],
+        "legacy_prompt_phrase": "突發性視覺改變",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "seizure_status": {
+      "label_zh": "抽搐目前狀態",
+      "meaning_zh": "依患者明確敘述抽搐是否仍持續、已停止但意識未恢復、或已停止且意識恢復。",
+      "do_not_infer_zh": "不得只因『發抖、手抖、顫抖』就視為抽搐；不得自行判定意識是否恢復。",
+      "evidence_kind": "direct_enum_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A0405 抽搐"
+        ],
+        "rule_ids": [
+          "TTAS-A040504",
+          "TTAS-A040511",
+          "TTAS-A040516"
+        ],
+        "legacy_prompt_phrase": "持續抽搐且無意識／抽搐後意識已恢復",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "pregnancy_weeks": {
+      "label_zh": "懷孕週數",
+      "meaning_zh": "患者直接提供的懷孕週數。",
+      "do_not_infer_zh": "不得從肚子大小、預產期模糊描述或月經狀況自行估算週數。",
+      "evidence_kind": "numeric_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A1008 懷孕問題大於20週"
+        ],
+        "rule_ids": [
+          "TTAS-A100813",
+          "TTAS-A100822"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "contraction_interval_minutes": {
+      "label_zh": "宮縮間隔分鐘數",
+      "meaning_zh": "患者明確提供的宮縮間隔時間（分鐘）。",
+      "do_not_infer_zh": "不得從『很頻繁、一直痛』自行換算分鐘。",
+      "evidence_kind": "numeric_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A1008 懷孕問題大於20週"
+        ],
+        "rule_ids": [
+          "TTAS-A100813",
+          "TTAS-A100822"
+        ],
+        "legacy_prompt_phrase": "急產（宮縮>2分鐘）",
+        "basis_note": "舊版只作措辭參考；實際 level 判定仍由現有 active_rules.json 的 <=2 / >2 deterministic predicate 決定。"
+      }
+    },
+    "ruptured_membranes": {
+      "label_zh": "是否已破水",
+      "meaning_zh": "患者明確表示已破水／羊水破裂，或明確否認。",
+      "do_not_infer_zh": "不得由腹痛、出血或分泌物自行推測已破水。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_adult_nontrauma"
+        ],
+        "official_locators": [
+          "A1008 懷孕問題大於20週"
+        ],
+        "rule_ids": [
+          "TTAS-A100813"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "insect_sting_exposure": {
+      "label_zh": "昆蟲螫傷暴露情境",
+      "meaning_zh": "患者明確表示被昆蟲螫傷；此欄位只表示暴露情境。",
+      "do_not_infer_zh": "不能因紅疹、腫脹、過敏或疼痛反推出昆蟲螫傷。",
+      "evidence_kind": "context_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_environment"
+        ],
+        "official_locators": [
+          "E0101 昆蟲螫傷"
+        ],
+        "rule_ids": [
+          "TTAS-E010107",
+          "TTAS-E010108",
+          "TTAS-E010112"
+        ],
+        "legacy_prompt_phrase": "螫傷、咬傷導致呼吸困難或意識改變",
+        "basis_note": "目前 enabled E0101 rules 要求 insect_sting_exposure context；不要把舊版『咬傷』文字擴成新的醫療規則。"
+      }
+    },
+    "history_severe_allergic_reaction": {
+      "label_zh": "既往嚴重過敏反應史",
+      "meaning_zh": "患者明確說明過去曾有嚴重過敏反應。",
+      "do_not_infer_zh": "一般過敏、皮膚癢、鼻過敏或『容易過敏』不能自行等同 severe allergic reaction history。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_environment"
+        ],
+        "official_locators": [
+          "E0101 昆蟲螫傷"
+        ],
+        "rule_ids": [
+          "TTAS-E010107"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "中文語意說明依目前 field 名稱與官方 locator；不新增嚴重過敏的醫療定義。"
+      }
+    },
+    "face_lip_tongue_swelling": {
+      "label_zh": "臉／嘴唇／舌頭腫脹",
+      "meaning_zh": "患者明確表示臉、嘴唇或舌頭有腫脹。",
+      "do_not_infer_zh": "其他部位腫脹、局部紅疹或喉嚨痛不能自行視為此 evidence。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_environment"
+        ],
+        "official_locators": [
+          "E0101 昆蟲螫傷"
+        ],
+        "rule_ids": [
+          "TTAS-E010108"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "generalized_rash_or_blisters": {
+      "label_zh": "廣泛性紅疹／水泡",
+      "meaning_zh": "患者明確表示紅疹或水泡是廣泛／全身性的。",
+      "do_not_infer_zh": "單一局部紅點、局部皮疹或只說皮膚癢，不得自行升格為 generalized。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_environment"
+        ],
+        "official_locators": [
+          "E0101 昆蟲螫傷"
+        ],
+        "rule_ids": [
+          "TTAS-E010112"
+        ],
+        "legacy_prompt_phrase": "廣泛性紅疹／水泡",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "chemical_eye_injury": {
+      "label_zh": "化學物質濺入／直接接觸眼睛",
+      "meaning_zh": "患者原文明確表示化學性物質直接濺入、噴入或接觸眼睛。",
+      "do_not_infer_zh": "只有眼痛、眼紅、灼熱、流淚或視力不適，但沒有明確化學物質接觸時，不得推測 chemical_eye_injury=true。",
+      "evidence_kind": "direct_event_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_environment"
+        ],
+        "official_locators": [
+          "E0105 化學物質暴露"
+        ],
+        "rule_ids": [
+          "TTAS-E010509"
+        ],
+        "legacy_prompt_phrase": "化學物質濺入眼睛",
+        "basis_note": "這是本次 live failure 的主要 target；舊版 prompt 的人類可讀措辭可保留，但判級權仍完全留在 Backend evaluator。"
+      }
+    },
+    "gunshot_injury": {
+      "label_zh": "槍傷",
+      "meaning_zh": "患者明確表示遭受槍傷。",
+      "do_not_infer_zh": "穿刺傷、擦傷、爆裂傷或聽到槍聲不得自行等同槍傷。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_trauma"
+        ],
+        "official_locators": [
+          "T0101 多重鈍傷/穿刺傷"
+        ],
+        "rule_ids": [
+          "TTAS-T010111"
+        ],
+        "legacy_prompt_phrase": "槍傷",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "open_fracture": {
+      "label_zh": "開放性骨折",
+      "meaning_zh": "患者明確表示為開放性骨折，或原文明確提供等價的已知事實。",
+      "do_not_infer_zh": "不得只因出血、疼痛、腫脹或疑似骨折自行判定為 open fracture。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_trauma"
+        ],
+        "official_locators": [
+          "T1201 上肢鈍傷",
+          "T1206 下肢鈍傷"
+        ],
+        "rule_ids": [
+          "TTAS-T120110",
+          "TTAS-T120610"
+        ],
+        "legacy_prompt_phrase": "開放性傷口疑似骨折",
+        "basis_note": "catalog 只負責抽 direct fact；上下肢 official code 仍由 injury_region + active rule 決定。"
+      }
+    },
+    "injury_region": {
+      "label_zh": "外傷部位區域",
+      "meaning_zh": "患者本輪明確指出受傷區域；目前 schema 可輸出 upper_limb / lower_limb / head_neck / trunk / pelvis / perineum / unknown。",
+      "do_not_infer_zh": "不得只由疾病名稱或 rule code 猜部位；部位必須可由患者本輪原文直接定位。",
+      "evidence_kind": "context_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_trauma"
+        ],
+        "official_locators": [
+          "T1201 上肢鈍傷",
+          "T1206 下肢鈍傷"
+        ],
+        "rule_ids": [
+          "TTAS-T120110",
+          "TTAS-T120116",
+          "TTAS-T120610",
+          "TTAS-T120617"
+        ],
+        "legacy_prompt_phrase": null,
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "suspected_fracture_or_dislocation_deformity": {
+      "label_zh": "疑似骨折／脫臼伴肢體變形",
+      "meaning_zh": "患者明確描述外傷後肢體變形，或明確表示疑似骨折／脫臼且符合目前欄位語意。",
+      "do_not_infer_zh": "只有疼痛、腫脹或不能走路時，不得自行推斷骨折／脫臼變形。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_trauma"
+        ],
+        "official_locators": [
+          "T1201 上肢鈍傷",
+          "T1206 下肢鈍傷"
+        ],
+        "rule_ids": [
+          "TTAS-T120116",
+          "TTAS-T120617"
+        ],
+        "legacy_prompt_phrase": "外傷後肢體腫脹變形疑似骨折／脫臼",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    },
+    "genital_swelling_deformity": {
+      "label_zh": "生殖器腫脹／變形",
+      "meaning_zh": "患者明確描述生殖器官腫脹或變形。",
+      "do_not_infer_zh": "會陰疼痛、出血或一般泌尿症狀不能自行推導生殖器腫脹／變形。",
+      "evidence_kind": "direct_boolean_fact",
+      "source_basis": {
+        "source_ids": [
+          "mohw_ttas_105_trauma"
+        ],
+        "official_locators": [
+          "T1101 會陰部及生殖器官鈍傷"
+        ],
+        "rule_ids": [
+          "TTAS-T110107"
+        ],
+        "legacy_prompt_phrase": "生殖器腫脹變形",
+        "basis_note": "醫療來源以目前 New_Android_Backend 的 source_manifest.json / active_rules.json 為準；舊 AILogic/triage.py 只作 AI 可讀措辭參考，不作醫療規則權威。"
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "generated_from": "phase3_kb_migration_package/phase3_source_registry.json",
+    "generated_at": "2026-10-05",
+    "medical_sources_only": true
+  },
+  "sources": [
+    {
+      "source_id": "vghtpe_patient_guide_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院便民手冊｜依病症查詢就醫科別參考",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/files/PDF/113%E5%B9%B4%E4%BE%BF%E6%B0%91%E6%89%8B%E5%86%8AV4-1150528.pdf",
+      "retrieved_at": "2026-10-05",
+      "note": "Priority 1 direct routing source; current guide table pages 12-15."
+    },
+    {
+      "source_id": "vghtpe_im_department_reference_2022",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院內科部｜就診科別參考",
+      "source_url": "https://wd.vghtpe.gov.tw/im/Fpage.action?fid=243&muid=561",
+      "retrieved_at": "2026-10-05",
+      "note": "Department-specific direct routing table; page last updated 2022-09-25."
+    },
+    {
+      "source_id": "vghtpe_docsearch_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "doctor_specialty_keywords",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院｜醫師及專長查詢",
+      "source_url": "https://www.vghtpe.gov.tw/docsearch.action",
+      "retrieved_at": "2026-10-05",
+      "note": "Official specialty keyword index; used only where a department/term is explicitly listed."
+    },
+    {
+      "source_id": "vghtpe_neuro_general_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院神經內科｜一般神經科",
+      "source_url": "https://wd.vghtpe.gov.tw/vghneuro/dent/vghneuro/Fpage.action?fid=1017&muid=1448",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports memory/cognition, headache and movement-disorder specialty evidence."
+    },
+    {
+      "source_id": "vghtpe_derm_cosmetic_2023",
+      "source_hospital": "vghtpe",
+      "source_type": "department_service",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院皮膚部｜美容醫學",
+      "source_url": "https://wd.vghtpe.gov.tw/derm/CONTENTS/Fpage.action?fid=9211&muid=9442",
+      "retrieved_at": "2026-10-05",
+      "note": "Official dermatology cosmetic/service indications."
+    },
+    {
+      "source_id": "vghtpe_plastic_services_2025",
+      "source_hospital": "vghtpe",
+      "source_type": "department_service",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院整形外科｜服務內容",
+      "source_url": "https://wd.vghtpe.gov.tw/ps/Fpage.action?fid=931&muid=2",
+      "retrieved_at": "2026-10-05",
+      "note": "Official reconstructive/plastic surgery service scope."
+    },
+    {
+      "source_id": "vghtpe_medical_beauty_services_2023",
+      "source_hospital": "vghtpe",
+      "source_type": "department_service",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院整形外科美容醫學中心｜服務項目",
+      "source_url": "https://wd.vghtpe.gov.tw/ps/Fpage.action?fid=3998&muid=4427",
+      "retrieved_at": "2026-10-05",
+      "note": "Directly covers the 33 legacy medical-beauty service terms or their named treatment forms."
+    },
+    {
+      "source_id": "vghtpe_psy_docsearch_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "doctor_specialty_keywords",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院精神醫學部｜醫師及專長查詢",
+      "source_url": "https://www.vghtpe.gov.tw/vghpsy/docsearch.action",
+      "retrieved_at": "2026-10-05",
+      "note": "Official psychiatry specialty keyword index."
+    },
+    {
+      "source_id": "vghtpe_ihealth_depression_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜憂鬱症之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/864",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports depressive symptom concepts; specialty evidence, not standalone diagnosis."
+    },
+    {
+      "source_id": "vghtpe_ihealth_bipolar_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜躁鬱症之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/868",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports manic/depressive symptom concepts."
+    },
+    {
+      "source_id": "vghtpe_ihealth_adhd_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜注意力缺損過動症之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/796",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports inattention/hyperactivity/impulsivity concepts."
+    },
+    {
+      "source_id": "vghtpe_ihealth_autism_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜自閉症之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/852",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports social-communication/repetitive/sensory concepts."
+    },
+    {
+      "source_id": "vghtpe_ihealth_ptsd_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜創傷後壓力症候群之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/799",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports re-experiencing, avoidance and hyperarousal concepts."
+    },
+    {
+      "source_id": "vghtpe_ihealth_schizophrenia_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜思覺失調症之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/858",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports hallucination/delusion/social withdrawal/functional decline concepts."
+    },
+    {
+      "source_id": "vghtpe_ihealth_eating_disorder_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜飲食障礙之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/801",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports binge/restrict/purge/weight-shape concern concepts."
+    },
+    {
+      "source_id": "vghtpe_ihealth_dementia_2026",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜失智症之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/3758",
+      "retrieved_at": "2026-10-05",
+      "note": "Supports memory/cognitive/language/behavior/sleep decline concepts."
+    },
+    {
+      "source_id": "vghtpe_dementia_clinic_2025",
+      "source_hospital": "vghtpe",
+      "source_type": "clinic_service",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院失智治療及研究中心｜門診表",
+      "source_url": "https://wd.vghtpe.gov.tw/dtrc/Fpage.action?fid=10093&muid=10552",
+      "retrieved_at": "2026-10-05",
+      "note": "Verifies existence of APP-compatible 失智特別門診 and memory clinics."
+    },
+    {
+      "source_id": "vghtc_ent_department_2026",
+      "source_hospital": "vghtc",
+      "source_type": "department_service",
+      "source_priority": 3,
+      "source_title": "臺中榮民總醫院｜耳鼻喉頭頸部",
+      "source_url": "https://www.vghtc.gov.tw/CP/1865",
+      "retrieved_at": "2026-10-05",
+      "note": "Fallback/subspecialty disambiguation: ear=tinnitus/vertigo/hearing; nose=sinus/allergy/smell; throat=head-neck/voice/swallow/sleep."
+    }
+  ]
+}

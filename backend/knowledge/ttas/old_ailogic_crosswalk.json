@@ -1,0 +1,83 @@
+{
+  "purpose": "舊 AILogic/triage.py 的簡化 TTAS 清單與目前官方來源的差異。不得把舊 prompt 直接搬入 production。",
+  "items": [
+    {
+      "old_claim": "低血糖 <40mg/dl 判第二級",
+      "status": "replace",
+      "official_current": "成人非外傷 A130409：<60mg/dl 且有混亂/冒汗/虛弱/顫抖等症狀為第二級；A130413：<60mg/dl 無症狀為第三級。",
+      "source_id": "mohw_ttas_105_adult_nontrauma"
+    },
+    {
+      "old_claim": "SBP>200 或 DBP>110 且無症狀一律第三級",
+      "status": "replace",
+      "official_current": "A020409：SBP≥220 或 DBP≥130 且無症狀為第三級；A020411：SBP 200-220 或 DBP 110-130 且無症狀為第四級。",
+      "source_id": "mohw_ttas_105_adult_nontrauma"
+    },
+    {
+      "old_claim": "沒有命中第一至三級清單就一律第四/五級（low）",
+      "status": "drop",
+      "official_current": "正式 TTAS 依主訴與調節變數判定；本系統若 evidence 不足或規則未涵蓋，不得自行視為第四/五級，應回 insufficient_information。",
+      "source_id": "mohw_ttas_105_general"
+    },
+    {
+      "old_claim": "high=90 / medium=50 / low=20",
+      "status": "drop",
+      "official_current": "90/50/20 是系統舊版自訂分數，不是 TTAS 官方級數。",
+      "source_id": "mohw_ttas_intro_2010"
+    },
+    {
+      "old_claim": "持續胸悶/胸痛且冒冷汗直接第二級",
+      "status": "replace",
+      "official_current": "使用正式 A0202 胸痛/胸悶規則與首要調節變數；例如 A020210 疑似心因性胸痛/胸悶為第二級。不要把舊版『冒冷汗』字串當官方判級規則。",
+      "source_id": "mohw_ttas_105_adult_nontrauma"
+    },
+    {
+      "old_claim": "咖啡色嘔吐物或黑便為第三級",
+      "status": "verified_with_context",
+      "official_current": "A030712 在噁心/嘔吐主訴下為第三級；血便/黑便另有 A0310 依出血量分第二至四級。",
+      "source_id": "mohw_ttas_105_adult_nontrauma"
+    },
+    {
+      "old_claim": "無法控制的腹瀉或嘔吐為第三級",
+      "status": "partial_replace",
+      "official_current": "嘔吐有 A030713『急性持續性嘔吐』第三級；腹瀉主要依休克/脫水與其他判定依據，不應把『無法控制腹瀉』直接寫成通用第三級規則。",
+      "source_id": "mohw_ttas_105_adult_nontrauma"
+    },
+    {
+      "old_claim": "抽搐後意識已恢復為第三級",
+      "status": "verified",
+      "official_current": "A040516 第三級；若抽搐已停止但意識仍未恢復則 A040511 第二級；持續抽搐 A040504 第一級。",
+      "source_id": "mohw_ttas_105_adult_nontrauma"
+    },
+    {
+      "old_claim": "中風症狀 4.5 小時門檻",
+      "status": "replace_with_108_revision",
+      "official_current": "108.6.11 起 A041011/A041017 門檻改為 6 小時。",
+      "source_id": "mohw_ttas_108_adult_nontrauma_patch"
+    },
+    {
+      "old_claim": "化學物質濺入眼睛為第二級",
+      "status": "verified_with_context",
+      "official_current": "E010509：化學物質暴露且濺入眼睛造成傷害為第二級。",
+      "source_id": "mohw_ttas_105_environment"
+    },
+    {
+      "old_claim": "毒氣吸入且無呼吸窘迫為第三級",
+      "status": "verified",
+      "official_current": "E010809 第三級。",
+      "source_id": "mohw_ttas_105_environment"
+    },
+    {
+      "old_claim": "外傷後肢體腫脹變形疑似骨折/脫臼為第三級",
+      "status": "verified_with_body_region_codes",
+      "official_current": "例如上肢 T120116、下肢 T120617 為第三級；開放性骨折則為第二級（T120110/T120610）。",
+      "source_id": "mohw_ttas_105_trauma"
+    },
+    {
+      "old_claim": "急產宮縮>2分鐘為第三級",
+      "status": "verified",
+      "official_current": "A100822 第三級；宮縮≤2分鐘或已破水則 A100813 第二級。",
+      "source_id": "mohw_ttas_105_adult_nontrauma"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+fastapi>=0.116.0
+uvicorn[standard]>=0.23.0
+python-dotenv>=1.0.0
+tzdata>=2024.1
+pydantic>=2.8.0
+pydantic-settings>=2.4.0
+pyodbc>=5.0.0
+google-genai>=1.0.0
+cerebras-cloud-sdk>=1.0.0
+python-multipart>=0.0.9
+requests>=2.34.2

@@ -1,0 +1,30 @@
+# Gradle files
+.gradle/
+.kotlin/
+build/
+
+# IntelliJ / Android Studio files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Local configuration
+local.properties
+
+# Log files
+*.log
+
+# Built variants
+/app/build/
+
+# macOS files
+.DS_Store
+
+# Backend local configuration and generated files
+.env
+android_medical_backend/.env
+android_medical_backend/.venv/
+android_medical_backend/**/__pycache__/
+android_medical_backend/**/*.pyc
+android_medical_backend/storage/

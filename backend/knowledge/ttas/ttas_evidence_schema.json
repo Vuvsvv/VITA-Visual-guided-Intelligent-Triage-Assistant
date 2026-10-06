@@ -1,0 +1,184 @@
+{
+  "schema_id": "ttas_evidence_v1",
+  "principles": [
+    "AI 只抽 evidence，不得輸出 TTAS level、urgency_score、warning_required 或 workflow state。",
+    "每筆 evidence 必須有 source_text、confidence，且 source_text 必須可在當輪使用者原文找到。",
+    "未知生命徵象不得補成正常。",
+    "Backend 僅驗證 shape、allow-list、grounding、confidence；官方 TTAS evaluator 才能決定 level candidate。",
+    "年齡屬事實欄位；Backend 不得用中文 regex 從自由文字自行猜年齡。"
+  ],
+  "fields": {
+    "age_years": {
+      "type": "number|null",
+      "source": "profile_or_ai_grounded"
+    },
+    "age_months": {
+      "type": "number|null",
+      "source": "profile_or_ai_grounded"
+    },
+    "respiratory_distress": {
+      "type": "severe|moderate|mild|none|unknown"
+    },
+    "spo2_pct": {
+      "type": "number|null",
+      "range": [
+        0,
+        100
+      ]
+    },
+    "pefr_predicted_pct": {
+      "type": "number|null",
+      "range": [
+        0,
+        300
+      ]
+    },
+    "hemodynamic_status": {
+      "type": "shock|insufficient|stable_abnormal|normal|unknown"
+    },
+    "sbp_mmhg": {
+      "type": "number|null"
+    },
+    "dbp_mmhg": {
+      "type": "number|null"
+    },
+    "heart_rate_bpm": {
+      "type": "number|null"
+    },
+    "gcs": {
+      "type": "integer|null",
+      "range": [
+        3,
+        15
+      ]
+    },
+    "consciousness": {
+      "type": "unconscious|altered|normal|unknown"
+    },
+    "seizure_status": {
+      "type": "ongoing|stopped_not_recovered|stopped_recovered|none|unknown"
+    },
+    "temperature_c": {
+      "type": "number|null"
+    },
+    "fever": {
+      "type": "true|false|unknown"
+    },
+    "immune_compromised": {
+      "type": "true|false|unknown"
+    },
+    "ill_appearing": {
+      "type": "true|false|unknown"
+    },
+    "pain_score_0_10": {
+      "type": "number|null",
+      "range": [
+        0,
+        10
+      ]
+    },
+    "pain_location_class": {
+      "type": "central|peripheral|unknown"
+    },
+    "high_risk_injury_mechanism": {
+      "type": "true|false|unknown"
+    },
+    "cardiac_chest_pain_suspected": {
+      "type": "true|false|unknown"
+    },
+    "tearing_pain": {
+      "type": "true|false|unknown"
+    },
+    "blood_glucose_mg_dl": {
+      "type": "number|null"
+    },
+    "hypoglycemia_symptoms": {
+      "type": "true|false|unknown"
+    },
+    "vomiting_pattern": {
+      "type": "acute_persistent|intermittent_or_resolved|chronic|unknown"
+    },
+    "coffee_ground_emesis_or_melena": {
+      "type": "true|false|unknown"
+    },
+    "hematemesis_amount": {
+      "type": "obvious_or_acute|small|unknown"
+    },
+    "hematochezia_or_melena_amount": {
+      "type": "large|medium|small|unknown"
+    },
+    "missed_period_with_abdominal_pain": {
+      "type": "true|false|unknown"
+    },
+    "sudden_or_worst_headache": {
+      "type": "true|false|unknown"
+    },
+    "acute_visual_disturbance": {
+      "type": "true|false|unknown"
+    },
+    "stroke_symptoms": {
+      "type": "true|false|unknown"
+    },
+    "stroke_onset_hours": {
+      "type": "number|null"
+    },
+    "pregnancy_weeks": {
+      "type": "number|null"
+    },
+    "contraction_interval_minutes": {
+      "type": "number|null"
+    },
+    "ruptured_membranes": {
+      "type": "true|false|unknown"
+    },
+    "chemical_eye_injury": {
+      "type": "true|false|unknown"
+    },
+    "toxic_gas_exposure": {
+      "type": "true|false|unknown"
+    },
+    "generalized_rash_or_blisters": {
+      "type": "true|false|unknown"
+    },
+    "face_lip_tongue_swelling": {
+      "type": "true|false|unknown"
+    },
+    "history_severe_allergic_reaction": {
+      "type": "true|false|unknown"
+    },
+    "insect_sting_exposure": {
+      "type": "true|false|unknown"
+    },
+    "open_fracture": {
+      "type": "true|false|unknown"
+    },
+    "injury_region": {
+      "type": "upper_limb|lower_limb|head_neck|trunk|pelvis|perineum|unknown"
+    },
+    "suspected_fracture_or_dislocation_deformity": {
+      "type": "true|false|unknown"
+    },
+    "neurovascular_compromise": {
+      "type": "true|false|unknown"
+    },
+    "uncontrolled_bleeding": {
+      "type": "true|false|unknown"
+    },
+    "penetrating_injury_high_region": {
+      "type": "true|false|unknown"
+    },
+    "gunshot_injury": {
+      "type": "true|false|unknown"
+    },
+    "genital_swelling_deformity": {
+      "type": "true|false|unknown"
+    }
+  },
+  "item_shape": {
+    "field": "<allow-listed field>",
+    "value": "<field-specific value>",
+    "confidence": "0..1",
+    "source_text": "shortest contiguous verbatim span from current user turn",
+    "semantic_status": "available|unknown|ambiguous"
+  }
+}

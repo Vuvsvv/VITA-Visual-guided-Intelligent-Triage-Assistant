@@ -1,0 +1,136 @@
+{
+  "package_id": "phase5_ttas_source_package_v1",
+  "prepared_date": "2026-10-05",
+  "purpose": "New_Android_Backend Phase 5：TTAS-based 急迫性初步篩檢。此資料包不是完整臨床 TTAS 系統。",
+  "effective_version_strategy": {
+    "base": "105.1.1 施行版",
+    "overrides": [
+      "107.5.1：總表與兒童版修正",
+      "108.6.11：成人非外傷 A041011、A041017 發作時間 4.5 小時改為 6 小時"
+    ],
+    "later_official_revision_found": false,
+    "checked_official_listing_date": "2026-10-05"
+  },
+  "sources": [
+    {
+      "source_id": "mohw_ttas_listing_current",
+      "publisher": "衛生福利部醫事司",
+      "title": "公告修正急診五級檢傷分類基準",
+      "url": "https://dep.mohw.gov.tw/DOMA/lp-5037-106.html",
+      "role": "version_index"
+    },
+    {
+      "source_id": "mohw_ttas_105_announcement",
+      "publisher": "衛生福利部醫事司",
+      "title": "公告修正急診五級檢傷分類基準(105.1.1施行)",
+      "effective_from": "2016-01-01",
+      "url": "https://dep.mohw.gov.tw/DOMA/cp-5037-57685-106.html",
+      "role": "base_announcement"
+    },
+    {
+      "source_id": "mohw_ttas_105_general",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-總表",
+      "effective_from": "2016-01-01",
+      "url": "https://www.mohw.gov.tw/dl-66174-ff4e5da2-ddc5-4f07-9f37-67434e5a1177.html",
+      "role": "base_rule_source"
+    },
+    {
+      "source_id": "mohw_ttas_105_environment",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-環境",
+      "effective_from": "2016-01-01",
+      "url": "https://www.mohw.gov.tw/dl-66173-8358fe1a-8ffb-4efd-b51b-51c164106409.html",
+      "role": "base_rule_source"
+    },
+    {
+      "source_id": "mohw_ttas_105_trauma",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-外傷",
+      "effective_from": "2016-01-01",
+      "url": "https://www.mohw.gov.tw/dl-66170-17f9b861-3a3b-4d7d-88c3-c5df33d2743a.html",
+      "role": "base_rule_source"
+    },
+    {
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-成人非外傷",
+      "effective_from": "2016-01-01",
+      "url": "https://www.mohw.gov.tw/dl-66171-5e1ceebd-e4bd-48f1-ab23-25b88950620a.html",
+      "role": "base_rule_source"
+    },
+    {
+      "source_id": "mohw_ttas_105_pediatric",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-兒童",
+      "effective_from": "2016-01-01",
+      "url": "https://www.mohw.gov.tw/dl-66172-6c630b47-a239-4923-8cbd-00b4e0ed0169.html",
+      "role": "base_rule_source"
+    },
+    {
+      "source_id": "mohw_ttas_107_announcement",
+      "publisher": "衛生福利部醫事司",
+      "title": "公告修正急診五級檢傷分類基準(總表及兒童版)(107.5.1施行)",
+      "effective_from": "2018-05-01",
+      "url": "https://dep.mohw.gov.tw/DOMA/cp-5037-57686-106.html",
+      "role": "override_announcement"
+    },
+    {
+      "source_id": "mohw_ttas_107_general_patch",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-總表(第二次修正)",
+      "effective_from": "2018-05-01",
+      "url": "https://www.mohw.gov.tw/dl-66176-0c5c4369-a7d9-4bce-9944-13f108d390e4.html",
+      "role": "override_rule_source"
+    },
+    {
+      "source_id": "mohw_ttas_107_pediatric_patch",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-兒童(第二次修正)",
+      "effective_from": "2018-05-01",
+      "url": "https://www.mohw.gov.tw/dl-66177-07a44c11-5d74-4bc5-8b91-e93c7b1939d1.html",
+      "role": "override_rule_source"
+    },
+    {
+      "source_id": "mohw_ttas_108_announcement",
+      "publisher": "衛生福利部醫事司",
+      "title": "公告修正急診五級檢傷分類基準(成人非外傷)(108.6.11施行)",
+      "effective_from": "2019-06-11",
+      "url": "https://dep.mohw.gov.tw/DOMA/cp-5037-57687-106.html",
+      "role": "override_announcement"
+    },
+    {
+      "source_id": "mohw_ttas_108_adult_nontrauma_patch",
+      "publisher": "衛生福利部",
+      "title": "急診五級檢傷分類基準修正版-成人非外傷(108.6.11修正)",
+      "effective_from": "2019-06-11",
+      "url": "https://www.mohw.gov.tw/dl-66178-5d1feb29-76b1-46fd-99c1-b817a6e4b514.html",
+      "role": "override_rule_source",
+      "override_codes": [
+        "A041011",
+        "A041017"
+      ]
+    },
+    {
+      "source_id": "mohw_ttas_intro_2010",
+      "publisher": "衛生福利部",
+      "title": "新急診五級檢傷分類標準實施 讓緊急醫療資源妥善運用",
+      "url": "https://www.mohw.gov.tw/cp-3161-26897-1.html",
+      "role": "policy_background"
+    },
+    {
+      "source_id": "mohw_ttas_scope_2015",
+      "publisher": "衛生福利部醫事司",
+      "title": "急重症病人優先處置，全民享有高品質緊急醫療救護",
+      "url": "https://dep.mohw.gov.tw/DOMA/fp-997-20446-106.html",
+      "role": "policy_background"
+    },
+    {
+      "source_id": "sem_ttas_policy_2019",
+      "publisher": "台灣急診醫學會",
+      "title": "檢傷分類政策聲明",
+      "url": "https://www.sem.org.tw/EJournal/Detail/162",
+      "role": "professional_policy_background"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+# Secrets and local machine settings
+.env
+.env.*
+!.env.example
+local.properties
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Android / Gradle
+.gradle/
+.kotlin/
+build/
+**/build/
+captures/
+*.apk
+*.aab
+*.ap_
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs and generated local outputs
+*.log
+test_chinese_tts.wav
+test_taiwanese_tts.wav
+test_input.wav
+
+backend/.venv/
+.venv/
