@@ -1,0 +1,92 @@
+# ⚠️ 只有網關（8000）對外開放。
+#    8001–8004 一律綁 127.0.0.1 —— 那四個微服務沒有任何 API Key 檢查，
+#    對外 publish 等於讓人繞過網關直接呼叫模型（也直接花掉 Gemini 額度）。
+#    網關找它們走的是 Docker 內部網路的容器名稱，不經過宿主機的 port，所以綁 loopback 不影響運作。
+#    要從宿主機除錯仍然可以：curl http://127.0.0.1:8003/
+services:
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.gateway
+    container_name: ai-gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - taiwanese-asr
+      - taiwanese-tts
+      - chinese-tts
+    env_file:
+      - .env
+    environment:
+      - GATEWAY_CONFIG=/app/services_config.yaml
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  # 台語 ASR — Breeze-ASR-26
+  taiwanese-asr:
+    build:
+      context: ./services/breezy_asr
+    container_name: taiwanese-asr
+    ports:
+      - "127.0.0.1:8001:8001"
+    volumes:
+      - hf_cache:/root/.cache/huggingface
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+
+  # 中文 ASR — Whisper large-v3-turbo
+  # ⚠️ 一定要給 GPU：large-v3-turbo 在 CPU 上（而且限制 6GB）會慢到不能用，甚至 OOM
+  # 台語 TTS — Gemini + Chatterbox
+  # 這個服務只是一個 HTTP client（不載入任何模型、requirements 裡沒有 torch），
+  # 所以可以直接容器化；GPU 的部分留在宿主機的 Chatterbox 引擎 (:9881)。
+  taiwanese-tts:
+    build:
+      context: ./services/taiwanese_tts
+    container_name: taiwanese-tts
+    ports:
+      - "127.0.0.1:8003:8003"
+    env_file:
+      - .env
+    environment:
+      - CB_API=http://host.docker.internal:9881
+    volumes:
+      # prompt 與詞彙替換表掛進來，改完存檔即生效、不用重 build
+      - ./services/taiwanese_tts/prompts:/app/prompts:ro
+      - ./services/taiwanese_tts/data:/app/data:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  # 中文 TTS — BreezyVoice
+  chinese-tts:
+    build:
+      context: ./services/breezy_tts
+    container_name: chinese-tts
+    ports:
+      - "127.0.0.1:8004:8004"
+    env_file:
+      - .env
+    volumes:
+      - hf_cache:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+
+volumes:
+  hf_cache:
+    driver: local

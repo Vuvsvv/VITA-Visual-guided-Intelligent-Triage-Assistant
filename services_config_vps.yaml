@@ -1,0 +1,54 @@
+# ============================================
+# AI 模型服務網關 - 服務配置檔 v4（裸機 VPS，systemd）
+# ============================================
+# deploy.sh 複製的就是這一份。
+# VPS 上沒有 Docker，所以絕對不能出現 host.docker.internal —— 那個 hostname 不會解析。
+# 每個 endpoint 都可以再用 <SERVICE_TYPE>_ENDPOINT 環境變數覆蓋。
+
+services:
+
+  taiwanese_asr:
+    name: "台語語音識別"
+    description: "台語語音 → 中文字（Breeze-ASR-26，不需翻譯）"
+    version: "2.3.0"
+    enabled: true
+    endpoint: "http://127.0.0.1:8001"
+    health_check: "/"
+    timeout: 120
+    input_type: "audio"
+    output_type: "text"
+    forward_path: "/api/transcribe"
+    file_field: "audio_file"
+    models: ["MediaTek-Research/Breeze-ASR-26"]
+
+
+  taiwanese_tts:
+    name: "台語文字轉語音"
+    description: "中文字 → 台羅數字調(Gemini) → 台語語音(Chatterbox LoRA 微調，模型 B)"
+    version: "5.0.0"
+    enabled: true
+    endpoint: "http://127.0.0.1:8003"
+    health_check: "/"
+    timeout: 300
+    input_type: "text"
+    output_type: "audio"
+    forward_path: "/api/synthesize"
+    file_field: null
+    models: ["gemini-2.0-flash", "Chatterbox (LoRA fine-tuned, model B)"]
+
+  chinese_tts:
+    name: "中文文字轉語音"
+    description: "中文字 → 台灣國語語音（支援語音克隆）"
+    version: "4.0.0"
+    enabled: true
+    endpoint: "http://127.0.0.1:8004"
+    health_check: "/"
+    timeout: 300
+    input_type: "text"
+    output_type: "audio"
+    forward_path: "/api/synthesize"
+    file_field: null
+    models: ["MediaTek-Research/BreezyVoice-300M"]
+
+global:
+  gateway_port: 8000
