@@ -40,14 +40,6 @@ VITA 的做法：**用一般聊天的方式問診 → 依醫院公開資料建�
 > 病人按「看推薦醫師」→ 看到醫師與時段 → 選一筆 → 按「前往掛號」
 > → 手機打開醫院 App，畫面上用**紅框**一步一步標出下一個要點的地方。
 
-<table>
-  <tr>
-    <td align="center"><img src="android/app/src/main/res/drawable/preview_step_chat.png" width="220" alt="聊天問診畫面"><br>聊天問診（可切換國語／台語）</td>
-    <td align="center"><img src="android/app/src/main/res/drawable/preview_step_history.png" width="220" alt="科別建議與導引摘要"><br>科別建議與導引摘要</td>
-    <td align="center"><img src="android/app/src/main/res/drawable/preview_step_summary.png" width="220" alt="醫院 App 紅框導引"><br>在醫院 App 上用紅框標出下一步</td>
-  </tr>
-</table>
-
 ---
 
 ## 3. 核心特色
