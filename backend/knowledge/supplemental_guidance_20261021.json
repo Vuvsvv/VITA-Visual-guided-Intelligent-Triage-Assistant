@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "source_id": "vghtpe_orth_foot_pain_20261021",
+      "source_hospital": "vghtpe",
+      "source_type": "doctor_specialty_keywords",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院｜骨科部醫師專長查詢：足部疼痛、變形",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/docsearch.action?more=%E9%AA%A8%E7%A7%91%E9%83%A8&q=%E8%B8%9D%E9%83%A8%E6%89%AD%E5%82%B7",
+      "retrieved_at": "2026-10-21",
+      "note": "官方骨科部關鍵字清單列有「足部疼痛、變形」；只擷取明示的足部疼痛，不推定扭傷或其他診斷。"
+    }
+  ],
+  "records": [
+    {
+      "department_name": "骨科",
+      "official_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "concept": "足部疼痛",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "source_id": "vghtpe_orth_foot_pain_20261021",
+      "source_hospital": "vghtpe",
+      "source_type": "doctor_specialty_keywords",
+      "source_title": "臺北榮民總醫院｜骨科部醫師專長查詢：足部疼痛、變形",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/docsearch.action?more=%E9%AA%A8%E7%A7%91%E9%83%A8&q=%E8%B8%9D%E9%83%A8%E6%89%AD%E5%82%B7",
+      "source_priority": 2,
+      "retrieved_at": "2026-10-21",
+      "evidence_text": "足部疼痛、變形",
+      "fallback_for_vghtpe": false,
+      "notes": "足部疼痛為官方骨科部專長關鍵字項目的明示子項；沿用既有骨科→一般骨科 canonical mapping，使用時仍驗證 live DB。"
+    }
+  ]
+}

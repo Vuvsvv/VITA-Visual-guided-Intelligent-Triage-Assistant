@@ -1,0 +1,470 @@
+{
+  "meta": {
+    "generated_at": "2026-10-05",
+    "repo": "private-repository",
+    "legacy_branch": "AILogic",
+    "legacy_file": "dept_keywords.py",
+    "target_branch_reviewed": "New_Android_Backend",
+    "total_legacy_departments": 35,
+    "total_legacy_keyword_pairs": 763,
+    "classification_counts": {
+      "direct_routing_evidence": 229,
+      "legacy_unverified": 222,
+      "legacy_synonym": 18,
+      "department_specialty_evidence": 294
+    },
+    "method": "Official Taipei VGH direct routing first; Taipei VGH specialty/service evidence second; Taichung VGH only for gaps/subspecialty disambiguation; unsupported legacy terms disabled.",
+    "important_rule": "Official department label is medical provenance; APP/SQL dept_id + childDept is canonical system identity.",
+    "review_status": "research_migration_candidate_not_yet_committed"
+  },
+  "mappings": [
+    {
+      "legacy_department_name": "一般內科",
+      "canonical_dept_id": 1232,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "一般內科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "一般內科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "家庭醫學科(一般門診/戒菸)",
+      "canonical_dept_id": 1233,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "家庭醫學科(一般門診/戒菸)",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "家庭醫學科",
+        "家庭醫學科(含門診戒菸服務)"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "心臟內科",
+      "canonical_dept_id": 1241,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "心臟內科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "心臟科",
+        "心臟內科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "感染科",
+      "canonical_dept_id": 1234,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "感染科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "感染科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "新陳代謝科",
+      "canonical_dept_id": 1237,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "新陳代謝科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "內分泌新陳代謝科",
+        "內分泌暨新陳代謝科",
+        "新陳代謝科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "神經內科",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "神經內科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "胃腸肝膽科",
+      "canonical_dept_id": 1239,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "胃腸肝膽科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "胃腸肝膽科",
+        "胃腸科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "胸腔內科",
+      "canonical_dept_id": 1238,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "胸腔內科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "胸腔內科",
+        "胸腔部"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "腎臟科",
+      "canonical_dept_id": 1242,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "腎臟科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "腎臟科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "過敏免疫風濕",
+      "canonical_dept_id": 1255,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "過敏免疫風濕",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "過敏免疫風濕科",
+        "過敏免疫風濕"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "血液腫瘤科",
+      "canonical_dept_id": 1240,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "血液腫瘤科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "血液腫瘤科",
+        "血液科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "腫瘤內科",
+      "canonical_dept_id": 1287,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "腫瘤內科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "腫瘤醫學部",
+        "腫瘤內科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "一般外科",
+      "canonical_dept_id": 1290,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "一般外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "直腸外科",
+      "canonical_dept_id": 1245,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "直腸外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "大腸直腸外科",
+        "直腸外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "心臟外科",
+      "canonical_dept_id": 1285,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "心臟外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "心臟外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "胸腔外科",
+      "canonical_dept_id": 1309,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "胸腔外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "胸腔外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "外傷兼疝氣及肝膽胃腸外科",
+      "canonical_dept_id": 1310,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "外傷兼疝氣及肝膽胃腸外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "外傷兼疝氣及肝膽胃腸外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "骨科",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "official_source_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "Broad legacy 骨科 follows the existing APP/backend convention 骨科→一般骨科; keep explicit and revalidate against live 310 before release."
+    },
+    {
+      "legacy_department_name": "神經外科",
+      "canonical_dept_id": 1244,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "神經外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "神經外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "泌尿外科",
+      "canonical_dept_id": 1314,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "泌尿外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "泌尿科",
+        "泌尿部",
+        "泌尿外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "整形外科",
+      "canonical_dept_id": 1294,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "整形外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "整形外科",
+        "重建整形外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "眼科",
+      "canonical_dept_id": 1329,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "眼科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "眼科",
+        "眼科部"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "牙科",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "口腔顎面外科",
+      "canonical_dept_id": 1250,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "口腔顎面外科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "口腔顎面外科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "耳科",
+      "canonical_dept_id": 1333,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "耳科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "耳鼻喉科",
+        "耳科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "鼻科",
+      "canonical_dept_id": 1334,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "鼻科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "耳鼻喉科",
+        "鼻科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "喉科",
+      "canonical_dept_id": 1335,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "喉科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "耳鼻喉科",
+        "喉科",
+        "喉頭頸科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "婦產科",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "兒童內科",
+      "canonical_dept_id": 1320,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童內科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "兒科",
+        "一般兒科",
+        "兒童內科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "皮膚科",
+      "canonical_dept_id": 1252,
+      "canonical_parent_dept": "其他科",
+      "canonical_child_dept": "皮膚科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "皮膚科",
+        "皮膚部"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "精神科",
+      "canonical_dept_id": 1251,
+      "canonical_parent_dept": "其他科",
+      "canonical_child_dept": "精神科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "精神科",
+        "精神部",
+        "精神醫學部"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "失智特別門診",
+      "canonical_dept_id": 1340,
+      "canonical_parent_dept": "其他科",
+      "canonical_child_dept": "失智特別門診",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "失智特別門診",
+        "記憶特別門診"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "復健醫學",
+      "canonical_dept_id": 1265,
+      "canonical_parent_dept": "其他科",
+      "canonical_child_dept": "復健醫學",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "復健醫學科",
+        "復健醫學"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "疼痛控制科",
+      "canonical_dept_id": 1345,
+      "canonical_parent_dept": "其他科",
+      "canonical_child_dept": "疼痛控制科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "疼痛控制科"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    },
+    {
+      "legacy_department_name": "醫學美容中心",
+      "canonical_dept_id": 1293,
+      "canonical_parent_dept": "其他科",
+      "canonical_child_dept": "醫學美容中心",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "美容醫學中心"
+      ],
+      "identity_source_id": "app_sql_inventory_2026_09_29",
+      "note": "APP/SQL name is canonical; official website labels may differ and are preserved separately."
+    }
+  ]
+}

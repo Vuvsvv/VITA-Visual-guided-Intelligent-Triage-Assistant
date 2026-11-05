@@ -1,0 +1,341 @@
+{
+  "sources": [
+    {
+      "source_id": "vghtpe_symptom_fever_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6698",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：感染科、過敏風濕免疫科、家庭醫學科、一般內科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_fatigue_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：倦怠（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6699",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：家庭醫學科、一般內科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_mouth_ulcer_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：口腔潰瘍（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6707",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：口腔外科、過敏風濕免疫科、家庭醫學科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。官方寫「口腔外科」，對到既有口腔顎面外科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_palpitations_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：心悸（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6732",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：家庭醫學科、新陳代謝科、心臟內科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。"
+    }
+  ],
+  "records": [
+    {
+      "department_name": "感染科",
+      "official_department_labels": [
+        "感染科"
+      ],
+      "concept": "發高燒",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1234,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "感染科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_fever_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6698",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "尤其是食物中毒（感染弧菌性腸炎、沙門桿菌、葡萄球菌等）更會發生嚴重的下痢及發高燒",
+      "fallback_for_vghtpe": false,
+      "notes": "發燒頁原文用語；三科原本只有「發燒」。"
+    },
+    {
+      "department_name": "一般內科",
+      "official_department_labels": [
+        "一般內科"
+      ],
+      "concept": "發高燒",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1232,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "一般內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_fever_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6698",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "尤其是食物中毒（感染弧菌性腸炎、沙門桿菌、葡萄球菌等）更會發生嚴重的下痢及發高燒",
+      "fallback_for_vghtpe": false,
+      "notes": "發燒頁原文用語；建議就診科別含一般內科。"
+    },
+    {
+      "department_name": "過敏免疫風濕",
+      "official_department_labels": [
+        "過敏免疫風濕科",
+        "過敏免疫風濕"
+      ],
+      "concept": "發高燒",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1255,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "過敏免疫風濕",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_fever_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6698",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "尤其是食物中毒（感染弧菌性腸炎、沙門桿菌、葡萄球菌等）更會發生嚴重的下痢及發高燒",
+      "fallback_for_vghtpe": false,
+      "notes": "官方頁面科別寫作「過敏風濕免疫科」，沿用既有 canonical mapping。"
+    },
+    {
+      "department_name": "感染科",
+      "official_department_labels": [
+        "感染科"
+      ],
+      "concept": "食物中毒",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1234,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "感染科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_fever_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6698",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "腸炎、赤痢、霍亂及食物中毒都會有下痢的現象",
+      "fallback_for_vghtpe": false,
+      "notes": "發燒頁所列原因。"
+    },
+    {
+      "department_name": "一般內科",
+      "official_department_labels": [
+        "一般內科"
+      ],
+      "concept": "食物中毒",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1232,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "一般內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_fever_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6698",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "腸炎、赤痢、霍亂及食物中毒都會有下痢的現象",
+      "fallback_for_vghtpe": false,
+      "notes": "發燒頁所列原因；建議就診科別含一般內科。"
+    },
+    {
+      "department_name": "感染科",
+      "official_department_labels": [
+        "感染科"
+      ],
+      "concept": "蜂窩組織炎",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1234,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "感染科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_fever_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6698",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "發燒合併有皮膚疼痛、紅腫時可能是蜂窩組織炎、丹毒、急性淋巴節炎",
+      "fallback_for_vghtpe": false,
+      "notes": "發燒頁所列感染症。"
+    },
+    {
+      "department_name": "一般內科",
+      "official_department_labels": [
+        "一般內科"
+      ],
+      "concept": "倦怠",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1232,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "一般內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_fatigue_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：倦怠（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6699",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "在一般門診，倦怠是一個很常見的問題",
+      "fallback_for_vghtpe": false,
+      "notes": "倦怠頁主題；建議就診科別專科只有一般內科（原本只有「全身倦怠」）。"
+    },
+    {
+      "department_name": "口腔顎面外科",
+      "official_department_labels": [
+        "口腔顎面外科"
+      ],
+      "concept": "口腔潰瘍",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1250,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "口腔顎面外科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_mouth_ulcer_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：口腔潰瘍（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6707",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "口腔潰瘍為臨床上常見的疾病，發生口腔潰瘍的時候，嘴巴通常非常疼痛",
+      "fallback_for_vghtpe": false,
+      "notes": "官方寫「口腔外科」，對到既有口腔顎面外科（過敏免疫風濕原本已有「口腔潰瘍」）。"
+    },
+    {
+      "department_name": "心臟內科",
+      "official_department_labels": [
+        "心臟科",
+        "心臟內科"
+      ],
+      "concept": "心跳加快",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1241,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "心臟內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_palpitations_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：心悸（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6732",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "心跳加快也是甲狀腺機能亢進症的重要症狀之一",
+      "fallback_for_vghtpe": false,
+      "notes": "心悸頁原文用語；兩科原本已有「心悸」。"
+    },
+    {
+      "department_name": "新陳代謝科",
+      "official_department_labels": [
+        "內分泌新陳代謝科",
+        "內分泌暨新陳代謝科",
+        "新陳代謝科"
+      ],
+      "concept": "心跳加快",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1237,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "新陳代謝科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_palpitations_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：心悸（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6732",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "心跳加快也是甲狀腺機能亢進症的重要症狀之一",
+      "fallback_for_vghtpe": false,
+      "notes": "心悸頁原文用語；兩科原本已有「心悸」。"
+    },
+    {
+      "department_name": "心臟內科",
+      "official_department_labels": [
+        "心臟科",
+        "心臟內科"
+      ],
+      "concept": "心跳不規則",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1241,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "心臟內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_palpitations_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：心悸（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6732",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "有強烈、急速的心跳不規則的情形",
+      "fallback_for_vghtpe": false,
+      "notes": "心悸頁所列就醫情況。"
+    },
+    {
+      "department_name": "新陳代謝科",
+      "official_department_labels": [
+        "內分泌新陳代謝科",
+        "內分泌暨新陳代謝科",
+        "新陳代謝科"
+      ],
+      "concept": "心跳不規則",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1237,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "新陳代謝科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_palpitations_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：心悸（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6732",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "有強烈、急速的心跳不規則的情形",
+      "fallback_for_vghtpe": false,
+      "notes": "心悸頁所列就醫情況。"
+    },
+    {
+      "department_name": "新陳代謝科",
+      "official_department_labels": [
+        "內分泌新陳代謝科",
+        "內分泌暨新陳代謝科",
+        "新陳代謝科"
+      ],
+      "concept": "甲狀腺機能亢進",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1237,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "新陳代謝科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_palpitations_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：心悸（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6732",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "心跳加快也是甲狀腺機能亢進症的重要症狀之一",
+      "fallback_for_vghtpe": false,
+      "notes": "心悸頁所列原因。"
+    }
+  ]
+}

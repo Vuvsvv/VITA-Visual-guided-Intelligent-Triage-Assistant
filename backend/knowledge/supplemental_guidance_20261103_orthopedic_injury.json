@@ -1,0 +1,164 @@
+{
+  "sources": [
+    {
+      "source_id": "vghtpe_ihealth_sprain_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜扭傷之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/476",
+      "retrieved_at": "2026-11-03",
+      "note": "頁面寫明「預約掛號：骨科門診」，所以列為 direct_routing_evidence。最近修訂 2025-05-01。"
+    },
+    {
+      "source_id": "vghtpe_orth_fracture_trauma_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院骨科部｜骨折創傷科",
+      "source_url": "https://wd.vghtpe.gov.tw/orth/Fpage.action?muid=5900&fid=6432",
+      "retrieved_at": "2026-11-03",
+      "note": "骨科部骨折創傷科簡介，最後更新 2026-04-15；科別專長，不出線索題。"
+    }
+  ],
+  "records": [
+    {
+      "department_name": "骨科",
+      "official_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "concept": "扭傷",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "source_id": "vghtpe_ihealth_sprain_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜扭傷之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/476",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "有以上的症狀，可能不只是扭傷，若休息仍無法緩解，持續腫脹疼痛，請盡速就醫。(預約掛號：骨科門診)",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「預約掛號：骨科門診」。"
+    },
+    {
+      "department_name": "骨科",
+      "official_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "concept": "腳踝扭傷",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "source_id": "vghtpe_ihealth_sprain_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜扭傷之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/476",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "腳踝扭傷時，休息、冰敷、加壓及抬高可減緩疼痛及腫脹。",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「預約掛號：骨科門診」。"
+    },
+    {
+      "department_name": "骨科",
+      "official_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "concept": "翻腳刀",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "source_id": "vghtpe_ihealth_sprain_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜扭傷之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/476",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "常見發生在腳踝關節，俗稱翻腳刀",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「預約掛號：骨科門診」。"
+    },
+    {
+      "department_name": "骨科",
+      "official_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "concept": "韌帶受傷",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "source_id": "vghtpe_ihealth_sprain_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜扭傷之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/476",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "扭傷是因過度扭曲或扭轉，導致關節周圍韌帶受傷",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「預約掛號：骨科門診」。"
+    },
+    {
+      "department_name": "骨科",
+      "official_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "concept": "骨折",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "source_id": "vghtpe_orth_fracture_trauma_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院骨科部｜骨折創傷科",
+      "source_url": "https://wd.vghtpe.gov.tw/orth/Fpage.action?muid=5900&fid=6432",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "除原有骨折創傷治療外，人工關節置換，及骨腫瘤手術",
+      "fallback_for_vghtpe": false,
+      "notes": "骨科部骨折創傷科簡介。"
+    },
+    {
+      "department_name": "骨科",
+      "official_department_labels": [
+        "骨科",
+        "骨科部"
+      ],
+      "concept": "人工關節置換",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1298,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "一般骨科",
+      "mapping_method": "app_existing_alias",
+      "source_id": "vghtpe_orth_fracture_trauma_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院骨科部｜骨折創傷科",
+      "source_url": "https://wd.vghtpe.gov.tw/orth/Fpage.action?muid=5900&fid=6432",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "除原有骨折創傷治療外，人工關節置換，及骨腫瘤手術",
+      "fallback_for_vghtpe": false,
+      "notes": "骨科部骨折創傷科簡介。"
+    }
+  ]
+}

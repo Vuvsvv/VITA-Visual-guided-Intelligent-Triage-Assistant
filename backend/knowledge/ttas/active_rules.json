@@ -1,0 +1,1597 @@
+{
+  "ruleset_id": "ttas_based_preliminary_screening_v1",
+  "purpose": "專題用 TTAS-based 急迫性初步篩檢；不宣稱完整臨床 TTAS 分級。",
+  "selection_policy": {
+    "winner": "取所有已啟用且完整命中的規則中最急迫（數字最小）的 level",
+    "unknown_required_evidence": "不得視為 false 或 normal；紀錄 missing_evidence",
+    "no_match": "level_candidate=null, status=insufficient_information",
+    "never_default_to_level_4_or_5": true,
+    "ai_may_set_level": false,
+    "urgency_score_90_50_20": "removed"
+  },
+  "rules": [
+    {
+      "rule_id": "TTAS-MOD-RESP-SEVERE",
+      "official_code": null,
+      "ttas_level": 1,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一呼吸；兒童現行總表亦同級",
+      "predicate": {
+        "eq": [
+          "respiratory_distress",
+          "severe"
+        ]
+      },
+      "required_fields": [
+        "respiratory_distress"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "respiratory distress severity requires clinical modifier assessment; no official numeric derivation threshold is available in the Phase 5 package"
+    },
+    {
+      "rule_id": "TTAS-MOD-RESP-MODERATE",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一呼吸；兒童現行總表亦同級",
+      "predicate": {
+        "eq": [
+          "respiratory_distress",
+          "moderate"
+        ]
+      },
+      "required_fields": [
+        "respiratory_distress"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "respiratory distress severity requires clinical modifier assessment; no official numeric derivation threshold is available in the Phase 5 package"
+    },
+    {
+      "rule_id": "TTAS-MOD-RESP-MILD",
+      "official_code": null,
+      "ttas_level": 3,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一呼吸；兒童現行總表亦同級",
+      "predicate": {
+        "eq": [
+          "respiratory_distress",
+          "mild"
+        ]
+      },
+      "required_fields": [
+        "respiratory_distress"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "respiratory distress severity requires clinical modifier assessment; no official numeric derivation threshold is available in the Phase 5 package"
+    },
+    {
+      "rule_id": "TTAS-MOD-SHOCK",
+      "official_code": null,
+      "ttas_level": 1,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一血行動力；兒童現行總表亦同級",
+      "predicate": {
+        "eq": [
+          "hemodynamic_status",
+          "shock"
+        ]
+      },
+      "required_fields": [
+        "hemodynamic_status"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "shock is a clinical modifier and the package does not provide a complete objective derivation predicate"
+    },
+    {
+      "rule_id": "TTAS-MOD-HEMODYNAMIC-INSUFFICIENT",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一血行動力；兒童現行總表亦同級",
+      "predicate": {
+        "eq": [
+          "hemodynamic_status",
+          "insufficient"
+        ]
+      },
+      "required_fields": [
+        "hemodynamic_status"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "hemodynamic insufficiency is a clinical modifier and the package does not provide a complete objective derivation predicate"
+    },
+    {
+      "rule_id": "TTAS-MOD-UNCONSCIOUS",
+      "official_code": null,
+      "ttas_level": 1,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一意識；兒童現行總表亦同級",
+      "predicate": {
+        "between": [
+          "gcs",
+          3,
+          8
+        ]
+      },
+      "required_fields": [
+        "gcs"
+      ],
+      "implementation_status": "enabled",
+      "hardening_reason": "runtime execution is restricted to the package's objective GCS range; AI-classified consciousness is not authoritative"
+    },
+    {
+      "rule_id": "TTAS-MOD-ALTERED-CONSCIOUSNESS",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一意識；兒童現行總表亦同級",
+      "predicate": {
+        "between": [
+          "gcs",
+          9,
+          13
+        ]
+      },
+      "required_fields": [
+        "gcs"
+      ],
+      "implementation_status": "enabled",
+      "hardening_reason": "runtime execution is restricted to the package's objective GCS range; AI-classified consciousness is not authoritative"
+    },
+    {
+      "rule_id": "TTAS-MOD-TEMP-HIGH-EXTREME",
+      "official_code": null,
+      "ttas_level": 1,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一體溫；兒童現行總表亦同級",
+      "predicate": {
+        "gt": [
+          "temperature_c",
+          41
+        ]
+      },
+      "required_fields": [
+        "temperature_c"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-MOD-TEMP-LOW-EXTREME",
+      "official_code": null,
+      "ttas_level": 1,
+      "population": "all",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一體溫；兒童現行總表亦同級",
+      "predicate": {
+        "lt": [
+          "temperature_c",
+          32
+        ]
+      },
+      "required_fields": [
+        "temperature_c"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-FEVER-IMMUNOCOMPROMISED",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一體溫",
+      "predicate": {
+        "all": [
+          {
+            "eq": [
+              "fever",
+              true
+            ]
+          },
+          {
+            "eq": [
+              "immune_compromised",
+              true
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "fever",
+        "immune_compromised"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-FEVER-ILL",
+      "official_code": null,
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一體溫",
+      "predicate": {
+        "all": [
+          {
+            "eq": [
+              "fever",
+              true
+            ]
+          },
+          {
+            "eq": [
+              "ill_appearing",
+              true
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "fever",
+        "ill_appearing"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "ill_appearing is a clinical assessment rather than an objective patient fact"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-FEVER-WELL",
+      "official_code": null,
+      "ttas_level": 4,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表一體溫",
+      "predicate": {
+        "all": [
+          {
+            "eq": [
+              "fever",
+              true
+            ]
+          },
+          {
+            "eq": [
+              "ill_appearing",
+              false
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "fever",
+        "ill_appearing"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "ill_appearing is a clinical assessment rather than an objective patient fact"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-CENTRAL-PAIN-SEVERE",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表二疼痛",
+      "predicate": {
+        "all": [
+          {
+            "between": [
+              "pain_score_0_10",
+              8,
+              10
+            ]
+          },
+          {
+            "eq": [
+              "pain_location_class",
+              "central"
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pain_score_0_10",
+        "pain_location_class"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "central/peripheral pain classification is a clinical modifier not deterministically derived by this ruleset"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-PERIPHERAL-PAIN-SEVERE",
+      "official_code": null,
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表二疼痛",
+      "predicate": {
+        "all": [
+          {
+            "between": [
+              "pain_score_0_10",
+              8,
+              10
+            ]
+          },
+          {
+            "eq": [
+              "pain_location_class",
+              "peripheral"
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pain_score_0_10",
+        "pain_location_class"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "central/peripheral pain classification is a clinical modifier not deterministically derived by this ruleset"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-CENTRAL-PAIN-MODERATE",
+      "official_code": null,
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表二疼痛",
+      "predicate": {
+        "all": [
+          {
+            "between": [
+              "pain_score_0_10",
+              4,
+              7
+            ]
+          },
+          {
+            "eq": [
+              "pain_location_class",
+              "central"
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pain_score_0_10",
+        "pain_location_class"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "central/peripheral pain classification is a clinical modifier not deterministically derived by this ruleset"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-PERIPHERAL-PAIN-MODERATE",
+      "official_code": null,
+      "ttas_level": 4,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表二疼痛",
+      "predicate": {
+        "all": [
+          {
+            "between": [
+              "pain_score_0_10",
+              4,
+              7
+            ]
+          },
+          {
+            "eq": [
+              "pain_location_class",
+              "peripheral"
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pain_score_0_10",
+        "pain_location_class"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "central/peripheral pain classification is a clinical modifier not deterministically derived by this ruleset"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-CENTRAL-PAIN-MILD",
+      "official_code": null,
+      "ttas_level": 4,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表二疼痛",
+      "predicate": {
+        "all": [
+          {
+            "lt": [
+              "pain_score_0_10",
+              4
+            ]
+          },
+          {
+            "eq": [
+              "pain_location_class",
+              "central"
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pain_score_0_10",
+        "pain_location_class"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "central/peripheral pain classification is a clinical modifier not deterministically derived by this ruleset"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-PERIPHERAL-PAIN-MILD",
+      "official_code": null,
+      "ttas_level": 5,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表二疼痛",
+      "predicate": {
+        "all": [
+          {
+            "lt": [
+              "pain_score_0_10",
+              4
+            ]
+          },
+          {
+            "eq": [
+              "pain_location_class",
+              "peripheral"
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pain_score_0_10",
+        "pain_location_class"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "central/peripheral pain classification is a clinical modifier not deterministically derived by this ruleset"
+    },
+    {
+      "rule_id": "TTAS-MOD-ADULT-HIGH-RISK-MECHANISM",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_general",
+      "official_locator": "成人總表表三高危險性受傷機轉",
+      "predicate": {
+        "eq": [
+          "high_risk_injury_mechanism",
+          true
+        ]
+      },
+      "required_fields": [
+        "high_risk_injury_mechanism"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "high-risk mechanism is a clinical classification without a complete package predicate"
+    },
+    {
+      "rule_id": "TTAS-PED-FEVER-LT3M",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "pediatric",
+      "source_id": "mohw_ttas_107_general_patch",
+      "official_locator": "107總表兒童體溫：小於3個月",
+      "predicate": {
+        "all": [
+          {
+            "lt": [
+              "age_months",
+              3
+            ]
+          },
+          {
+            "any": [
+              {
+                "gt": [
+                  "temperature_c",
+                  38
+                ]
+              },
+              {
+                "lt": [
+                  "temperature_c",
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "age_months",
+        "temperature_c"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-PED-FEVER-3M-3Y-IMMUNE-OR-ILL",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "pediatric",
+      "source_id": "mohw_ttas_107_general_patch",
+      "official_locator": "107總表兒童體溫：3個月至3歲",
+      "predicate": {
+        "all": [
+          {
+            "between": [
+              "age_months",
+              3,
+              36
+            ]
+          },
+          {
+            "gt": [
+              "temperature_c",
+              38
+            ]
+          },
+          {
+            "any": [
+              {
+                "eq": [
+                  "immune_compromised",
+                  true
+                ]
+              },
+              {
+                "eq": [
+                  "ill_appearing",
+                  true
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "age_months",
+        "temperature_c",
+        "immune_compromised|ill_appearing"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "the combined predicate permits AI-supplied ill_appearing to determine level"
+    },
+    {
+      "rule_id": "TTAS-PED-FEVER-GT3Y-IMMUNE",
+      "official_code": null,
+      "ttas_level": 2,
+      "population": "pediatric",
+      "source_id": "mohw_ttas_107_general_patch",
+      "official_locator": "107總表兒童體溫：大於3歲免疫功能缺陷",
+      "predicate": {
+        "all": [
+          {
+            "gt": [
+              "age_years",
+              3
+            ]
+          },
+          {
+            "gt": [
+              "temperature_c",
+              38
+            ]
+          },
+          {
+            "eq": [
+              "immune_compromised",
+              true
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "age_years",
+        "temperature_c",
+        "immune_compromised"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-PED-FEVER-3M-3Y-WELL",
+      "official_code": null,
+      "ttas_level": 3,
+      "population": "pediatric",
+      "source_id": "mohw_ttas_107_general_patch",
+      "official_locator": "107總表兒童體溫：3個月至3歲無病容",
+      "predicate": {
+        "all": [
+          {
+            "between": [
+              "age_months",
+              3,
+              36
+            ]
+          },
+          {
+            "gt": [
+              "temperature_c",
+              38
+            ]
+          },
+          {
+            "eq": [
+              "ill_appearing",
+              false
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "age_months",
+        "temperature_c",
+        "ill_appearing"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "ill_appearing is a clinical assessment rather than an objective patient fact"
+    },
+    {
+      "rule_id": "TTAS-PED-FEVER-GT3Y-ILL",
+      "official_code": null,
+      "ttas_level": 3,
+      "population": "pediatric",
+      "source_id": "mohw_ttas_107_general_patch",
+      "official_locator": "107總表兒童體溫：大於3歲有病容",
+      "predicate": {
+        "all": [
+          {
+            "gt": [
+              "age_years",
+              3
+            ]
+          },
+          {
+            "gt": [
+              "temperature_c",
+              38
+            ]
+          },
+          {
+            "eq": [
+              "ill_appearing",
+              true
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "age_years",
+        "temperature_c",
+        "ill_appearing"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "ill_appearing is a clinical assessment rather than an objective patient fact"
+    },
+    {
+      "rule_id": "TTAS-PED-FEVER-GT3Y-WELL",
+      "official_code": null,
+      "ttas_level": 4,
+      "population": "pediatric",
+      "source_id": "mohw_ttas_107_general_patch",
+      "official_locator": "107總表兒童體溫：大於3歲無病容",
+      "predicate": {
+        "all": [
+          {
+            "gt": [
+              "age_years",
+              3
+            ]
+          },
+          {
+            "gt": [
+              "temperature_c",
+              38
+            ]
+          },
+          {
+            "eq": [
+              "ill_appearing",
+              false
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "age_years",
+        "temperature_c",
+        "ill_appearing"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "ill_appearing is a clinical assessment rather than an objective patient fact"
+    },
+    {
+      "rule_id": "TTAS-A020210",
+      "official_code": "A020210",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0202 胸痛/胸悶",
+      "predicate": {
+        "eq": [
+          "cardiac_chest_pain_suspected",
+          true
+        ]
+      },
+      "required_fields": [
+        "cardiac_chest_pain_suspected"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "cardiac chest pain suspected is a clinical conclusion, not a directly observable fact"
+    },
+    {
+      "rule_id": "TTAS-A020211",
+      "official_code": "A020211",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0202 胸痛/胸悶",
+      "predicate": {
+        "eq": [
+          "tearing_pain",
+          true
+        ]
+      },
+      "required_fields": [
+        "tearing_pain"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "A0202 is the chest pain/tightness complaint; tearing pain alone does not establish that complaint context"
+    },
+    {
+      "rule_id": "TTAS-A020407",
+      "official_code": "A020407",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0204 高血壓急症",
+      "predicate": {
+        "all": [
+          {
+            "any": [
+              {
+                "gte": [
+                  "sbp_mmhg",
+                  220
+                ]
+              },
+              {
+                "gte": [
+                  "dbp_mmhg",
+                  130
+                ]
+              }
+            ]
+          },
+          {
+            "eq": [
+              "cardiac_chest_pain_suspected",
+              true
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "sbp_mmhg|dbp_mmhg",
+        "symptomatic_hypertension"
+      ],
+      "implementation_status": "reference_only",
+      "note": "官方症狀集合不只胸痛；實作前需以獨立 symptomatic_hypertension evidence 取代此暫存 predicate。"
+    },
+    {
+      "rule_id": "TTAS-A020409",
+      "official_code": "A020409",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0204 高血壓急症",
+      "predicate": {
+        "all": [
+          {
+            "any": [
+              {
+                "gte": [
+                  "sbp_mmhg",
+                  220
+                ]
+              },
+              {
+                "gte": [
+                  "dbp_mmhg",
+                  130
+                ]
+              }
+            ]
+          },
+          {
+            "eq": [
+              "symptomatic_hypertension",
+              false
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "sbp_mmhg|dbp_mmhg",
+        "symptomatic_hypertension"
+      ],
+      "implementation_status": "reference_only"
+    },
+    {
+      "rule_id": "TTAS-A020410",
+      "official_code": "A020410",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0204 高血壓急症",
+      "predicate": {
+        "all": [
+          {
+            "range_pair": [
+              "sbp_mmhg",
+              200,
+              220,
+              "dbp_mmhg",
+              110,
+              130
+            ]
+          },
+          {
+            "eq": [
+              "symptomatic_hypertension",
+              true
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "sbp_mmhg|dbp_mmhg",
+        "symptomatic_hypertension"
+      ],
+      "implementation_status": "reference_only"
+    },
+    {
+      "rule_id": "TTAS-A020411",
+      "official_code": "A020411",
+      "ttas_level": 4,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0204 高血壓急症",
+      "predicate": {
+        "all": [
+          {
+            "range_pair": [
+              "sbp_mmhg",
+              200,
+              220,
+              "dbp_mmhg",
+              110,
+              130
+            ]
+          },
+          {
+            "eq": [
+              "symptomatic_hypertension",
+              false
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "sbp_mmhg|dbp_mmhg",
+        "symptomatic_hypertension"
+      ],
+      "implementation_status": "reference_only"
+    },
+    {
+      "rule_id": "TTAS-A030115",
+      "official_code": "A030115",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0301 腹痛",
+      "predicate": {
+        "eq": [
+          "missed_period_with_abdominal_pain",
+          true
+        ]
+      },
+      "required_fields": [
+        "missed_period_with_abdominal_pain"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A030712",
+      "official_code": "A030712",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0307 噁心/嘔吐",
+      "predicate": {
+        "eq": [
+          "coffee_ground_emesis_or_melena",
+          true
+        ]
+      },
+      "required_fields": [
+        "coffee_ground_emesis_or_melena"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "A0307 is the nausea/vomiting complaint and the merged evidence field cannot distinguish coffee-ground emesis from isolated melena"
+    },
+    {
+      "rule_id": "TTAS-A030713",
+      "official_code": "A030713",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0307 噁心/嘔吐",
+      "predicate": {
+        "eq": [
+          "vomiting_pattern",
+          "acute_persistent"
+        ]
+      },
+      "required_fields": [
+        "vomiting_pattern"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A030910",
+      "official_code": "A030910",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0309 吐血",
+      "predicate": {
+        "eq": [
+          "hematemesis_amount",
+          "obvious_or_acute"
+        ]
+      },
+      "required_fields": [
+        "hematemesis_amount"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A031010",
+      "official_code": "A031010",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0310 血便/黑便",
+      "predicate": {
+        "eq": [
+          "hematochezia_or_melena_amount",
+          "large"
+        ]
+      },
+      "required_fields": [
+        "hematochezia_or_melena_amount"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A031015",
+      "official_code": "A031015",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0310 血便/黑便",
+      "predicate": {
+        "eq": [
+          "hematochezia_or_melena_amount",
+          "medium"
+        ]
+      },
+      "required_fields": [
+        "hematochezia_or_melena_amount"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A031017",
+      "official_code": "A031017",
+      "ttas_level": 4,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0310 血便/黑便",
+      "predicate": {
+        "eq": [
+          "hematochezia_or_melena_amount",
+          "small"
+        ]
+      },
+      "required_fields": [
+        "hematochezia_or_melena_amount"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A040410",
+      "official_code": "A040410",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0404 頭痛",
+      "predicate": {
+        "eq": [
+          "sudden_or_worst_headache",
+          true
+        ]
+      },
+      "required_fields": [
+        "sudden_or_worst_headache"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A040411",
+      "official_code": "A040411",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0404 頭痛",
+      "predicate": {
+        "eq": [
+          "acute_visual_disturbance",
+          true
+        ]
+      },
+      "required_fields": [
+        "acute_visual_disturbance"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "A0404 is the headache complaint; acute visual disturbance alone does not establish headache context"
+    },
+    {
+      "rule_id": "TTAS-A040504",
+      "official_code": "A040504",
+      "ttas_level": 1,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0405 抽搐",
+      "predicate": {
+        "eq": [
+          "seizure_status",
+          "ongoing"
+        ]
+      },
+      "required_fields": [
+        "seizure_status"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A040511",
+      "official_code": "A040511",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0405 抽搐",
+      "predicate": {
+        "eq": [
+          "seizure_status",
+          "stopped_not_recovered"
+        ]
+      },
+      "required_fields": [
+        "seizure_status"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A040516",
+      "official_code": "A040516",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A0405 抽搐",
+      "predicate": {
+        "eq": [
+          "seizure_status",
+          "stopped_recovered"
+        ]
+      },
+      "required_fields": [
+        "seizure_status"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A041011",
+      "official_code": "A041011",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_108_adult_nontrauma_patch",
+      "official_locator": "A0410 中風症狀",
+      "predicate": {
+        "all": [
+          {
+            "eq": [
+              "stroke_symptoms",
+              true
+            ]
+          },
+          {
+            "lt": [
+              "stroke_onset_hours",
+              6
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "stroke_symptoms",
+        "stroke_onset_hours"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "stroke_symptoms is a clinical grouping without a Backend-verifiable official evidence definition"
+    },
+    {
+      "rule_id": "TTAS-A041017",
+      "official_code": "A041017",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_108_adult_nontrauma_patch",
+      "official_locator": "A0410 中風症狀",
+      "predicate": {
+        "all": [
+          {
+            "eq": [
+              "stroke_symptoms",
+              true
+            ]
+          },
+          {
+            "gte": [
+              "stroke_onset_hours",
+              6
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "stroke_symptoms",
+        "stroke_onset_hours"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "stroke_symptoms is a clinical grouping without a Backend-verifiable official evidence definition",
+      "note": "官方同列亦包含症狀已緩解；若要支援需新增 grounded resolved_stroke_symptoms evidence。"
+    },
+    {
+      "rule_id": "TTAS-A100813",
+      "official_code": "A100813",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A1008 懷孕問題大於20週",
+      "predicate": {
+        "all": [
+          {
+            "gt": [
+              "pregnancy_weeks",
+              20
+            ]
+          },
+          {
+            "any": [
+              {
+                "lte": [
+                  "contraction_interval_minutes",
+                  2
+                ]
+              },
+              {
+                "eq": [
+                  "ruptured_membranes",
+                  true
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pregnancy_weeks",
+        "contraction_interval_minutes|ruptured_membranes"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A100822",
+      "official_code": "A100822",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A1008 懷孕問題大於20週",
+      "predicate": {
+        "all": [
+          {
+            "gt": [
+              "pregnancy_weeks",
+              20
+            ]
+          },
+          {
+            "gt": [
+              "contraction_interval_minutes",
+              2
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "pregnancy_weeks",
+        "contraction_interval_minutes"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-A130409",
+      "official_code": "A130409",
+      "ttas_level": 2,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A1304 低血糖",
+      "predicate": {
+        "all": [
+          {
+            "lt": [
+              "blood_glucose_mg_dl",
+              60
+            ]
+          },
+          {
+            "eq": [
+              "hypoglycemia_symptoms",
+              true
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "blood_glucose_mg_dl",
+        "hypoglycemia_symptoms"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "hypoglycemia_symptoms is a clinical association without a Backend-verifiable official symptom definition"
+    },
+    {
+      "rule_id": "TTAS-A130413",
+      "official_code": "A130413",
+      "ttas_level": 3,
+      "population": "adult",
+      "source_id": "mohw_ttas_105_adult_nontrauma",
+      "official_locator": "A1304 低血糖",
+      "predicate": {
+        "all": [
+          {
+            "lt": [
+              "blood_glucose_mg_dl",
+              60
+            ]
+          },
+          {
+            "eq": [
+              "hypoglycemia_symptoms",
+              false
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "blood_glucose_mg_dl",
+        "hypoglycemia_symptoms"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "hypoglycemia_symptoms is a clinical association without a Backend-verifiable official symptom definition"
+    },
+    {
+      "rule_id": "TTAS-E010107",
+      "official_code": "E010107",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_environment",
+      "official_locator": "E0101 昆蟲螫傷",
+      "predicate": {
+        "all": [
+          {"eq": ["insect_sting_exposure", true]},
+          {"eq": ["history_severe_allergic_reaction", true]}
+        ]
+      },
+      "required_fields": [
+        "insect_sting_exposure",
+        "history_severe_allergic_reaction"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-E010108",
+      "official_code": "E010108",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_environment",
+      "official_locator": "E0101 昆蟲螫傷",
+      "predicate": {
+        "all": [
+          {"eq": ["insect_sting_exposure", true]},
+          {"eq": ["face_lip_tongue_swelling", true]}
+        ]
+      },
+      "required_fields": [
+        "insect_sting_exposure",
+        "face_lip_tongue_swelling"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-E010112",
+      "official_code": "E010112",
+      "ttas_level": 3,
+      "population": "all",
+      "source_id": "mohw_ttas_105_environment",
+      "official_locator": "E0101 昆蟲螫傷",
+      "predicate": {
+        "all": [
+          {"eq": ["insect_sting_exposure", true]},
+          {"eq": ["generalized_rash_or_blisters", true]}
+        ]
+      },
+      "required_fields": [
+        "insect_sting_exposure",
+        "generalized_rash_or_blisters"
+      ],
+      "implementation_status": "enabled",
+      "note": "僅在昆蟲螫傷情境啟用；需由 context evidence 限制。"
+    },
+    {
+      "rule_id": "TTAS-E010509",
+      "official_code": "E010509",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_environment",
+      "official_locator": "E0105 化學物質暴露",
+      "predicate": {
+        "eq": [
+          "chemical_eye_injury",
+          true
+        ]
+      },
+      "required_fields": [
+        "chemical_eye_injury"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-E010809",
+      "official_code": "E010809",
+      "ttas_level": 3,
+      "population": "all",
+      "source_id": "mohw_ttas_105_environment",
+      "official_locator": "E0108 有毒氣體吸入/暴露",
+      "predicate": {
+        "all": [
+          {
+            "eq": [
+              "toxic_gas_exposure",
+              true
+            ]
+          },
+          {
+            "eq": [
+              "respiratory_distress",
+              "none"
+            ]
+          }
+        ]
+      },
+      "required_fields": [
+        "toxic_gas_exposure",
+        "respiratory_distress"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "the rule depends on AI-classified respiratory_distress=none without an official deterministic derivation"
+    },
+    {
+      "rule_id": "TTAS-T010109",
+      "official_code": "T010109",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T0101 多重鈍傷/穿刺傷",
+      "predicate": {
+        "eq": [
+          "high_risk_injury_mechanism",
+          true
+        ]
+      },
+      "required_fields": [
+        "high_risk_injury_mechanism"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "high-risk mechanism is a clinical classification without a complete package predicate"
+    },
+    {
+      "rule_id": "TTAS-T010110",
+      "official_code": "T010110",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T0101 多重鈍傷/穿刺傷",
+      "predicate": {
+        "eq": [
+          "penetrating_injury_high_region",
+          true
+        ]
+      },
+      "required_fields": [
+        "penetrating_injury_high_region"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "the evidence contract cannot prove the exact multi-trauma/penetration complaint context"
+    },
+    {
+      "rule_id": "TTAS-T010111",
+      "official_code": "T010111",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T0101 多重鈍傷/穿刺傷",
+      "predicate": {
+        "eq": [
+          "gunshot_injury",
+          true
+        ]
+      },
+      "required_fields": [
+        "gunshot_injury"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-T120110",
+      "official_code": "T120110",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T1201 上肢鈍傷",
+      "predicate": {
+        "all": [
+          {"eq": ["open_fracture", true]},
+          {"eq": ["injury_region", "upper_limb"]}
+        ]
+      },
+      "required_fields": [
+        "open_fracture",
+        "injury_region"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-T120116",
+      "official_code": "T120116",
+      "ttas_level": 3,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T1201 上肢鈍傷",
+      "predicate": {
+        "all": [
+          {"eq": ["suspected_fracture_or_dislocation_deformity", true]},
+          {"eq": ["injury_region", "upper_limb"]}
+        ]
+      },
+      "required_fields": [
+        "suspected_fracture_or_dislocation_deformity",
+        "injury_region"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-T120610",
+      "official_code": "T120610",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T1206 下肢鈍傷",
+      "predicate": {
+        "all": [
+          {"eq": ["open_fracture", true]},
+          {"eq": ["injury_region", "lower_limb"]}
+        ]
+      },
+      "required_fields": [
+        "open_fracture",
+        "injury_region"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-T120617",
+      "official_code": "T120617",
+      "ttas_level": 3,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T1206 下肢鈍傷",
+      "predicate": {
+        "all": [
+          {"eq": ["suspected_fracture_or_dislocation_deformity", true]},
+          {"eq": ["injury_region", "lower_limb"]}
+        ]
+      },
+      "required_fields": [
+        "suspected_fracture_or_dislocation_deformity",
+        "injury_region"
+      ],
+      "implementation_status": "enabled"
+    },
+    {
+      "rule_id": "TTAS-T120207",
+      "official_code": "T120207",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T1202 上肢穿刺傷",
+      "predicate": {
+        "eq": [
+          "penetrating_injury_high_region",
+          true
+        ]
+      },
+      "required_fields": [
+        "penetrating_injury_high_region"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "the package evidence field does not safely establish the exact upper-limb penetration context"
+    },
+    {
+      "rule_id": "TTAS-T120707",
+      "official_code": "T120707",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T1207 下肢穿刺傷",
+      "predicate": {
+        "eq": [
+          "penetrating_injury_high_region",
+          true
+        ]
+      },
+      "required_fields": [
+        "penetrating_injury_high_region"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "the package evidence field does not safely establish the exact lower-limb penetration context"
+    },
+    {
+      "rule_id": "TTAS-T110107",
+      "official_code": "T110107",
+      "ttas_level": 2,
+      "population": "all",
+      "source_id": "mohw_ttas_105_trauma",
+      "official_locator": "T1101 會陰部及生殖器官鈍傷",
+      "predicate": {
+        "eq": [
+          "genital_swelling_deformity",
+          true
+        ]
+      },
+      "required_fields": [
+        "genital_swelling_deformity"
+      ],
+      "implementation_status": "reference_only",
+      "hardening_reason": "T1101 is perineal/genital blunt trauma; swelling or deformity alone does not establish trauma context"
+    }
+  ]
+}

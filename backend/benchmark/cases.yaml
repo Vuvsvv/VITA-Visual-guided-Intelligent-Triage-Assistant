@@ -1,0 +1,155 @@
+# 固定案例 benchmark（2026-10-28 baseline）
+# accept_departments 使用知識庫 department_canonical_mapping.json 的 canonical childDept 名稱。
+# 原始需求的名稱若對不上，已依實際名稱改寫（見 docs/BENCHMARK_BASELINE_20261028.md「科別名稱對照」）。
+# patient_mode:
+#   simulate     模擬病人依 present/absent 回答
+#   always_unknown  每題一律回答「不知道」
+# smoke: true 的案例屬於 --tier smoke 的精簡組（日常檢查用，省 AI 額度）
+
+cases:
+  - id: c01_back_pain_monday
+    opening: 周一開始腰酸背痛
+    present: [大腿根部麻, 有點側彎, 髖關節痛]
+    absent: []
+    accept_departments: [一般骨科, 復健醫學, 神經外科, 神經內科, 疼痛控制科]
+    expect_urgent: false
+
+  - id: c02_back_pain
+    opening: 腰痠背痛
+    present: [大腿根部麻, 有點側彎, 髖關節痛]
+    absent: []
+    accept_departments: [一般骨科, 復健醫學, 神經外科, 神經內科, 疼痛控制科]
+    expect_urgent: false
+
+  - id: c03_dizziness_tinnitus
+    smoke: true
+    opening: 最近常常頭暈
+    present: [耳鳴, 聽力變差]
+    absent: []
+    accept_departments: [耳科, 鼻科, 喉科]
+    expect_urgent: false
+
+  - id: c04_cough_two_weeks
+    smoke: true
+    opening: 咳嗽咳了兩個禮拜
+    present: [有痰, 走路會喘]
+    absent: [發燒, 咳血]
+    accept_departments: [胸腔內科]
+    expect_urgent: false
+
+  - id: c05_finger_joint_pain
+    opening: 手指關節痛
+    present: [關節腫, 早上僵硬很久]
+    absent: []
+    accept_departments: [過敏免疫風濕]
+    expect_urgent: false
+
+  - id: c06_fever_sore_throat
+    opening: 這幾天發燒
+    present: [喉嚨痛, 咳嗽]
+    absent: []
+    accept_departments: [感染科, 一般內科, 耳科, 鼻科, 喉科]
+    expect_urgent: false
+
+  - id: c07_frequent_urination
+    opening: 最近一直跑廁所
+    present: [小便痛, 小便灼熱]
+    absent: [血尿]
+    accept_departments: [泌尿外科, 感染科]
+    expect_urgent: false
+
+  - id: c08_foggy_poor_appetite
+    opening: 頭腦昏沉，吃不太下
+    present: [容易累]
+    absent: []
+    accept_departments: [一般內科, 家庭醫學科(一般門診/戒菸)]
+    expect_urgent: false
+
+  - id: c09_right_knee_pain
+    smoke: true
+    opening: 右膝蓋痛三天
+    present: [走路會痛, 有點腫]
+    absent: []
+    accept_departments: [一般骨科, 復健醫學]
+    expect_urgent: false
+
+  - id: c10_headache_no_fever
+    opening: 沒有發燒但是頭很痛
+    present: [痛了兩三週, 早上比較痛]
+    absent: []
+    accept_departments: [神經內科]
+    expect_urgent: false
+
+  - id: c11_palpitation
+    opening: 最近常常心悸
+    present: [爬樓梯會喘]
+    absent: [胸痛]
+    accept_departments: [心臟內科]
+    expect_urgent: false
+
+  - id: c12_bloating_after_meal
+    opening: 吃完飯胃很脹
+    present: [火燒心, 打嗝]
+    absent: []
+    accept_departments: [胃腸肝膽科, 外傷兼疝氣及肝膽胃腸外科]
+    expect_urgent: false
+
+  - id: c13_itchy_rash
+    opening: 皮膚很癢起紅疹
+    present: [持續一週, 手臂和肚子]
+    absent: []
+    # 知識庫中「癢」只屬家醫科、「皮膚紅疹」只屬過敏免疫風濕，皮膚科沒有這兩個概念。
+    accept_departments: [皮膚科, 家庭醫學科(一般門診/戒菸), 過敏免疫風濕]
+    expect_urgent: false
+
+  - id: c14_red_itchy_eyes
+    opening: 眼睛紅紅的很癢
+    present: [有分泌物]
+    absent: []
+    accept_departments: [眼科]
+    expect_urgent: false
+
+  - id: c15_irregular_menses
+    opening: 月經很不規則
+    present: [經痛]
+    absent: []
+    accept_departments: [婦產科]
+    expect_urgent: false
+
+  - id: c16_insomnia_low_mood
+    opening: 最近一直失眠
+    present: [心情低落, 提不起勁]
+    absent: []
+    accept_departments: [精神科]
+    expect_urgent: false
+
+  - id: c17_thirst_polyuria
+    opening: 口很渴一直喝水
+    present: [尿很多, 體重變輕]
+    absent: []
+    accept_departments: [新陳代謝科]
+    expect_urgent: false
+
+  - id: c18_unknown_patient
+    smoke: true
+    opening: 我不太舒服
+    patient_mode: always_unknown
+    present: []
+    absent: []
+    accept_departments: [家庭醫學科(一般門診/戒菸)]
+    expect_urgent: false
+
+  - id: c19_urgent_chest_pain
+    smoke: true
+    opening: 突然胸口很痛
+    present: [冒冷汗, 喘不過氣]
+    absent: []
+    accept_departments: []
+    expect_urgent: true
+
+  - id: c20_urgent_stroke_signs
+    opening: 突然右邊手腳沒力
+    present: [講話不清楚]
+    absent: []
+    accept_departments: []
+    expect_urgent: true

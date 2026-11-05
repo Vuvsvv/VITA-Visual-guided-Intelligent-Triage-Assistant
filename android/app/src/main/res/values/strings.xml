@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">導底看哪科－智慧看診指南</string>
+    <string name="accessibility_desc">智慧視覺導引服務，透過螢幕提示協助使用者至第三方醫院完成操作。</string>
+</resources>

@@ -1,0 +1,242 @@
+{
+  "mappings": [
+    {
+      "legacy_department_name": "兒童腸胃科",
+      "canonical_dept_id": 1322,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童腸胃科",
+      "mapping_method": "exact_app_name",
+      "official_source_department_labels": [
+        "小兒腸胃科"
+      ],
+      "identity_source_id": "medichain_sql_310_live_20261102",
+      "note": "310 MediChainDB Department 1322（婦幼/兒童腸胃科）於 2026-11-02 查證；臺北榮總症狀頁的「小兒腸胃科」對應此科。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "vghtpe_symptom_infant_diarrhea_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：嬰兒持續性腹瀉、黏液血便（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6747",
+      "retrieved_at": "2026-11-02",
+      "note": "官方頁面明列建議就診科別：家庭醫學科、小兒腸胃科（頁面最後更新 2016-06-07）；依使用者決定只收專科（小兒腸胃科 → 兒童腸胃科），不收家庭醫學科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_child_fever_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：小兒發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6748",
+      "retrieved_at": "2026-11-02",
+      "note": "官方頁面明列建議就診科別：家庭醫學科、一般兒科（頁面最後更新 2016-06-07）；依使用者決定只收專科（一般兒科 → 兒童內科），不收家庭醫學科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_infant_bloating_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：嬰兒腹脹（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6749",
+      "retrieved_at": "2026-11-02",
+      "note": "官方頁面明列建議就診科別：家庭醫學科、小兒腸胃科（頁面最後更新 2016-06-07）；依使用者決定只收專科（小兒腸胃科 → 兒童腸胃科），不收家庭醫學科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_child_constipation_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：小兒便秘（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6750",
+      "retrieved_at": "2026-11-02",
+      "note": "官方頁面明列建議就診科別：家庭醫學科、小兒腸胃科（頁面最後更新 2016-06-07）；依使用者決定只收專科（小兒腸胃科 → 兒童腸胃科），不收家庭醫學科。"
+    }
+  ],
+  "records": [
+    {
+      "department_name": "兒童腸胃科",
+      "official_department_labels": [
+        "小兒腸胃科"
+      ],
+      "concept": "牛奶過敏",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1322,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童腸胃科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_infant_diarrhea_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：嬰兒持續性腹瀉、黏液血便（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6747",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "這樣的小嬰兒可能是患了牛奶過敏症",
+      "fallback_for_vghtpe": false,
+      "notes": "小嬰兒持續性腹瀉、黏液血便頁；建議就診科別首列專科為小兒腸胃科。"
+    },
+    {
+      "department_name": "兒童內科",
+      "official_department_labels": [
+        "兒科",
+        "一般兒科",
+        "兒童內科"
+      ],
+      "concept": "小兒發燒",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1320,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_child_fever_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：小兒發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6748",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "小兒發燒是家長最常碰到問題",
+      "fallback_for_vghtpe": false,
+      "notes": "建議就診科別專科為一般兒科。"
+    },
+    {
+      "department_name": "兒童內科",
+      "official_department_labels": [
+        "兒科",
+        "一般兒科",
+        "兒童內科"
+      ],
+      "concept": "小孩發燒",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1320,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_child_fever_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：小兒發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6748",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "小孩發燒時：如非常不舒服，或體溫＞38.5℃，可先予口服退燒藥",
+      "fallback_for_vghtpe": false,
+      "notes": "同頁原文用語；家長常說「小孩發燒」。"
+    },
+    {
+      "department_name": "兒童內科",
+      "official_department_labels": [
+        "兒科",
+        "一般兒科",
+        "兒童內科"
+      ],
+      "concept": "熱痙攣",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1320,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_child_fever_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：小兒發燒（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6748",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "嬰幼兒（小於５歲）的發燒常會有熱痙攣（抽筋）的併發症",
+      "fallback_for_vghtpe": false,
+      "notes": "小兒發燒頁所列併發症。"
+    },
+    {
+      "department_name": "兒童腸胃科",
+      "official_department_labels": [
+        "小兒腸胃科"
+      ],
+      "concept": "腸絞痛",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1322,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童腸胃科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_infant_bloating_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：嬰兒腹脹（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6749",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "尤其是有腸絞痛的嬰兒，常被注意到有腹脹的情況",
+      "fallback_for_vghtpe": false,
+      "notes": "嬰兒腹脹頁；建議就診科別專科為小兒腸胃科。"
+    },
+    {
+      "department_name": "兒童腸胃科",
+      "official_department_labels": [
+        "小兒腸胃科"
+      ],
+      "concept": "嬰兒哭鬧",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1322,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童腸胃科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_infant_bloating_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：嬰兒腹脹（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6749",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "在嬰兒哭鬧時，尤其是有腸絞痛的嬰兒，常被注意到有腹脹的情況",
+      "fallback_for_vghtpe": false,
+      "notes": "同頁原文用語。"
+    },
+    {
+      "department_name": "兒童腸胃科",
+      "official_department_labels": [
+        "小兒腸胃科"
+      ],
+      "concept": "小兒便秘",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1322,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童腸胃科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_child_constipation_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：小兒便秘（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6750",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "小兒便秘是臨床上常見的疾病",
+      "fallback_for_vghtpe": false,
+      "notes": "建議就診科別專科為小兒腸胃科。"
+    },
+    {
+      "department_name": "兒童腸胃科",
+      "official_department_labels": [
+        "小兒腸胃科"
+      ],
+      "concept": "嬰兒便秘",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1322,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "兒童腸胃科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_child_constipation_20261102",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：小兒便秘（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6750",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-02",
+      "evidence_text": "在治療上，醫師會建議若嬰兒便秘時，可以增加餵食中水分",
+      "fallback_for_vghtpe": false,
+      "notes": "同頁原文用語。"
+    }
+  ]
+}

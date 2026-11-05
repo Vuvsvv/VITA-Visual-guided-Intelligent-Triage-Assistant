@@ -1,0 +1,210 @@
+{
+  "sources": [
+    {
+      "source_id": "vghtpe_ihealth_dysmenorrhea_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜經痛之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/1190",
+      "retrieved_at": "2026-11-03",
+      "note": "婦女保健科衛教，頁面寫明「若您有上述症狀，請至婦產科門診就醫」，所以列為 direct_routing_evidence。最近修訂 2025-11-10。"
+    },
+    {
+      "source_id": "vghtpe_ihealth_uterine_fibroid_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_priority": 2,
+      "source_title": "臺北榮總護理部健康e點通｜子宮肌瘤之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/588",
+      "retrieved_at": "2026-11-03",
+      "note": "婦女保健科衛教，頁面寫明「若您有上述症狀，請至婦產科門診就醫」，所以列為 direct_routing_evidence。最近修訂 2025-11-10。"
+    }
+  ],
+  "records": [
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "經期疼痛",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_dysmenorrhea_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜經痛之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/1190",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "續發性經痛：指過去無經痛病史，因骨盆腔內生殖系統疾病，如子宮肌瘤、子宮內膜異位症與腫瘤等而引起的經期疼痛",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」。"
+    },
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "子宮內膜異位症",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_dysmenorrhea_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜經痛之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/1190",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "續發性經痛：指過去無經痛病史，因骨盆腔內生殖系統疾病，如子宮肌瘤、子宮內膜異位症與腫瘤等而引起的經期疼痛",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」；病名只計分、不出題。"
+    },
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "痛經",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_dysmenorrhea_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜經痛之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/1190",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "如果是骨盆腔疾病而引起的續發性痛經，宜尋求婦產科醫師進一步治療",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」。"
+    },
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "子宮肌瘤",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_uterine_fibroid_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜子宮肌瘤之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/588",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "有上述症狀並不一定是子宮肌瘤，若您有上述症狀，請至婦產科門診就醫",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」；病名只計分、不出題。"
+    },
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "異常陰道出血",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_uterine_fibroid_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜子宮肌瘤之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/588",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "異常陰道出血：是最常見的症狀，通常有月經延長或經血過多情形，當經血過多並伴有血塊者，容易造成貧血、疲倦及無力。",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」。"
+    },
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "月經延長",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_uterine_fibroid_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜子宮肌瘤之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/588",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "異常陰道出血：是最常見的症狀，通常有月經延長或經血過多情形，當經血過多並伴有血塊者，容易造成貧血、疲倦及無力。",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」。"
+    },
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "經血過多",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_uterine_fibroid_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜子宮肌瘤之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/588",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "異常陰道出血：是最常見的症狀，通常有月經延長或經血過多情形，當經血過多並伴有血塊者，容易造成貧血、疲倦及無力。",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」。"
+    },
+    {
+      "department_name": "婦產科",
+      "official_department_labels": [
+        "婦產科",
+        "婦女醫學部"
+      ],
+      "concept": "血塊",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1319,
+      "canonical_parent_dept": "婦幼",
+      "canonical_child_dept": "婦產科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_ihealth_uterine_fibroid_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "patient_education",
+      "source_title": "臺北榮總護理部健康e點通｜子宮肌瘤之照護",
+      "source_url": "https://ihealth.vghtpe.gov.tw/media/588",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "異常陰道出血：是最常見的症狀，通常有月經延長或經血過多情形，當經血過多並伴有血塊者，容易造成貧血、疲倦及無力。",
+      "fallback_for_vghtpe": false,
+      "notes": "頁面寫明「請至婦產科門診就醫」。"
+    }
+  ]
+}

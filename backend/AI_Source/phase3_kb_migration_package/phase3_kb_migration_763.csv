@@ -1,0 +1,764 @@
+﻿legacy_department,legacy_keyword,classification,canonical_concept,canonical_dept_id,canonical_parent_dept,canonical_child_dept,department_mapping_method,official_source_department_labels,supporting_source_ids,production_use,production_eligible,note
+一般內科,發燒,direct_routing_evidence,發燒,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,全身倦怠,direct_routing_evidence,全身倦怠,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,頭痛,direct_routing_evidence,頭痛,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,頭暈,direct_routing_evidence,頭暈,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,心悸,direct_routing_evidence,心悸,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,胸痛,direct_routing_evidence,胸痛,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,咳嗽,direct_routing_evidence,咳嗽,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,呼吸困難,direct_routing_evidence,呼吸困難,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,腹痛,direct_routing_evidence,腹痛,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,體重減輕,direct_routing_evidence,體重減輕,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,食慾不振,direct_routing_evidence,食慾不振,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,噁心,direct_routing_evidence,噁心,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,嘔吐,direct_routing_evidence,嘔吐,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,黃疸,direct_routing_evidence,黃疸,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,排便異常,direct_routing_evidence,排便異常,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,水腫,direct_routing_evidence,水腫,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,頻尿,legacy_unverified,頻尿,1232,內科,一般內科,exact_app_name,一般內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+一般內科,多尿,direct_routing_evidence,多尿,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,下背痛,direct_routing_evidence,下背痛,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,關節痛,direct_routing_evidence,關節痛,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,皮疹,direct_routing_evidence,皮疹,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,焦慮,direct_routing_evidence,焦慮,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+一般內科,失眠,direct_routing_evidence,失眠,1232,內科,一般內科,exact_app_name,一般內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),體重異常增加,legacy_unverified,體重異常增加,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),體重異常減少,direct_routing_evidence,體重異常減少,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),肥胖症,direct_routing_evidence,肥胖症,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),發燒,direct_routing_evidence,發燒,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),易流汗,legacy_unverified,易流汗,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),夜汗,legacy_unverified,夜汗,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),口渴喝水多,legacy_unverified,口渴喝水多,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),怕冷,legacy_unverified,怕冷,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),怕熱,legacy_unverified,怕熱,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),蒼白貧血,legacy_unverified,蒼白貧血,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),出血不止,legacy_unverified,出血不止,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),疹子,legacy_synonym,皮膚疹,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+家庭醫學科(一般門診/戒菸),水痘,legacy_unverified,水痘,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),皮下淤青,legacy_unverified,皮下淤青,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),手腳會麻,direct_routing_evidence,手腳會麻,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),手抖,legacy_unverified,手抖,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),手腳冰冷,legacy_unverified,手腳冰冷,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),走路不穩,legacy_unverified,走路不穩,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),頭痛,direct_routing_evidence,頭痛,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),頭暈,direct_routing_evidence,頭暈,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),臉腫,legacy_unverified,臉腫,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),月亮臉,legacy_unverified,月亮臉,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),癢,direct_routing_evidence,癢,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),打噴嚏,legacy_unverified,打噴嚏,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),流鼻水,direct_routing_evidence,流鼻水,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),流鼻涕,legacy_synonym,流鼻水,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+家庭醫學科(一般門診/戒菸),鼻水倒流,legacy_unverified,鼻水倒流,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),鼻塞,direct_routing_evidence,鼻塞,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),鼻不通,legacy_synonym,鼻塞,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+家庭醫學科(一般門診/戒菸),鼻出血,legacy_unverified,鼻出血,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),後頸疼痛,legacy_unverified,後頸疼痛,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),頸僵硬,legacy_unverified,頸僵硬,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),腫瘤,legacy_unverified,腫瘤,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),結節,legacy_unverified,結節,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+家庭醫學科(一般門診/戒菸),咳嗽,direct_routing_evidence,咳嗽,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),咽喉痛,direct_routing_evidence,咽喉痛,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),貪食,direct_routing_evidence,貪食,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+家庭醫學科(一般門診/戒菸),厭食,direct_routing_evidence,厭食,1233,內科,家庭醫學科(一般門診/戒菸),exact_app_name,家庭醫學科 | 家庭醫學科(含門診戒菸服務),vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+心臟內科,胸悶,direct_routing_evidence,胸悶,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,胸痛,direct_routing_evidence,胸痛,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,呼吸困難,direct_routing_evidence,呼吸困難,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,暈眩,direct_routing_evidence,暈眩,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,咳血,direct_routing_evidence,咳血,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,心悸,direct_routing_evidence,心悸,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,發紺,direct_routing_evidence,發紺,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,下肢水腫,direct_routing_evidence,下肢水腫,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,咳嗽,direct_routing_evidence,咳嗽,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,夜間陣發性呼吸困難,direct_routing_evidence,夜間陣發性呼吸困難,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,低血壓,direct_routing_evidence,低血壓,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,昏倒,direct_routing_evidence,昏倒,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,頭暈,direct_routing_evidence,頭暈,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,頭痛,direct_routing_evidence,頭痛,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,高血壓,direct_routing_evidence,高血壓,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,心律不整,direct_routing_evidence,心律不整,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+心臟內科,冠狀動脈疾病,direct_routing_evidence,冠狀動脈疾病,1241,內科,心臟內科,exact_app_name,心臟科 | 心臟內科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,發燒,direct_routing_evidence,發燒,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,小便燒痛灼熱,legacy_synonym,小便疼痛,1234,內科,感染科,exact_app_name,感染科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+感染科,頻尿,direct_routing_evidence,頻尿,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,尿道分泌物,legacy_unverified,尿道分泌物,1234,內科,感染科,exact_app_name,感染科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+感染科,寒顫,direct_routing_evidence,寒顫,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,咳嗽,direct_routing_evidence,咳嗽,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,皮膚紅腫,direct_routing_evidence,皮膚紅腫,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,小便疼痛,direct_routing_evidence,小便疼痛,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,愛滋病,direct_routing_evidence,愛滋病,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,梅毒,direct_routing_evidence,梅毒,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,腹瀉,direct_routing_evidence,腹瀉,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+感染科,喉嚨痛,direct_routing_evidence,喉嚨痛,1234,內科,感染科,exact_app_name,感染科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,體重異常增加,legacy_unverified,體重異常增加,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,體重異常減少,legacy_synonym,體重減輕,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+新陳代謝科,肥胖症,legacy_synonym,肥胖,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+新陳代謝科,易流汗,legacy_unverified,易流汗,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,夜汗,legacy_unverified,夜汗,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,口渴喝水多,legacy_synonym,多喝,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+新陳代謝科,怕冷,legacy_synonym,甲狀腺症狀,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+新陳代謝科,怕熱,legacy_synonym,甲狀腺症狀,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+新陳代謝科,蒼白貧血,legacy_unverified,蒼白貧血,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,出血不止,legacy_unverified,出血不止,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,蟻走感,legacy_unverified,蟻走感,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,麻木感,legacy_unverified,麻木感,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,關節腫,legacy_unverified,關節腫,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,關節痛,legacy_unverified,關節痛,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,手腳會麻,legacy_unverified,手腳會麻,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,手抖,direct_routing_evidence,手抖,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,臉腫,legacy_unverified,臉腫,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,月亮臉,legacy_unverified,月亮臉,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,眼球突出,legacy_unverified,眼球突出,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,腫瘤,legacy_unverified,腫瘤,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,結節,legacy_unverified,結節,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,大脖子,legacy_synonym,脖子腫大,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+新陳代謝科,口渴,legacy_unverified,口渴,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,口乾,legacy_unverified,口乾,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+新陳代謝科,心悸,direct_routing_evidence,心悸,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,脖子腫大,direct_routing_evidence,脖子腫大,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,體重減輕,direct_routing_evidence,體重減輕,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,肥胖,direct_routing_evidence,肥胖,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,骨質疏鬆,direct_routing_evidence,骨質疏鬆,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,多毛症,direct_routing_evidence,多毛症,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,月經異常,direct_routing_evidence,月經異常,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,血壓高,direct_routing_evidence,血壓高,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,多喝,direct_routing_evidence,多喝,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,多尿,direct_routing_evidence,多尿,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,生長異常,direct_routing_evidence,生長異常,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+新陳代謝科,溢乳,direct_routing_evidence,溢乳,1237,內科,新陳代謝科,exact_app_name,內分泌新陳代謝科 | 內分泌暨新陳代謝科 | 新陳代謝科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+神經內科,感覺異常,department_specialty_evidence,感覺異常,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,記憶力差,department_specialty_evidence,記憶力差,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_neuro_general_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,肩膀痛舉不起手,legacy_unverified,肩膀痛舉不起手,1274,內科,神經內科,exact_app_name,神經內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+神經內科,肌肉萎縮,department_specialty_evidence,肌肉萎縮,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,肌肉抽筋,direct_routing_evidence,肌肉抽筋,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經內科,腰酸背痛,direct_routing_evidence,腰酸背痛,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經內科,手腳會麻,direct_routing_evidence,手腳會麻,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經內科,手抖,department_specialty_evidence,手抖,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,手腳不聽使喚,department_specialty_evidence,手腳不聽使喚,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,走路不穩,direct_routing_evidence,走路不穩,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經內科,頭痛,direct_routing_evidence,頭痛,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經內科,頭暈,direct_routing_evidence,頭暈,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經內科,眩暈,direct_routing_evidence,眩暈,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經內科,房子會轉,legacy_synonym,眩暈,1274,內科,神經內科,exact_app_name,神經內科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+神經內科,暈厥,department_specialty_evidence,暈厥,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,短暫昏迷,department_specialty_evidence,短暫昏迷,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,意識障礙,department_specialty_evidence,意識障礙,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,意識昏迷,department_specialty_evidence,意識昏迷,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,視力模糊,department_specialty_evidence,視力模糊,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,複視,department_specialty_evidence,複視,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,眼瞼下垂,department_specialty_evidence,眼瞼下垂,1274,內科,神經內科,exact_app_name,神經內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經內科,後頸疼痛,legacy_unverified,後頸疼痛,1274,內科,神經內科,exact_app_name,神經內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+神經內科,頸僵硬,legacy_unverified,頸僵硬,1274,內科,神經內科,exact_app_name,神經內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+胃腸肝膽科,腹痛,direct_routing_evidence,腹痛,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,黃疸,direct_routing_evidence,黃疸,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,嘔吐,direct_routing_evidence,嘔吐,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,胸口灼熱,direct_routing_evidence,胸口灼熱,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,便秘,direct_routing_evidence,便秘,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,體重減輕,direct_routing_evidence,體重減輕,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,腹水,direct_routing_evidence,腹水,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,吞嚥困難,direct_routing_evidence,吞嚥困難,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,吐血,direct_routing_evidence,吐血,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,解黑便,direct_routing_evidence,解黑便,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,解血便,direct_routing_evidence,解血便,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,腹部腫瘤,direct_routing_evidence,腹部腫瘤,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,腹瀉,direct_routing_evidence,腹瀉,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,肝功能異常,direct_routing_evidence,肝功能異常,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,肝癌,direct_routing_evidence,肝癌,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,消化道腫瘤,direct_routing_evidence,消化道腫瘤,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,胃癌,direct_routing_evidence,胃癌,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,大腸癌,direct_routing_evidence,大腸癌,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,胰臟癌,direct_routing_evidence,胰臟癌,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胃腸肝膽科,吞入異物,direct_routing_evidence,吞入異物,1239,內科,胃腸肝膽科,exact_app_name,胃腸肝膽科 | 胃腸科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+胸腔內科,運動出力痛,department_specialty_evidence,運動出力痛,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔內科,胸痛,direct_routing_evidence,胸痛,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+胸腔內科,呼吸急促困難,direct_routing_evidence,呼吸急促困難,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+胸腔內科,夜間陣發性呼吸,department_specialty_evidence,夜間陣發性呼吸,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔內科,端坐呼吸,department_specialty_evidence,端坐呼吸,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔內科,躺下較喘,department_specialty_evidence,躺下較喘,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔內科,咳嗽,direct_routing_evidence,咳嗽,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+胸腔內科,咳血,direct_routing_evidence,咳血,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+胸腔內科,嘯鳴,department_specialty_evidence,嘯鳴,1238,內科,胸腔內科,exact_app_name,胸腔內科 | 胸腔部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+腎臟科,蛋白尿,direct_routing_evidence,蛋白尿,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,血尿,direct_routing_evidence,血尿,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,下肢水腫,direct_routing_evidence,下肢水腫,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,尿量減少,direct_routing_evidence,尿量減少,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,疲倦,direct_routing_evidence,疲倦,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,高血壓,direct_routing_evidence,高血壓,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,浮腫,direct_routing_evidence,浮腫,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,頭暈,direct_routing_evidence,頭暈,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,貧血,direct_routing_evidence,貧血,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腎臟科,噁心嘔吐,direct_routing_evidence,噁心嘔吐,1242,內科,腎臟科,exact_app_name,腎臟科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,疹子,legacy_unverified,疹子,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+過敏免疫風濕,水痘,legacy_unverified,水痘,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+過敏免疫風濕,皮下淤青,legacy_unverified,皮下淤青,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+過敏免疫風濕,掉頭髮,department_specialty_evidence,掉頭髮,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+過敏免疫風濕,關節腫,direct_routing_evidence,關節腫,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,關節痛,direct_routing_evidence,關節痛,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,晨起關節僵硬,department_specialty_evidence,晨起關節僵硬,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+過敏免疫風濕,肩膀痛舉不起手,department_specialty_evidence,肩膀痛舉不起手,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+過敏免疫風濕,髖關節疼痛,department_specialty_evidence,髖關節疼痛,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+過敏免疫風濕,膝關節疼痛,department_specialty_evidence,膝關節疼痛,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+過敏免疫風濕,肌肉抽筋,legacy_unverified,肌肉抽筋,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+過敏免疫風濕,手腳冰冷,legacy_unverified,手腳冰冷,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+過敏免疫風濕,頭髮異狀,legacy_unverified,頭髮異狀,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+過敏免疫風濕,口渴,legacy_unverified,口渴,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+過敏免疫風濕,口乾,direct_routing_evidence,口乾,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,皮膚紅疹,direct_routing_evidence,皮膚紅疹,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,發燒,direct_routing_evidence,發燒,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,下背痛,direct_routing_evidence,下背痛,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,晨間僵硬,direct_routing_evidence,晨間僵硬,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,口腔潰瘍,direct_routing_evidence,口腔潰瘍,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,光敏感,direct_routing_evidence,光敏感,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+過敏免疫風濕,呼喘,department_specialty_evidence,呼喘,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+過敏免疫風濕,眼乾,direct_routing_evidence,眼乾,1255,內科,過敏免疫風濕,exact_app_name,過敏免疫風濕科 | 過敏免疫風濕,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,不明原因發燒,department_specialty_evidence,不明原因發燒,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,盜汗,department_specialty_evidence,盜汗,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,體重減輕,department_specialty_evidence,體重減輕,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,貧血症狀,department_specialty_evidence,貧血症狀,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,頭暈,department_specialty_evidence,頭暈,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,疲倦,department_specialty_evidence,疲倦,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,臉色蒼白,department_specialty_evidence,臉色蒼白,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,容易出血或瘀青,department_specialty_evidence,容易出血或瘀青,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,容易出血,department_specialty_evidence,容易出血,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,瘀青,department_specialty_evidence,瘀青,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,反覆感染,department_specialty_evidence,反覆感染,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,貧血,direct_routing_evidence,貧血,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,淋巴結腫大,department_specialty_evidence,淋巴結腫大,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,骨頭疼痛,department_specialty_evidence,骨頭疼痛,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,血球數目異常,department_specialty_evidence,血球數目異常,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+血液腫瘤科,紫斑症,direct_routing_evidence,紫斑症,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,血液檢查異常,direct_routing_evidence,血液檢查異常,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,凝血功能異常,direct_routing_evidence,凝血功能異常,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,身體不明原因腫塊,direct_routing_evidence,身體不明原因腫塊,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,白血病,direct_routing_evidence,白血病,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,淋巴癌,direct_routing_evidence,淋巴癌,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,造血幹細胞移植諮詢,direct_routing_evidence,造血幹細胞移植諮詢,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,各種頭頸腫瘤,direct_routing_evidence,各種頭頸腫瘤,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,腸胃道腫瘤,direct_routing_evidence,腸胃道腫瘤,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,胰臟癌,direct_routing_evidence,胰臟癌,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,泌尿道腫瘤,direct_routing_evidence,泌尿道腫瘤,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,乳癌,direct_routing_evidence,乳癌,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,惡性肉瘤,direct_routing_evidence,惡性肉瘤,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+血液腫瘤科,呼吸道腫瘤等惡性腫瘤治療,direct_routing_evidence,呼吸道腫瘤等惡性腫瘤治療,1240,內科,血液腫瘤科,exact_app_name,血液腫瘤科 | 血液科,vghtpe_im_department_reference_2022,routing_primary,True,Official symptom-to-department guidance
+腫瘤內科,體重異常增加,legacy_unverified,體重異常增加,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,脫水,legacy_unverified,脫水,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,不明原因發燒,legacy_unverified,不明原因發燒,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,體重異常減少,legacy_unverified,體重異常減少,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,發燒,legacy_unverified,發燒,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,易流汗,legacy_unverified,易流汗,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,夜汗,legacy_unverified,夜汗,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,口渴喝水多,legacy_unverified,口渴喝水多,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,異常怕冷或怕熱,legacy_unverified,異常怕冷或怕熱,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,蒼白貧血,legacy_unverified,蒼白貧血,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,出血不止,legacy_unverified,出血不止,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,盜汗,legacy_unverified,盜汗,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,體重減輕,legacy_unverified,體重減輕,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+腫瘤內科,淋巴結腫大,department_specialty_evidence,淋巴結腫大,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+腫瘤內科,骨頭疼痛,department_specialty_evidence,骨頭疼痛,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+腫瘤內科,血球數目異常,department_specialty_evidence,血球數目異常,1287,內科,腫瘤內科,exact_app_name,腫瘤醫學部 | 腫瘤內科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+一般外科,皮下腫塊,direct_routing_evidence,皮下腫塊,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+一般外科,乳房疼痛,department_specialty_evidence,乳房疼痛,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+一般外科,乳房腫瘤,department_specialty_evidence,乳房腫瘤,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+一般外科,硬塊,department_specialty_evidence,硬塊,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+一般外科,乳房分泌物,department_specialty_evidence,乳房分泌物,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+一般外科,上腹痛,direct_routing_evidence,上腹痛,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+一般外科,下腹痛,direct_routing_evidence,下腹痛,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+一般外科,腹部腫瘤,department_specialty_evidence,腹部腫瘤,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+一般外科,疝氣,direct_routing_evidence,疝氣,1290,外科系,一般外科,exact_app_name,一般外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+直腸外科,下腹痛,direct_routing_evidence,下腹痛,1245,外科系,直腸外科,exact_app_name,大腸直腸外科 | 直腸外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+直腸外科,吐血便血,department_specialty_evidence,吐血便血,1245,外科系,直腸外科,exact_app_name,大腸直腸外科 | 直腸外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+直腸外科,黑便,direct_routing_evidence,黑便,1245,外科系,直腸外科,exact_app_name,大腸直腸外科 | 直腸外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+心臟外科,下肢水腫,direct_routing_evidence,下肢水腫,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+心臟外科,手腳冰冷,department_specialty_evidence,手腳冰冷,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,下肢麻木,department_specialty_evidence,下肢麻木,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,下肢酸痛,direct_routing_evidence,下肢酸痛,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+心臟外科,單腳水腫,department_specialty_evidence,單腳水腫,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,肢體酸痛,department_specialty_evidence,肢體酸痛,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,間歇性跛行,department_specialty_evidence,間歇性跛行,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,無法走路走很遠,department_specialty_evidence,無法走路走很遠,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,手指腳趾發紫,department_specialty_evidence,手指腳趾發紫,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,下肢皮膚發黑出血,department_specialty_evidence,下肢皮膚發黑出血,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,下肢靜脈曲張,direct_routing_evidence,下肢靜脈曲張,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+心臟外科,上肢腫脹,department_specialty_evidence,上肢腫脹,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,急性末梢趾頭乾性壞死或濕性有傷口,department_specialty_evidence,急性末梢趾頭乾性壞死或濕性有傷口,1285,外科系,心臟外科,exact_app_name,心臟外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+心臟外科,冒冷汗,legacy_unverified,冒冷汗,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,頭暈,legacy_unverified,頭暈,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,發燒,legacy_unverified,發燒,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,咳嗽,legacy_unverified,咳嗽,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,心悸,legacy_unverified,心悸,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,胸痛,legacy_unverified,胸痛,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,呼吸急促困難,legacy_unverified,呼吸急促困難,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,胸悶,legacy_unverified,胸悶,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,呼吸喘,legacy_unverified,呼吸喘,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,胸部緊緊被壓迫,legacy_unverified,胸部緊緊被壓迫,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,夜間陣發性呼吸困難,legacy_unverified,夜間陣發性呼吸困難,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,躺不平,legacy_unverified,躺不平,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,需要墊枕頭才能睡覺,legacy_unverified,需要墊枕頭才能睡覺,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,咳嗽血痰,legacy_unverified,咳嗽血痰,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,一般腹痛,legacy_unverified,一般腹痛,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+心臟外科,胃不適感,legacy_unverified,胃不適感,1285,外科系,心臟外科,exact_app_name,心臟外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+胸腔外科,複視,legacy_unverified,複視,1309,外科系,胸腔外科,exact_app_name,胸腔外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+胸腔外科,腫瘤,department_specialty_evidence,腫瘤,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔外科,結節,department_specialty_evidence,結節,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔外科,吞嚥困難,department_specialty_evidence,吞嚥困難,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔外科,胸痛,direct_routing_evidence,胸痛,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+胸腔外科,呼吸急促困難,department_specialty_evidence,呼吸急促困難,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔外科,咳嗽,department_specialty_evidence,咳嗽,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔外科,咳血,direct_routing_evidence,咳血,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+胸腔外科,心窩灼熱,department_specialty_evidence,心窩灼熱,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔外科,嘔酸水,department_specialty_evidence,嘔酸水,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+胸腔外科,腹部腫瘤,department_specialty_evidence,腹部腫瘤,1309,外科系,胸腔外科,exact_app_name,胸腔外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+外傷兼疝氣及肝膽胃腸外科,疝氣,direct_routing_evidence,疝氣,1310,外科系,外傷兼疝氣及肝膽胃腸外科,exact_app_name,外傷兼疝氣及肝膽胃腸外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+骨科,關節腫,department_specialty_evidence,關節腫,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+骨科,關節痛,direct_routing_evidence,關節痛,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+骨科,晨起關節僵硬,department_specialty_evidence,晨起關節僵硬,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+骨科,肩膀痛舉不起手,direct_routing_evidence,肩膀痛舉不起手,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+骨科,髖關節疼痛,direct_routing_evidence,髖關節疼痛,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+骨科,膝關節疼痛,direct_routing_evidence,膝關節疼痛,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+骨科,肌肉萎縮,department_specialty_evidence,肌肉萎縮,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+骨科,肌肉抽筋,department_specialty_evidence,肌肉抽筋,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+骨科,腰酸背痛,direct_routing_evidence,腰酸背痛,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+骨科,下肢水腫,department_specialty_evidence,下肢水腫,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+骨科,手腳會麻,department_specialty_evidence,手腳會麻,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+骨科,牙關節疼,legacy_unverified,牙關節疼,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+骨科,張嘴會痛,legacy_unverified,張嘴會痛,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+骨科,脊柱側彎,direct_routing_evidence,脊柱側彎,1298,外科系,一般骨科,app_existing_alias,骨科 | 骨科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經外科,肩膀痛舉不起手,department_specialty_evidence,肩膀痛舉不起手,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經外科,肌肉萎縮,department_specialty_evidence,肌肉萎縮,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經外科,肌肉抽筋,direct_routing_evidence,肌肉抽筋,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經外科,腰酸背痛,direct_routing_evidence,腰酸背痛,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經外科,手腳會麻,department_specialty_evidence,手腳會麻,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經外科,頭痛,department_specialty_evidence,頭痛,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經外科,意識障礙,department_specialty_evidence,意識障礙,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經外科,意識昏迷,department_specialty_evidence,意識昏迷,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+神經外科,後頸疼痛,direct_routing_evidence,後頸疼痛,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經外科,頸僵硬,direct_routing_evidence,頸僵硬,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+神經外科,脊柱側彎,department_specialty_evidence,脊柱側彎,1244,外科系,神經外科,exact_app_name,神經外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,腰酸背痛,department_specialty_evidence,腰酸背痛,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,腹部腫瘤,department_specialty_evidence,腹部腫瘤,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,小便燒痛灼熱,direct_routing_evidence,小便燒痛灼熱,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+泌尿外科,急尿,department_specialty_evidence,急尿,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,忍不住尿,direct_routing_evidence,忍不住尿,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+泌尿外科,夜間多次小便,direct_routing_evidence,夜間多次小便,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+泌尿外科,頻尿,direct_routing_evidence,頻尿,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+泌尿外科,尿色改變,department_specialty_evidence,尿色改變,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,血尿,direct_routing_evidence,血尿,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+泌尿外科,尿道分泌物,department_specialty_evidence,尿道分泌物,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,陰囊腫,department_specialty_evidence,陰囊腫,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,性功能障礙,department_specialty_evidence,性功能障礙,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,睪丸疼痛,department_specialty_evidence,睪丸疼痛,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+泌尿外科,性慾減少,department_specialty_evidence,性慾減少,1314,外科系,泌尿外科,exact_app_name,泌尿科 | 泌尿部 | 泌尿外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,掉頭髮,department_specialty_evidence,掉頭髮,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,皮下腫塊,department_specialty_evidence,皮下腫塊,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,皺紋,department_specialty_evidence,皺紋,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,疤痕攣縮,department_specialty_evidence,疤痕攣縮,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,疤痕美容,department_specialty_evidence,疤痕美容,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,蟹足腫,department_specialty_evidence,蟹足腫,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,皮膚癌,department_specialty_evidence,皮膚癌,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,皮膚赤青,legacy_unverified,皮膚赤青,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+整形外科,色素斑,department_specialty_evidence,色素斑,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,手腳會麻,legacy_unverified,手腳會麻,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+整形外科,淋巴水腫,department_specialty_evidence,淋巴水腫,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,軟組織腫瘤,department_specialty_evidence,軟組織腫瘤,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,肢體肥胖,legacy_unverified,肢體肥胖,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+整形外科,腋下狐臭,direct_routing_evidence,腋下狐臭,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+整形外科,蘿蔔腿,legacy_unverified,蘿蔔腿,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+整形外科,頭髮異狀,legacy_unverified,頭髮異狀,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+整形外科,臉部皮膚鬆弛,department_specialty_evidence,臉部皮膚鬆弛,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,臉部皺紋,department_specialty_evidence,臉部皺紋,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,臉部斑點,department_specialty_evidence,臉部斑點,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,痘疤,department_specialty_evidence,痘疤,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,短小下巴,department_specialty_evidence,短小下巴,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,國字臉,department_specialty_evidence,國字臉,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,方臉,department_specialty_evidence,方臉,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,眼瞼下垂,department_specialty_evidence,眼瞼下垂,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,眼袋,department_specialty_evidence,眼袋,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,單眼皮,department_specialty_evidence,單眼皮,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,畸形,department_specialty_evidence,畸形,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,不對稱,department_specialty_evidence,不對稱,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,疤痕增生,department_specialty_evidence,疤痕增生,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,塌鼻,department_specialty_evidence,塌鼻,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,朝天鼻,department_specialty_evidence,朝天鼻,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,鼻骨斷裂,department_specialty_evidence,鼻骨斷裂,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,斜頸,department_specialty_evidence,斜頸,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,蹼狀頸,legacy_unverified,蹼狀頸,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+整形外科,兔唇,department_specialty_evidence,兔唇,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,顎裂,department_specialty_evidence,顎裂,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,腮腺腫瘤,department_specialty_evidence,腮腺腫瘤,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,豬頭肥,legacy_unverified,豬頭肥,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+整形外科,乳房切除後重建,department_specialty_evidence,乳房切除後重建,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,乳房過大,department_specialty_evidence,乳房過大,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,乳房過小,department_specialty_evidence,乳房過小,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,乳頭凹陷,department_specialty_evidence,乳頭凹陷,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,乳頭過長,department_specialty_evidence,乳頭過長,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+整形外科,腹部突出,department_specialty_evidence,腹部突出,1294,外科系,整形外科,exact_app_name,整形外科 | 重建整形外科,vghtpe_plastic_services_2025,routing_supporting,True,Official department/service/specialty page supports this concept
+眼科,頭痛,legacy_unverified,頭痛,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+眼科,視力模糊,direct_routing_evidence,視力模糊,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+眼科,複視,department_specialty_evidence,複視,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+眼科,眼睛痛,direct_routing_evidence,眼睛痛,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+眼科,眼周圍痛,legacy_synonym,眼睛痛,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+眼科,眼睛癢,direct_routing_evidence,眼睛癢,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+眼科,眼分泌物,department_specialty_evidence,眼分泌物,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+眼科,眼瞼水腫,direct_routing_evidence,眼瞼水腫,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+眼科,眼瞼下垂,department_specialty_evidence,眼瞼下垂,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+眼科,眼球突出,direct_routing_evidence,眼球突出,1329,五官科,眼科,exact_app_name,眼科 | 眼科部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+牙科,腫瘤,department_specialty_evidence,腫瘤,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+牙科,結節,department_specialty_evidence,結節,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+牙科,潰瘍破皮,legacy_unverified,潰瘍破皮,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+牙科,口腔出血,legacy_unverified,口腔出血,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+牙科,咀嚼困難,legacy_unverified,咀嚼困難,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+牙科,牙齦出血,direct_routing_evidence,牙齦出血,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+牙科,牙痛,direct_routing_evidence,牙痛,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+牙科,咬合不良,department_specialty_evidence,咬合不良,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+牙科,張口受限,legacy_unverified,張口受限,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+牙科,牙關節疼,department_specialty_evidence,牙關節疼,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+牙科,張嘴會痛,department_specialty_evidence,張嘴會痛,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+牙科,蛀牙,direct_routing_evidence,蛀牙,1248,五官科,牙科,exact_app_name,牙科 | 一般牙科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+口腔顎面外科,腮腺腫瘤,department_specialty_evidence,腮腺腫瘤,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+口腔顎面外科,豬頭肥,department_specialty_evidence,豬頭肥,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+口腔顎面外科,顏面骨折重建,department_specialty_evidence,顏面骨折重建,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+口腔顎面外科,潰瘍破皮,direct_routing_evidence,潰瘍破皮,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+口腔顎面外科,口腔出血,direct_routing_evidence,口腔出血,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+口腔顎面外科,咀嚼困難,direct_routing_evidence,咀嚼困難,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+口腔顎面外科,張口受限,direct_routing_evidence,張口受限,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+口腔顎面外科,牙關節疼,department_specialty_evidence,牙關節疼,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+口腔顎面外科,張嘴會痛,department_specialty_evidence,張嘴會痛,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+口腔顎面外科,兔唇,department_specialty_evidence,兔唇,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+口腔顎面外科,顎裂,department_specialty_evidence,顎裂,1250,五官科,口腔顎面外科,exact_app_name,口腔顎面外科,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+耳科,頭暈,direct_routing_evidence,頭暈,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,眩暈,direct_routing_evidence,眩暈,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,房子會轉,legacy_synonym,眩暈,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+耳科,耳痛,direct_routing_evidence,耳痛,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,耳腫,direct_routing_evidence,耳腫,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,耳分泌物,direct_routing_evidence,耳分泌物,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,耳出血,department_specialty_evidence,耳出血,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+耳科,重聽,direct_routing_evidence,重聽,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,耳聾,direct_routing_evidence,耳聾,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,耳鳴,direct_routing_evidence,耳鳴,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies ear sub-specialty
+耳科,耳垢,department_specialty_evidence,耳垢,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+耳科,耳前皮膚感覺異常,department_specialty_evidence,耳前皮膚感覺異常,1333,五官科,耳科,exact_app_name,耳鼻喉科 | 耳科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+鼻科,癢,legacy_unverified,癢,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+鼻科,打噴嚏,department_specialty_evidence,打噴嚏,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+鼻科,流鼻水,direct_routing_evidence,流鼻水,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies nose sub-specialty
+鼻科,流鼻涕,legacy_synonym,流鼻水,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+鼻科,鼻水倒流,department_specialty_evidence,鼻水倒流,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+鼻科,鼻塞,direct_routing_evidence,鼻塞,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies nose sub-specialty
+鼻科,鼻不通,legacy_synonym,鼻塞,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+鼻科,鼻出血,department_specialty_evidence,鼻出血,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+鼻科,塌鼻,legacy_unverified,塌鼻,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+鼻科,朝天鼻,legacy_unverified,朝天鼻,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+鼻科,鼻骨斷裂,legacy_unverified,鼻骨斷裂,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+鼻科,嗅覺減低,direct_routing_evidence,嗅覺減低,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies nose sub-specialty
+鼻科,嗅覺喪失,direct_routing_evidence,嗅覺喪失,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT; Taichung official service scope verifies nose sub-specialty
+鼻科,睡眠呼吸中止,legacy_unverified,睡眠呼吸中止,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+鼻科,鼻腔異臭,department_specialty_evidence,鼻腔異臭,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+鼻科,黃鼻涕,department_specialty_evidence,黃鼻涕,1334,五官科,鼻科,exact_app_name,耳鼻喉科 | 鼻科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+喉科,腫瘤,department_specialty_evidence,腫瘤,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+喉科,結節,department_specialty_evidence,結節,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+喉科,咳嗽,department_specialty_evidence,咳嗽,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+喉科,潰瘍破皮,department_specialty_evidence,潰瘍破皮,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+喉科,口腔出血,department_specialty_evidence,口腔出血,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+喉科,咀嚼困難,department_specialty_evidence,咀嚼困難,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtc_ent_department_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+喉科,吞嚥困難,direct_routing_evidence,吞嚥困難,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT/throat; Taichung official service scope verifies throat/head-neck sub-specialty
+喉科,聲音沙啞,direct_routing_evidence,聲音沙啞,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT/throat; Taichung official service scope verifies throat/head-neck sub-specialty
+喉科,咽喉痛,direct_routing_evidence,咽喉痛,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT/throat; Taichung official service scope verifies throat/head-neck sub-specialty
+喉科,睡眠呼吸中止,direct_routing_evidence,睡眠呼吸中止,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT/throat; Taichung official service scope verifies throat/head-neck sub-specialty
+喉科,打鼾,direct_routing_evidence,打鼾,1335,五官科,喉科,exact_app_name,耳鼻喉科 | 喉科 | 喉頭頸科,vghtpe_patient_guide_2026 | vghtc_ent_department_2026,routing_primary,True,Taipei routes to ENT/throat; Taichung official service scope verifies throat/head-neck sub-specialty
+婦產科,月經,direct_routing_evidence,月經,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,陰道,direct_routing_evidence,陰道,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,懷孕,direct_routing_evidence,懷孕,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,經痛,direct_routing_evidence,經痛,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,分泌物,direct_routing_evidence,分泌物,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,子宮,direct_routing_evidence,子宮,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,卵巢,direct_routing_evidence,卵巢,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,更年期,direct_routing_evidence,更年期,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,白帶,department_specialty_evidence,白帶,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+婦產科,陰道出血,direct_routing_evidence,陰道出血,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,下腹痛,direct_routing_evidence,下腹痛,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,尿失禁,direct_routing_evidence,尿失禁,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+婦產科,生殖器官脫垂,department_specialty_evidence,生殖器官脫垂,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+婦產科,會陰部腫瘤,department_specialty_evidence,會陰部腫瘤,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+婦產科,骨盆腫瘤,department_specialty_evidence,骨盆腫瘤,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+婦產科,質塊,department_specialty_evidence,質塊,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+婦產科,囊腫,department_specialty_evidence,囊腫,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+婦產科,骨盆腔發炎,department_specialty_evidence,骨盆腔發炎,1319,婦幼,婦產科,exact_app_name,婦產科 | 婦女醫學部,vghtpe_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+兒童內科,嬰兒,legacy_unverified,嬰兒,1320,婦幼,兒童內科,exact_app_name,兒科 | 一般兒科 | 兒童內科,,disabled,False,"Age/demographic context, not symptom→department medical evidence; keep out of routing KB."
+兒童內科,幼兒,legacy_unverified,幼兒,1320,婦幼,兒童內科,exact_app_name,兒科 | 一般兒科 | 兒童內科,,disabled,False,"Age/demographic context, not symptom→department medical evidence; keep out of routing KB."
+兒童內科,小孩,legacy_unverified,小孩,1320,婦幼,兒童內科,exact_app_name,兒科 | 一般兒科 | 兒童內科,,disabled,False,"Age/demographic context, not symptom→department medical evidence; keep out of routing KB."
+兒童內科,孩童,legacy_unverified,孩童,1320,婦幼,兒童內科,exact_app_name,兒科 | 一般兒科 | 兒童內科,,disabled,False,"Age/demographic context, not symptom→department medical evidence; keep out of routing KB."
+皮膚科,疹子,legacy_synonym,皮膚疹,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+皮膚科,水痘,legacy_unverified,水痘,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+皮膚科,皮膚紅腫痛,legacy_unverified,皮膚紅腫痛,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+皮膚科,皮下淤青,legacy_unverified,皮下淤青,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+皮膚科,青春痘,department_specialty_evidence,青春痘,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,掉頭髮,direct_routing_evidence,掉頭髮,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+皮膚科,皮下腫塊,legacy_unverified,皮下腫塊,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+皮膚科,頭髮異狀,department_specialty_evidence,頭髮異狀,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,老人斑,department_specialty_evidence,老人斑,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,胎記治療,department_specialty_evidence,胎記治療,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,刺青去除,department_specialty_evidence,刺青去除,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,乾癬,department_specialty_evidence,乾癬,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,酒糟,department_specialty_evidence,酒糟,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,白斑,department_specialty_evidence,白斑,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,皺紋,department_specialty_evidence,皺紋,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,皮膚凹陷,department_specialty_evidence,皮膚凹陷,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,疤痕,department_specialty_evidence,疤痕,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,臉型雕塑,department_specialty_evidence,臉型雕塑,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,皺眉紋,department_specialty_evidence,皺眉紋,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,魚尾紋,department_specialty_evidence,魚尾紋,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,抬頭紋,department_specialty_evidence,抬頭紋,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,體態雕塑,department_specialty_evidence,體態雕塑,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,豐頰,department_specialty_evidence,豐頰,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,拉提,department_specialty_evidence,拉提,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,雄性禿,department_specialty_evidence,雄性禿,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,嵌甲,department_specialty_evidence,嵌甲,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,甲溝炎,department_specialty_evidence,甲溝炎,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_derm_cosmetic_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+皮膚科,多汗,direct_routing_evidence,多汗,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+皮膚科,狐臭,direct_routing_evidence,狐臭,1252,其他科,皮膚科,exact_app_name,皮膚科 | 皮膚部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+精神科,容易緊張,legacy_unverified,容易緊張,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,失眠,direct_routing_evidence,失眠,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+精神科,嗜睡,direct_routing_evidence,嗜睡,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+精神科,記憶力差,legacy_unverified,記憶力差,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,注意力不集中,department_specialty_evidence,注意力不集中,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_adhd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,思考力不足,legacy_unverified,思考力不足,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,強制性重覆動作,legacy_unverified,強制性重覆動作,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,幻想,legacy_unverified,幻想,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,傻笑,legacy_unverified,傻笑,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,胡言亂語,legacy_unverified,胡言亂語,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,手腳不聽使喚,legacy_unverified,手腳不聽使喚,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,頭痛,legacy_unverified,頭痛,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,頭暈,legacy_unverified,頭暈,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,口渴,legacy_unverified,口渴,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,口乾,legacy_unverified,口乾,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,貪食,legacy_unverified,貪食,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,厭食,legacy_unverified,厭食,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,情緒低落,department_specialty_evidence,情緒低落,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,對事物失去興趣,department_specialty_evidence,對事物失去興趣,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,疲倦無力,department_specialty_evidence,疲倦無力,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,注意力下降,department_specialty_evidence,注意力下降,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,睡眠改變,department_specialty_evidence,睡眠改變,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,食慾改變,department_specialty_evidence,食慾改變,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,自責,department_specialty_evidence,自責,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,無價值感,department_specialty_evidence,無價值感,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,動作變慢,department_specialty_evidence,動作變慢,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,焦躁,department_specialty_evidence,焦躁,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,自殺意念,department_specialty_evidence,自殺意念,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,注意力差,department_specialty_evidence,注意力差,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,罪惡感,department_specialty_evidence,罪惡感,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,低自尊,legacy_unverified,低自尊,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,低能量,department_specialty_evidence,低能量,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,死亡想法,department_specialty_evidence,死亡想法,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,自殺想法,department_specialty_evidence,自殺想法,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_depression_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,精力明顯增加,department_specialty_evidence,精力明顯增加,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,話變多,department_specialty_evidence,話變多,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,思緒奔逸,department_specialty_evidence,思緒奔逸,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,自信膨脹,department_specialty_evidence,自信膨脹,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,睡眠需求減少,department_specialty_evidence,睡眠需求減少,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,衝動消費,department_specialty_evidence,衝動消費,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,冒險行為,department_specialty_evidence,冒險行為,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,過度擔心,legacy_unverified,過度擔心,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,緊張不安,legacy_unverified,緊張不安,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,坐立難安,legacy_unverified,坐立難安,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,肌肉緊繃,legacy_unverified,肌肉緊繃,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,睡眠困難,legacy_unverified,睡眠困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,心悸,legacy_unverified,心悸,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,胸悶,legacy_unverified,胸悶,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,呼吸急促,legacy_unverified,呼吸急促,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,冒汗,legacy_unverified,冒汗,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,害怕失控,legacy_unverified,害怕失控,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,害怕死亡,legacy_unverified,害怕死亡,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,逃避特定場所,legacy_unverified,逃避特定場所,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,逃避社交情境,legacy_unverified,逃避社交情境,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,焦慮持續,legacy_unverified,焦慮持續,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,廣泛焦慮,legacy_unverified,廣泛焦慮,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,影響生活功能,legacy_unverified,影響生活功能,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,反覆擔心身體疾病,legacy_unverified,反覆擔心身體疾病,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,頻繁就醫,legacy_unverified,頻繁就醫,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,頻繁檢查,legacy_unverified,頻繁檢查,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,對身體感覺高度警覺,legacy_unverified,對身體感覺高度警覺,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,肢體無力,legacy_unverified,肢體無力,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,麻木,legacy_unverified,麻木,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,抽搐,legacy_unverified,抽搐,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,失聲,legacy_unverified,失聲,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,怕髒,legacy_unverified,怕髒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,怕出錯,legacy_unverified,怕出錯,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,怕傷害他人,legacy_unverified,怕傷害他人,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,反覆洗手,legacy_unverified,反覆洗手,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,檢查,legacy_unverified,檢查,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,排列,legacy_unverified,排列,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,確認,legacy_unverified,確認,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,計數,legacy_unverified,計數,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,難以停止,legacy_unverified,難以停止,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,反覆想起創傷,department_specialty_evidence,反覆想起創傷,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,惡夢,department_specialty_evidence,惡夢,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,閃回,department_specialty_evidence,閃回,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,避免相關人事物,department_specialty_evidence,避免相關人事物,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,情緒麻木,department_specialty_evidence,情緒麻木,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,易怒,department_specialty_evidence,易怒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,警覺過高,department_specialty_evidence,警覺過高,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,PTSD,department_specialty_evidence,PTSD,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_ptsd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,幻聽,department_specialty_evidence,幻聽,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_psy_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,幻覺,department_specialty_evidence,幻覺,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_psy_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,妄想,department_specialty_evidence,妄想,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_psy_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,被害感,department_specialty_evidence,被害感,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,思考混亂,department_specialty_evidence,思考混亂,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,語無倫次,department_specialty_evidence,語無倫次,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,行為怪異,department_specialty_evidence,行為怪異,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,激躁,legacy_unverified,激躁,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,情感平淡,department_specialty_evidence,情感平淡,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,社交退縮,department_specialty_evidence,社交退縮,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,動機下降,department_specialty_evidence,動機下降,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,生活自理變差,department_specialty_evidence,生活自理變差,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,認知功能受影響,department_specialty_evidence,認知功能受影響,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,持續妄想,department_specialty_evidence,持續妄想,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,行為高度混亂,department_specialty_evidence,行為高度混亂,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,認知困難,department_specialty_evidence,認知困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,思覺失調症,department_specialty_evidence,思覺失調症,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_schizophrenia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,自閉症,department_specialty_evidence,自閉症,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_psy_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,社交互動困難,department_specialty_evidence,社交互動困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_autism_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,溝通困難,department_specialty_evidence,溝通困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_autism_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,興趣侷限,department_specialty_evidence,興趣侷限,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_autism_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,重複行為,department_specialty_evidence,重複行為,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_autism_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,對感覺刺激敏感,department_specialty_evidence,對感覺刺激敏感,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_autism_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,ADHD,legacy_synonym,注意力不足過動症,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+精神科,容易分心,department_specialty_evidence,容易分心,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_adhd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,衝動,department_specialty_evidence,衝動,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_adhd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,坐不住,department_specialty_evidence,坐不住,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_psy_docsearch_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,忘東忘西,department_specialty_evidence,忘東忘西,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_adhd_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,組織能力較弱,legacy_unverified,組織能力較弱,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,過度在意體重,department_specialty_evidence,過度在意體重,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,過度在意身形,department_specialty_evidence,過度在意身形,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,限制飲食,department_specialty_evidence,限制飲食,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,過度運動,legacy_unverified,過度運動,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,暴食,department_specialty_evidence,暴食,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,催吐,department_specialty_evidence,催吐,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,濫用瀉劑,department_specialty_evidence,濫用瀉劑,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,體重明顯下降,department_specialty_evidence,體重明顯下降,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,體重波動,legacy_unverified,體重波動,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,月經異常,legacy_unverified,月經異常,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,電解質失衡,legacy_unverified,電解質失衡,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,身體虛弱,legacy_unverified,身體虛弱,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,異常飲食,department_specialty_evidence,異常飲食,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,對食物高度關注,department_specialty_evidence,對食物高度關注,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,對體重高度關注,department_specialty_evidence,對體重高度關注,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,對體型高度關注,department_specialty_evidence,對體型高度關注,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,飲食疾患,department_specialty_evidence,飲食疾患,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_eating_disorder_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,對物質失去控制,legacy_unverified,對物質失去控制,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,對行為失去控制,legacy_unverified,對行為失去控制,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,明知有害仍持續使用,legacy_unverified,明知有害仍持續使用,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,耐受性增加,legacy_unverified,耐受性增加,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,戒斷症狀,legacy_unverified,戒斷症狀,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,人際衝突,legacy_unverified,人際衝突,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,情緒不穩,legacy_unverified,情緒不穩,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,衝動行為,legacy_unverified,衝動行為,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,危險行為,legacy_unverified,危險行為,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,長期人際困難,legacy_unverified,長期人際困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,情緒起伏劇烈,legacy_unverified,情緒起伏劇烈,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,害怕被拋棄,legacy_unverified,害怕被拋棄,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,人際關係不穩,legacy_unverified,人際關係不穩,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,自傷風險,legacy_unverified,自傷風險,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,過度敏感,legacy_unverified,過度敏感,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,僵化完美主義,legacy_unverified,僵化完美主義,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,缺乏同理,legacy_unverified,缺乏同理,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,自我認同困難,legacy_unverified,自我認同困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,記憶力退化,department_specialty_evidence,記憶力退化,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,判斷力下降,department_specialty_evidence,判斷力下降,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,迷路,legacy_unverified,迷路,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,語言困難,department_specialty_evidence,語言困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,個性改變,department_specialty_evidence,個性改變,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,疑心,legacy_unverified,疑心,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,日夜顛倒,department_specialty_evidence,日夜顛倒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,意識波動,legacy_unverified,意識波動,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,短時間內突然混亂,legacy_unverified,短時間內突然混亂,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,感染,legacy_unverified,感染,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,代謝異常,legacy_unverified,代謝異常,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,藥物,legacy_unverified,藥物,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,住院壓力,legacy_unverified,住院壓力,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,譫妄,legacy_unverified,譫妄,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,入睡困難,legacy_unverified,入睡困難,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,淺眠,department_specialty_evidence,淺眠,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,早醒,department_specialty_evidence,早醒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,白天嗜睡,legacy_unverified,白天嗜睡,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,情緒易怒,department_specialty_evidence,情緒易怒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,夜間行為異常,department_specialty_evidence,夜間行為異常,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,惡夢頻繁,legacy_unverified,惡夢頻繁,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,作息顛倒,department_specialty_evidence,作息顛倒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_dementia_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,長期易怒,legacy_unverified,長期易怒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,暴怒,department_specialty_evidence,暴怒,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,vghtpe_ihealth_bipolar_2026,routing_supporting,True,Official department/service/specialty page supports this concept
+精神科,違抗規範,legacy_unverified,違抗規範,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,攻擊行為,legacy_unverified,攻擊行為,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,逃學,legacy_unverified,逃學,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,破壞物品,legacy_unverified,破壞物品,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,偷竊,legacy_unverified,偷竊,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,說謊,legacy_unverified,說謊,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,退縮,legacy_unverified,退縮,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,拒學,legacy_unverified,拒學,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,身體不適,legacy_synonym,身心不適,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,semantic_normalization_only,True,Semantic-normalization alias only; routing must be supported by the canonical concept official evidence.
+精神科,成績下降,legacy_unverified,成績下降,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+精神科,自傷,legacy_unverified,自傷,1251,其他科,精神科,exact_app_name,精神科 | 精神部 | 精神醫學部,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+失智特別門診,記憶力差,department_specialty_evidence,記憶力差,1340,其他科,失智特別門診,exact_app_name,失智特別門診 | 記憶特別門診,vghtpe_ihealth_dementia_2026 | vghtpe_dementia_clinic_2025,routing_supporting,True,Dementia symptoms plus current official dementia specialty clinic
+復健醫學,關節腫,legacy_unverified,關節腫,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,關節痛,legacy_unverified,關節痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,肩膀痛舉不起手,direct_routing_evidence,肩膀痛舉不起手,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,髖關節疼痛,direct_routing_evidence,髖關節疼痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,膝關節疼痛,direct_routing_evidence,膝關節疼痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,肌肉萎縮,legacy_unverified,肌肉萎縮,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,肌肉抽筋,direct_routing_evidence,肌肉抽筋,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,腰酸背痛,direct_routing_evidence,腰酸背痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,下肢水腫,legacy_unverified,下肢水腫,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,手腳會麻,direct_routing_evidence,手腳會麻,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,走路不穩,legacy_unverified,走路不穩,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,淋巴水腫,legacy_unverified,淋巴水腫,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,頭暈,legacy_unverified,頭暈,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,後頸疼痛,direct_routing_evidence,後頸疼痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,頸僵硬,direct_routing_evidence,頸僵硬,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,斜頸,legacy_unverified,斜頸,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,蹼狀頸,legacy_unverified,蹼狀頸,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,咀嚼困難,legacy_unverified,咀嚼困難,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,張口受限,legacy_unverified,張口受限,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,牙關節疼,legacy_unverified,牙關節疼,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,張嘴會痛,legacy_unverified,張嘴會痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,脊柱側彎,direct_routing_evidence,脊柱側彎,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+復健醫學,運動出力痛,legacy_unverified,運動出力痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+復健醫學,胸痛,legacy_unverified,胸痛,1265,其他科,復健醫學,exact_app_name,復健醫學科 | 復健醫學,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+疼痛控制科,關節腫,legacy_unverified,關節腫,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+疼痛控制科,關節痛,legacy_unverified,關節痛,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+疼痛控制科,肩膀痛舉不起手,direct_routing_evidence,肩膀痛舉不起手,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+疼痛控制科,髖關節疼痛,direct_routing_evidence,髖關節疼痛,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+疼痛控制科,膝關節疼痛,direct_routing_evidence,膝關節疼痛,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+疼痛控制科,腰酸背痛,direct_routing_evidence,腰酸背痛,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+疼痛控制科,手腳會麻,legacy_unverified,手腳會麻,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,,disabled,False,No sufficient official source matched in this migration pass; do not use for production routing.
+疼痛控制科,後頸疼痛,direct_routing_evidence,後頸疼痛,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+疼痛控制科,頸僵硬,direct_routing_evidence,頸僵硬,1345,其他科,疼痛控制科,exact_app_name,疼痛控制科,vghtpe_patient_guide_2026,routing_primary,True,Official symptom-to-department guidance
+醫學美容中心,內視鏡拉皮,department_specialty_evidence,內視鏡拉皮,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,植髮,department_specialty_evidence,植髮,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,隆乳,department_specialty_evidence,隆乳,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,抽脂,department_specialty_evidence,抽脂,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,雙眼皮,department_specialty_evidence,雙眼皮,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,隆鼻,department_specialty_evidence,隆鼻,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,疤痕整修,department_specialty_evidence,疤痕整修,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,眼袋,department_specialty_evidence,眼袋,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,拉皮,department_specialty_evidence,拉皮,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,乳頭重建,department_specialty_evidence,乳頭重建,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,私密部位整形,department_specialty_evidence,私密部位整形,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,飛梭雷射,department_specialty_evidence,飛梭雷射,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,電波除皺,department_specialty_evidence,電波除皺,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,電磁波緊膚,department_specialty_evidence,電磁波緊膚,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,音波緊膚,department_specialty_evidence,音波緊膚,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,銣雅鉻雷射,department_specialty_evidence,銣雅鉻雷射,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,柔膚雷射,department_specialty_evidence,柔膚雷射,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,皮秒雷射,department_specialty_evidence,皮秒雷射,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,鉺雅鉻雷射,department_specialty_evidence,鉺雅鉻雷射,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,二氧化碳雷射,department_specialty_evidence,二氧化碳雷射,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,痘疤凹洞,department_specialty_evidence,痘疤凹洞,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,毛孔粗大,department_specialty_evidence,毛孔粗大,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,除毛,department_specialty_evidence,除毛,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,除痣,department_specialty_evidence,除痣,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,除疤,department_specialty_evidence,除疤,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,磨皮,department_specialty_evidence,磨皮,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,洗眉,department_specialty_evidence,洗眉,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,除刺青,department_specialty_evidence,除刺青,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,脈衝光,department_specialty_evidence,脈衝光,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,染料雷射,department_specialty_evidence,染料雷射,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,肉毒桿菌,department_specialty_evidence,肉毒桿菌,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,玻尿酸,department_specialty_evidence,玻尿酸,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept
+醫學美容中心,微波熱能除汗,department_specialty_evidence,微波熱能除汗,1293,其他科,醫學美容中心,exact_app_name,美容醫學中心,vghtpe_medical_beauty_services_2023,routing_supporting,True,Official department/service/specialty page supports this concept

@@ -1,0 +1,334 @@
+{
+  "sources": [
+    {
+      "source_id": "vghtpe_symptom_headache_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：頭痛（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6701",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：神經內科、家庭醫學科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_dizziness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：頭暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6702",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：神經內科、家庭醫學科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。"
+    },
+    {
+      "source_id": "vghtpe_symptom_vertigo_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：眩暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6703",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：神經內科、家庭醫學科、耳鼻喉科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。耳鼻喉科的眩暈症狀對到既有「耳科」；神經內科原本已有「眩暈」。"
+    },
+    {
+      "source_id": "vghtpe_symptom_numbness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_priority": 1,
+      "source_title": "臺北榮民總醫院｜症狀說明：麻痺（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6729",
+      "retrieved_at": "2026-11-03",
+      "note": "官方頁面明列建議就診科別：家庭醫學科、神經內科、神經外科、神經修復科、心臟血管外科（頁面最後更新 2016-06-07）；依使用者決定只收專科，不收家庭醫學科。神經修復科在 310 尚無對照，暫不收；心臟血管外科對到既有心臟外科，只收周邊血管原因。"
+    }
+  ],
+  "records": [
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "三叉神經痛",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_headache_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：頭痛（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6701",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "例如：三叉神經痛、舌咽神經痛、枕部神經痛、鼻竇性頭痛、耳性頭痛",
+      "fallback_for_vghtpe": false,
+      "notes": "頭痛頁所列神經性頭痛；神經內科原本已有「頭痛」（也涵蓋偏頭痛、緊張性頭痛）。"
+    },
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "頭昏",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_dizziness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：頭暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6702",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "一般來說頭昏主要分為四大類",
+      "fallback_for_vghtpe": false,
+      "notes": "頭暈頁原文用語；神經內科原本已有「頭暈」。"
+    },
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "天旋地轉",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_dizziness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：頭暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6702",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "眩暈，天旋地轉的感覺",
+      "fallback_for_vghtpe": false,
+      "notes": "頭暈頁原文用語；病人常說「天旋地轉」。"
+    },
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "昏厥",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_dizziness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：頭暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6702",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "昏厥，因腦部血流降低所引起的短暫意識喪失",
+      "fallback_for_vghtpe": false,
+      "notes": "頭暈頁原文用語。"
+    },
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "頭重重的",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_dizziness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：頭暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6702",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "例如走路不穩、頭昏眼花、頭重重的、眼前一片黑等等說法",
+      "fallback_for_vghtpe": false,
+      "notes": "頭暈頁所列病人說法。"
+    },
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "眼前一片黑",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_dizziness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：頭暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6702",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "例如走路不穩、頭昏眼花、頭重重的、眼前一片黑等等說法",
+      "fallback_for_vghtpe": false,
+      "notes": "頭暈頁所列病人說法。"
+    },
+    {
+      "department_name": "耳科",
+      "official_department_labels": [
+        "耳鼻喉科",
+        "耳科"
+      ],
+      "concept": "美尼爾氏症",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1333,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "耳科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_vertigo_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：眩暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6703",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "美尼爾氏症又稱內耳淋巴積水或內耳青光眼，會引起眩暈、耳鳴、聽力障礙等症狀",
+      "fallback_for_vghtpe": false,
+      "notes": "官方寫「耳鼻喉科」；耳部症狀對到既有耳科。"
+    },
+    {
+      "department_name": "耳科",
+      "official_department_labels": [
+        "耳鼻喉科",
+        "耳科"
+      ],
+      "concept": "聽力障礙",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1333,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "耳科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_vertigo_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：眩暈（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6703",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "美尼爾氏症又稱內耳淋巴積水或內耳青光眼，會引起眩暈、耳鳴、聽力障礙等症狀",
+      "fallback_for_vghtpe": false,
+      "notes": "官方寫「耳鼻喉科」；耳部症狀對到既有耳科。"
+    },
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "麻痺",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_numbness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：麻痺（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6729",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "麻痺是皮膚的知覺異常所致，特別是觸覺異常",
+      "fallback_for_vghtpe": false,
+      "notes": "麻痺頁主題；建議就診科別含神經內科。"
+    },
+    {
+      "department_name": "神經內科",
+      "official_department_labels": [
+        "神經內科"
+      ],
+      "concept": "麻木",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1274,
+      "canonical_parent_dept": "內科",
+      "canonical_child_dept": "神經內科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_numbness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：麻痺（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6729",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "一般常造成手腳麻木的原因包括糖尿病、周邊血管阻塞症、頸椎或腰椎的病變",
+      "fallback_for_vghtpe": false,
+      "notes": "同頁原文用語。"
+    },
+    {
+      "department_name": "神經外科",
+      "official_department_labels": [
+        "神經外科"
+      ],
+      "concept": "麻痺",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1244,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "神經外科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_numbness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：麻痺（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6729",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "麻痺是皮膚的知覺異常所致，特別是觸覺異常",
+      "fallback_for_vghtpe": false,
+      "notes": "麻痺頁主題；建議就診科別含神經外科。"
+    },
+    {
+      "department_name": "神經外科",
+      "official_department_labels": [
+        "神經外科"
+      ],
+      "concept": "麻木",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1244,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "神經外科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_numbness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：麻痺（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6729",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "一般常造成手腳麻木的原因包括糖尿病、周邊血管阻塞症、頸椎或腰椎的病變",
+      "fallback_for_vghtpe": false,
+      "notes": "同頁原文用語。"
+    },
+    {
+      "department_name": "心臟外科",
+      "official_department_labels": [
+        "心臟外科"
+      ],
+      "concept": "周邊血管阻塞",
+      "evidence_type": "direct_routing_evidence",
+      "canonical_dept_id": 1285,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "心臟外科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_symptom_numbness_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "symptom_department_guidance",
+      "source_title": "臺北榮民總醫院｜症狀說明：麻痺（建議就診科別）",
+      "source_url": "https://www.vghtpe.gov.tw/vghtpe/Fpage.action?fid=6729",
+      "source_priority": 1,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "一般常造成手腳麻木的原因包括糖尿病、周邊血管阻塞症、頸椎或腰椎的病變",
+      "fallback_for_vghtpe": false,
+      "notes": "官方列「心臟血管外科」，對到既有心臟外科（其知識庫概念皆為周邊血管症狀）；只收血管原因，不收一般「麻木」，因臺中榮總症狀查詢的「手腳會麻」不列心臟外科。"
+    }
+  ]
+}

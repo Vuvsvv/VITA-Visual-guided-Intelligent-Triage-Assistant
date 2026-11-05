@@ -1,0 +1,232 @@
+{
+  "sources": [
+    {
+      "source_id": "vghtpe_cs_pneumothorax_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院胸腔外科｜衛教簡介：氣胸",
+      "source_url": "https://wd.vghtpe.gov.tw/cs/Fpage.action?muid=1339&fid=904",
+      "retrieved_at": "2026-11-03",
+      "note": "胸腔外科自家衛教頁（指導修訂 112.06.01）；科別專長，不出線索題。"
+    },
+    {
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_priority": 2,
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "retrieved_at": "2026-11-03",
+      "note": "口腔醫學部牙周病科服務項目，最後更新 2023-06-01。310 沒有牙周病科，對到既有牙科 1248；科別專長，不出線索題。"
+    }
+  ],
+  "records": [
+    {
+      "department_name": "胸腔外科",
+      "official_department_labels": [
+        "胸腔外科"
+      ],
+      "concept": "氣胸",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1309,
+      "canonical_parent_dept": "外科系",
+      "canonical_child_dept": "胸腔外科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_cs_pneumothorax_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院胸腔外科｜衛教簡介：氣胸",
+      "source_url": "https://wd.vghtpe.gov.tw/cs/Fpage.action?muid=1339&fid=904",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "簡單地說，氣胸是指肋膜腔內出現了氣體，並造成了肺葉的塌陷。",
+      "fallback_for_vghtpe": false,
+      "notes": "胸腔外科自家衛教頁（指導修訂 112.06.01）；科別專長。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "牙周病",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "牙周病科提供以下治療服務。",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "牙齦發炎",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "長期累積在齒齦交界處，會造成牙齦發炎，牙周囊袋形成以及牙周骨質破壞",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "牙肉紅腫",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "因牙結石堆積導致牙肉紅腫，經牙周治療後牙肉恢復健康。",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "牙結石",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "因牙結石堆積導致牙肉紅腫，經牙周治療後牙肉恢復健康。",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "牙齦退縮",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "當牙齦退縮，牙根露出，牙齒看起來很長",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "洗牙",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "牙周病科醫師的治療先採取非手術性方式，如超音波洗牙，深部刮除牙結石",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "植牙",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "人工植牙乃是在局部或全口缺牙區植入螺絲釘狀的人工牙根",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    },
+    {
+      "department_name": "牙科",
+      "official_department_labels": [
+        "牙科",
+        "一般牙科"
+      ],
+      "concept": "缺牙",
+      "evidence_type": "department_specialty_evidence",
+      "canonical_dept_id": 1248,
+      "canonical_parent_dept": "五官科",
+      "canonical_child_dept": "牙科",
+      "mapping_method": "exact_app_name",
+      "source_id": "vghtpe_dent_periodontics_20261103",
+      "source_hospital": "vghtpe",
+      "source_type": "department_specialty",
+      "source_title": "臺北榮民總醫院口腔醫學部｜各科服務項目：牙周病科",
+      "source_url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?muid=14001&fid=12930",
+      "source_priority": 2,
+      "retrieved_at": "2026-11-03",
+      "evidence_text": "人工植牙乃是在局部或全口缺牙區植入螺絲釘狀的人工牙根",
+      "fallback_for_vghtpe": false,
+      "notes": "口腔醫學部牙周病科服務項目。"
+    }
+  ]
+}
