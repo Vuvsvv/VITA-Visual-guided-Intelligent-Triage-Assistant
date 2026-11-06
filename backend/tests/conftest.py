@@ -5,7 +5,7 @@ from unittest.mock import AsyncMock, Mock
 import pytest
 
 from app import db
-from app.services import ai_service
+from app.services import ai_service, rate_limit
 
 
 @pytest.fixture(autouse=True)
@@ -29,3 +29,10 @@ def offline_providers(monkeypatch):
 
     monkeypatch.setattr(ai_service, "_complete_cerebras", offline_completion)
     monkeypatch.setattr(db, "create_db_connection", offline_sql)
+
+
+@pytest.fixture(autouse=True)
+def no_chat_rate_limit(monkeypatch):
+    # Suites send many chat turns from one TestClient; test_security_limits re-enables the cap.
+    monkeypatch.setattr(rate_limit, "_EXEMPT_HOSTS", rate_limit._EXEMPT_HOSTS | {"testclient"})
+    rate_limit.reset()

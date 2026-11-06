@@ -37,7 +37,7 @@ async def quick_search_schedules(
         raise HTTPException(status_code=404, detail="找不到指定 dept_id 的正式科別。")
 
     # Correlation-only identifier for this response and its item IDs. It is not persisted.
-    case_id = f"quick_{uuid4().hex[:8]}"
+    case_id = f"quick_{uuid4().hex}"
     try:
         results = await search_quick_schedules(
             case_id=case_id,

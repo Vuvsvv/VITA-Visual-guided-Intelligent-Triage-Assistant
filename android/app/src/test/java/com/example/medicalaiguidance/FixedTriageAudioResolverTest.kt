@@ -68,13 +68,34 @@ class FixedTriageAudioResolverTest {
         "triage_clarification_preferred_sessions_01" to "想確認一下，您比較方便的時段是上午、下午、夜間，還是全天都可以？",
         "triage_clarification_department_01" to "目前提供的資訊還不足以確定最合適的科別，我再確認一點：除了目前描述的不舒服之外，還有其他明顯症狀嗎？",
         "triage_system_department_unresolved_01" to "目前仍無法安全地自動判定唯一科別，系統沒有替你套用預設科別。請改用手動選科，或洽醫院掛號服務協助。",
-        "triage_system_revision_01" to "好的，我會延續這次問診紀錄重新整理。請補充想修改的症狀、嚴重程度、看診日期或時段。"
+        "triage_system_revision_01" to "好的，我會延續這次問診紀錄重新整理。請補充想修改的症狀、科別、嚴重程度、看診日期或時段。",
+        // Backend fixed sentences (docs/固定句清單.md), copied verbatim from the backend constants.
+        "triage_safety_retry_01" to "先回到剛剛的問題：以下狀況如果都沒有，回答「沒有」就可以。",
+        "triage_safety_last_attempt_01" to "這題需要您回答「有」或「沒有」，系統才能繼續幫您找科別。",
+        "triage_safety_explain_01" to "這題是想確認您有沒有需要馬上去急診的狀況；如果都沒有，回答「沒有」就可以。",
+        "triage_stop_urgent_01" to "初步篩檢結果顯示您的狀況可能較危急，線上問診無法判斷嚴重程度，因此不會繼續掛號導引。請立即前往急診；情況危急請撥打 119。",
+        "triage_stop_safety_positive_01" to "您回報的狀況可能需要立即處理，線上問診無法判斷嚴重程度，因此不會繼續掛號導引。請立即前往急診；情況危急請撥打 119。",
+        "triage_stop_safety_unresolved_01" to "因為還沒能確認您是否有急迫症狀，系統不能繼續一般掛號導引。若身體不適，請洽醫療人員協助評估；若情況緊急，請立即尋求緊急醫療協助。",
+        "triage_stop_unresolved_01" to "目前仍無法可靠釐清症狀，系統不會替你猜測科別；請改用手動選科或洽醫院掛號服務。",
+        "triage_stop_no_family_medicine_01" to "資訊不足，無法判斷科別。請改用手動選科或洽醫院掛號服務。",
+        "triage_safety_net_01" to "目前還沒辦法確定要看哪一科，要繼續描述，還是先掛家庭醫學科？",
+        "triage_companion_02" to "還有其他不舒服的地方嗎？沒有的話直接說「沒有」就可以。",
+        "triage_companion_01" to "最近還有沒有其他不舒服的地方？",
+        "triage_age_01" to "請問就診者今年幾歲？",
+        "triage_open_question_01" to "可以再多說一點嗎？例如哪裡不舒服、從什麼時候開始、有多嚴重。",
+        "triage_department_evidence_01" to "已記錄目前症狀，但正式科別資料仍不足以確認建議科別。您可以補充新的症狀資訊，或返回就診類型選擇「快速查詢」自行選科。",
+        "triage_availability_01" to "最近哪幾天、哪個時段比較方便看診？不方便的時間也可以告訴我；都可以的話直接說『都可以』。",
+        "triage_availability_session_01" to "那一天中，上午、下午還是晚上比較方便？都可以的話直接說『都可以』。",
+        "triage_availability_date_01" to "那最近哪幾天比較方便？都可以的話直接說『都可以』。",
+        "triage_confirm_family_medicine_01" to "目前的症狀無法明確區分科別，系統建議先由家庭醫學科初步評估。請確認後取得推薦掛號方案。",
+        "triage_revision_detail_01" to "請直接告訴我要改成什麼，例如「改成下週四下午」「改看皮膚科」，或補充新的症狀。",
+        "triage_system_no_response_01" to "系統剛剛沒有回應，請再傳一次剛才的訊息。"
     )
 
     @Test
     fun allRequiredPromptsResolveToTheirLanguageSpecificRawResources() {
-        assertEquals(45, requiredPrompts.size)
-        assertEquals(45, requiredPrompts.map { it.second }.toSet().size)
+        assertEquals(65, requiredPrompts.size)
+        assertEquals(65, requiredPrompts.map { it.second }.toSet().size)
         assertEquals(requiredPrompts.map { it.second }.toSet(), FixedTriageAudioResolver.requiredTexts)
 
         requiredPrompts.forEach { (id, text) ->

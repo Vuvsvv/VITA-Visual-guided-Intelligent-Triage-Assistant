@@ -10,7 +10,7 @@ from app.services import conversation_service as cs, department_reasoning_servic
 from app.services import rag_triage_adapter as adapter
 from app.services.case_store import save_case
 from app.services.rule_engine import QUESTION_TEXTS, RED_FLAG_QUESTION_KEY
-from test_phase7_natural_safety import runtime, respond, evidence, route
+from test_phase7_natural_safety import runtime, respond, evidence, pending, route
 
 SETTINGS = get_settings()
 ASK, CAP, FAMILY = SETTINGS.safety_net_ask_turn, SETTINGS.hard_turn_cap, SETTINGS.family_medicine_dept_id
@@ -94,9 +94,15 @@ def test_choosing_family_medicine_asks_for_confirmation_and_keeps_new_symptoms(r
     stall(client, interpreter, case)
     calls = department.await_count
     choice(interpreter, "先掛家醫科", "family_medicine", extractions=[evidence("symptom", "頭痛", "頭痛")])
-    result = post(client, case, "先掛家醫科，另外有點頭痛")
+    rescreen = post(client, case, "先掛家醫科，另外有點頭痛")
+    # 「頭痛」 is first said after the safety screen, so the screen is asked again first
+    # (test_safety_gaps.py); the family medicine choice is kept for the turn after it.
+    assert rescreen["conversation_state"]["reply_source"] == "SAFETY_RESCREEN"
+    assert rescreen["conversation_state"]["safety_net_choice"] == "family_medicine"
+    respond(interpreter, answer=pending("都沒有"))
+    result = post(client, case, "都沒有")
     assert_family_medicine_confirmation(result, "safety_net_choice")
-    assert department.await_count == calls + 1  # Departments are still recomputed this turn.
+    assert department.await_count == calls + 1  # Departments are recomputed once the screen is done.
     assert any(item["normalized_value"] == "頭痛" for item in result["triage_case"]["semantic_extractions"])
 
     confirmed = post(client, case, confirmed=True)

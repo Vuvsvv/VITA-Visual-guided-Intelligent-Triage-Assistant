@@ -60,6 +60,8 @@ class RagTriageSuggestion:
     ttas_evidence: list[TTASEvidence] | None = None
     time_preferences: list[TimePreference] | None = None
     interpretation_complete: bool = True
+    # The repair call itself failed (timeout, provider error), unlike an answer that broke the rules.
+    provider_failed: bool = False
     dialogue_act: DialogueActInterpretation | None = None
     prior_answer_reference: PriorAnswerReference | None = None
     department_preference: DepartmentPreferenceInterpretation | None = None
@@ -179,6 +181,7 @@ async def refine_case_with_ai(
             )
             return RagTriageSuggestion(
                 semantic_extractions=[], pending_answer=None, ttas_evidence=[], interpretation_complete=False,
+                provider_failed=not isinstance(exc, (ValueError, json.JSONDecodeError)),
             )
 
         department_preference = validate_department_preference(data.get("department_preference"), user_sources)

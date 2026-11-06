@@ -65,7 +65,8 @@ SAFETY_RETRY_REPLY = "先回到剛剛的問題：以下狀況如果都沒有，�
 SAFETY_LAST_ATTEMPT_REPLY = "這題需要您回答「有」或「沒有」，系統才能繼續幫您找科別。"
 SAFETY_SYMPTOM_ACK_LIMIT = 3
 # Turns that do not count toward SAFETY_ANSWER_CAP; the hard turn cap still bounds them.
-_UNCOUNTED_SAFETY_VALIDATIONS = frozenset({"request_explanation", "symptom_added"})
+# interpretation_unavailable: the AI never answered, so the patient's reply was not judged at all.
+_UNCOUNTED_SAFETY_VALIDATIONS = frozenset({"request_explanation", "symptom_added", "interpretation_unavailable"})
 SAFETY_PENDING_INTENT = "safety_screen"
 AVAILABILITY_PENDING_INTENT = "appointment_availability"
 AVAILABILITY_QUESTION = "最近哪幾天、哪個時段比較方便看診？不方便的時間也可以告訴我；都可以的話直接說『都可以』。"
@@ -121,6 +122,32 @@ def requested_department_adopted(case: TriageCase) -> bool:
     requested = case.patient_input.requested_department_id
     return (case.conversation_state.department_status == "resolved" and result is not None
             and requested is not None and result.dept_id == requested)
+
+
+def symptom_grounded(case: TriageCase) -> bool:
+    """The accepted main symptom appears in the patient's own words."""
+    symptom = case.patient_input.symptom
+    return bool(symptom) and any(
+        symptom in item.content for item in case.history_records if item.role == "user"
+    )
+
+
+def _ask_symptom_for_requested_department(case: TriageCase) -> None:
+    """「我想看婦產科」 with no symptom yet: the Backend asks its fixed symptom question.
+
+    chat.py prefixes 「收到，已記錄您希望看{科別}…」. 起因：AI planner 改問「請問您目前最主要的
+    不適症狀是什麼？」，蓋掉確認句，病人以為系統沒聽到要看的科。
+    """
+    state = case.conversation_state
+    state.clarification_status = "clarifying"
+    state.uncertainty_reasons = ["已記錄指定科別，仍需了解主要症狀"]
+    state.next_information_needed = []
+    state.last_question_key = "symptom"
+    state.reply_source = "REQUESTED_DEPARTMENT_SYMPTOM"
+    state.is_complete = False
+    case.triage.need_more_info = True
+    case.triage.next_question = QUESTION_TEXTS["symptom"]
+    case.triage.is_final = False
 
 
 def safety_screen_resolved(case: TriageCase) -> bool:
@@ -874,10 +901,18 @@ def capture_safety_screen_answer(
     user_sources: list[str],
     *, dialogue_act: DialogueActInterpretation | None = None,
     current_extractions: list[SemanticExtraction] = (),
+    interpretation_unavailable: bool = False,
 ) -> bool:
     """Complete a negative safety screen from validated AI interpretation only."""
     state = case.conversation_state
     if state.clarification_status != "safety_check" or not user_sources:
+        return False
+    if interpretation_unavailable:
+        # The AI timed out or failed: the reply was never judged, so it is not an unclear answer
+        # (起因：AI 沒回應三次，病人每次都答「都沒有」，卻被停在「無法確認急迫症狀」).
+        state.safety_answer_validation = "interpretation_unavailable"
+        logger.info("safety answer case_id=%s attempt_incremented=false reason=interpretation_unavailable",
+                    case.case_id)
         return False
     if (dialogue_act is not None and dialogue_act.act == "request_explanation"
             and dialogue_act.confidence >= ACCEPT_THRESHOLD):
@@ -1048,7 +1083,13 @@ def continue_safety_check(
         state.safety_answer_validation not in _UNCOUNTED_SAFETY_VALIDATIONS
         and state.safety_answer_attempts == SAFETY_ANSWER_CAP - 1
     )
-    if added:
+    if state.safety_answer_validation == "interpretation_unavailable":
+        # Same fixed retry line as other AI failures (it has a prerecorded voice); the screen
+        # question stays the pending question for the next Turn Interpreter call.
+        question = TECHNICAL_CLARIFICATION_REPLY
+        state.pending_clarification_question = QUESTION_TEXTS[RED_FLAG_QUESTION_KEY]
+        state.reply_source = "TECHNICAL_FALLBACK"
+    elif added:
         question = f"{safety_symptom_acknowledgement(added)}\n{question}"
         state.reply_source = "SAFETY_CONTROLLED_FALLBACK"
     elif suggestion is not None and suggestion.intent == SAFETY_PENDING_INTENT:
@@ -1079,6 +1120,7 @@ def advance_conversation(
     current_extractions: list[SemanticExtraction],
     made_progress: bool = False,
     availability_changed: bool = False,
+    department_requested_this_turn: bool = False,
 ) -> None:
     """Apply only validated clarification proposals and Backend-owned state gates."""
     state = case.conversation_state
@@ -1103,10 +1145,7 @@ def advance_conversation(
             0 if made_progress else state.consecutive_no_progress_turns + len(user_sources)
         )
 
-    grounded_symptom = bool(case.patient_input.symptom) and any(
-        case.patient_input.symptom in item.content
-        for item in case.history_records if item.role == "user"
-    )
+    grounded_symptom = symptom_grounded(case)
     grounded_detail = bool(state.clarification_evidence) or any(
         item.field in _DETAIL_FIELDS
         and item.semantic_status in {"available", "partial"}
@@ -1125,7 +1164,11 @@ def advance_conversation(
         for field, reason in state.clarification_reasons.items()
     )
     safety_ready = grounded_symptom and grounded_detail and not low_confidence
-    if safety_ready and not safety_screen_resolved(case):
+    if department_requested_this_turn and not grounded_symptom:
+        _ask_symptom_for_requested_department(case)
+        return
+    # A reopened screen (new symptom after the first screen) is asked at once.
+    if (safety_ready or state.safety_rescreen_sources) and not safety_screen_resolved(case):
         if state.turn_count >= get_settings().hard_turn_cap:
             _unresolved(case)
             return
@@ -1556,8 +1599,75 @@ def _ask_body_part_question(case: TriageCase, source: str) -> None:
     case.triage.reasons.append("症狀未說明部位，且只有這個症狀指向其他科別，先詢問部位。")
 
 
+_SYMPTOM_FIELDS = frozenset({"symptom", "accompanying_symptoms"})
+
+
+def _present_concepts(item: SemanticExtraction) -> set[str]:
+    values = item.normalized_value if isinstance(item.normalized_value, list) else [item.normalized_value]
+    return {value.strip() for value in values if isinstance(value, str) and value.strip()}
+
+
+def known_symptom_concepts(case: TriageCase) -> set[str]:
+    """Present symptom concepts on record before this turn (stored fields and extraction history)."""
+    patient = case.patient_input
+    known = {value.strip() for value in [patient.symptom, *patient.accompanying_symptoms]
+             if isinstance(value, str) and value.strip()}
+    return known | {concept for item in case.semantic_extractions
+                    if item.field in _SYMPTOM_FIELDS and item.assertion == "present"
+                    for concept in _present_concepts(item)}
+
+
+def reopen_safety_screen_for_new_symptoms(
+    case: TriageCase, current_extractions: list[SemanticExtraction], user_sources: list[str], *,
+    prior_symptoms: set[str], prior_user_sources: list[str],
+) -> list[str]:
+    """A symptom first said after a negative safety screen opens the screen again.
+
+    The screen asked about the symptoms known then; a later 「我剛剛突然胸口很痛、喘不過氣」
+    (in a clue answer, the time question or a revision) was never screened, and TTAS only
+    references chest pain and breathlessness. Code decides "new" without reading wording:
+    a present symptom concept not accepted before, whose verbatim source the patient had not
+    said in an earlier message, and that is not an official concept a clue question asked
+    (a 「有耳鳴」 answer to our own question is not a new complaint). Returns the quoted sources.
+    """
+    state = case.conversation_state
+    patient = case.patient_input
+    if (not user_sources or state.clarification_status in {"safety_check", "urgent", "unresolved"}
+            or not patient.red_flags_checked or patient.red_flags or patient.red_flags_status != "negative"):
+        return []
+    known = set(prior_symptoms)
+    if not known:
+        # The live screen always follows a described complaint; a screened case with no symptom
+        # on record came from a client snapshot, so there is nothing to compare against.
+        return []
+    known |= {record.concept.strip() for record in state.clue_concepts_asked}
+    # Words that answered a clue question this turn (「我最近眼睛很乾」 for 乾眼症) are that answer.
+    clue_answer_sources = {
+        record.answer_source_text.strip() for record in state.clue_concepts_asked
+        if record.answer_source_text and record.answer_source_text.strip()
+        and any(record.answer_source_text.strip() in text for text in user_sources)
+    }
+    new_items = [
+        item for item in current_extractions
+        if item.field in _SYMPTOM_FIELDS and item.assertion == "present"
+        and _present_concepts(item) - known
+        and not any(item.source_text.strip() in text for text in prior_user_sources)
+        and not any(item.source_text.strip() in answer or answer in item.source_text.strip()
+                    for answer in clue_answer_sources)
+    ]
+    sources = _safety_added_symptoms(new_items, user_sources)
+    if not sources:
+        return []
+    patient.red_flags_checked = False
+    patient.red_flags_status = "not_checked"
+    state.safety_rescreen_sources = sources
+    logger.info("safety screen reopened case_id=%s new_symptom_count=%s", case.case_id, len(sources))
+    return sources
+
+
 def _enter_safety_check(case: TriageCase) -> None:
     state = case.conversation_state
+    rescreen_sources, state.safety_rescreen_sources = state.safety_rescreen_sources, []
     if state.clarification_status != "safety_check":
         state.safety_answer_attempts = 0
         state.safety_answer_validation = None
@@ -1572,9 +1682,15 @@ def _enter_safety_check(case: TriageCase) -> None:
     state.is_complete = False
     mark_questions_asked(case, [RED_FLAG_QUESTION_KEY])
     case.triage.need_more_info = True
-    case.triage.next_question = QUESTION_TEXTS[RED_FLAG_QUESTION_KEY]
+    question = QUESTION_TEXTS[RED_FLAG_QUESTION_KEY]
+    if rescreen_sources:
+        question = f"{safety_symptom_acknowledgement(rescreen_sources)}\n{question}"
+        state.reply_source = "SAFETY_RESCREEN"
+    case.triage.next_question = question
     case.triage.is_final = False
-    case.triage.reasons.append("症狀描述已足夠，仍須完成既有急迫症狀篩檢。")
+    case.triage.reasons.append(
+        "篩檢後又說出新症狀，重新確認急迫症狀。" if rescreen_sources else "症狀描述已足夠，仍須完成既有急迫症狀篩檢。"
+    )
 
 
 def _asks_filled_duration(case: TriageCase, intent: str | None, question: str | None) -> bool:

@@ -174,7 +174,15 @@ def test_interpretation_failure_bounded_no_medical_guess(runtime, failure):
         interpreter.return_value = failure
     for _ in range(3):
         result = client.post("/chat", json=dict(case_id=first["case_id"], message="不知道")).json()
-    assert result["conversation_state"]["clarification_status"] == "unresolved"
+    if isinstance(failure, Exception):
+        # The AI call failed, so the reply was never judged: ask to resend, count nothing
+        # (test_safety_gaps.py); the hard turn cap still bounds the screen.
+        assert result["conversation_state"]["clarification_status"] == "safety_check"
+        assert result["conversation_state"]["safety_answer_attempts"] == 0
+        assert result["reply"] == conversation_service.TECHNICAL_CLARIFICATION_REPLY
+    else:
+        # The AI answered with unusable output twice: that still counts as an unclear answer.
+        assert result["conversation_state"]["clarification_status"] == "unresolved"
     assert not result["triage_case"]["patient_input"]["red_flags_checked"]
 
 

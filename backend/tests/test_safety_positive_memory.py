@@ -169,26 +169,25 @@ def test_all_negative_screen_still_reaches_department(runtime):
     department.assert_awaited_once()
 
 
-def test_revision_after_positive_allows_a_new_screen(runtime):
+def test_revision_after_positive_keeps_the_stop(runtime):
+    # 2026-11-06: a positive screen is final. Before, 「我想修改」 cleared it, so a patient who said
+    # 「有，胸口很痛」 could then say 「我說錯了」 and 「都沒有」 and continue to booking.
     client, interpreter, planner, department = runtime
     case_id = start_safety(client, interpreter, "突然胸口很痛", CHEST)
     text = "有，胸口很痛"
-    say(client, interpreter, planner, case_id, text, pending(text, assertion="present"),
-        next_question="請問您現在是否有意識不清的情況？")
-    stopped = say(client, interpreter, planner, case_id, "沒有", pending("沒有"))
+    stopped = say(client, interpreter, planner, case_id, text, pending(text, assertion="present"))
     assert stopped["conversation_state"]["clarification_status"] == "unresolved"
     revised = client.post("/chat", json=dict(case_id=case_id, revision_requested=True)).json()
-    assert revised["conversation_state"]["safety_positive_reported"] is False
+    assert revised["conversation_state"]["safety_positive_reported"] is True
+    assert revised["conversation_state"]["reply_source"] == "SAFETY_POSITIVE_STOP"
+    assert revised["reply"] == SAFETY_POSITIVE_REPLY
+    department.reset_mock()
     correction = "我說錯了，不是胸痛，是膝蓋痛三天"
     respond(interpreter, [evidence("symptom", "膝蓋痛", "膝蓋痛"), evidence("duration", "三天", "三天")])
-    rescreen = client.post("/chat", json=dict(case_id=case_id, message=correction)).json()
-    assert rescreen["conversation_state"]["clarification_status"] == "safety_check"
-    assert rescreen["next_question"] == QUESTION_TEXTS[RED_FLAG_QUESTION_KEY]
-    department.reset_mock()
-    result = say(client, interpreter, planner, case_id, "都沒有", pending("都沒有"))
-    assert result["triage_case"]["patient_input"]["red_flags_status"] == "negative"
-    assert result["conversation_state"]["clarification_status"] != "unresolved"
-    department.assert_awaited_once()
+    after = client.post("/chat", json=dict(case_id=case_id, message=correction)).json()
+    assert after["conversation_state"]["clarification_status"] == "unresolved"
+    assert after["reply"] == SAFETY_POSITIVE_REPLY
+    department.assert_not_awaited()
 
 
 # Benchmark baseline turns (docs/BENCHMARK_BASELINE_20261028.md): patient text, answer status/assertion,

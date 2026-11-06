@@ -341,14 +341,16 @@ def test_partial_same_intent_uses_concrete_ai_question_without_clearing_answer(r
 
 def test_fresh_revision_safety_cycle_does_not_inherit_old_attempt_cap(runtime):
     client, interpreter, _, _ = runtime
+    # 2026-11-06: a stopped screen can no longer be revised (test_safety_gaps.py); a fresh cycle now
+    # comes from a symptom first said after a completed screen, which needed two unclear replies.
     case = clinical_case()
-    case.patient_input.red_flags_checked = False
-    case.conversation_state.clarification_status = "unresolved"
-    case.conversation_state.safety_answer_attempts = cs.SAFETY_ANSWER_CAP
+    case.patient_input.red_flags_status = "negative"
+    case.conversation_state.clarification_status = "clarifying"
+    case.conversation_state.safety_answer_attempts = cs.SAFETY_ANSWER_CAP - 1
     save_case(case)
-    client.post("/chat", json=dict(case_id=case.case_id, revision_requested=True))
-    respond(interpreter, [evidence("symptom", "頭暈", "頭暈"), evidence("duration", "3天", "3天", None)])
-    fresh = client.post("/chat", json=dict(case_id=case.case_id, message="頭暈3天")).json()
+    respond(interpreter, [evidence("accompanying_symptoms", ["耳鳴"], "耳鳴"),
+                          evidence("duration", "3天", "3天", None)])
+    fresh = client.post("/chat", json=dict(case_id=case.case_id, message="還有耳鳴3天")).json()
     assert fresh["conversation_state"]["clarification_status"] == "safety_check"
     assert fresh["conversation_state"]["safety_answer_attempts"] == 0
     respond(interpreter, answer=pending("不確定", "unclear", "uncertain"))

@@ -48,7 +48,7 @@ def _prune_expired(now: float | None = None) -> None:
 
 
 def new_case_id() -> str:
-    return f"case_{uuid4().hex[:8]}"
+    return f"case_{uuid4().hex}"
 
 
 def sanitize_untrusted_snapshot(snapshot: TriageCase) -> TriageCase:

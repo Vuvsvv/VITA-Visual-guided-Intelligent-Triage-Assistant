@@ -17,13 +17,14 @@ import logging
 from typing import Optional
 from uuid import UUID
 
-from fastapi import APIRouter, File, Form, UploadFile, HTTPException
+from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
 
 from app.config import get_settings
 from app.schemas import ChatRequest, VisitType, VoiceChatResponse
 from app.routes.chat import chat as chat_handler
 from app.services.voice_client import VoiceGatewayClient, VoiceGatewayError
 from app.services.fixed_sentences import BACKEND_FIXED_SENTENCES
+from app.services.rate_limit import enforce_chat_rate_limit
 from app.services.tts_cache import tts_cache
 from app.services.voice_perf import VoiceTrace, trace_for, run_gateway, safe_cache_key
 
@@ -119,7 +120,7 @@ async def voice_asr(
         return {"text": "", "lang": use_lang, "asr_failed": True, "error": str(e)}
 
 
-@router.post("/chat", response_model=VoiceChatResponse)
+@router.post("/chat", response_model=VoiceChatResponse, dependencies=[Depends(enforce_chat_rate_limit)])
 async def voice_chat(
     file: UploadFile = File(..., description="長輩說話的音訊檔（wav）"),
     case_id: Optional[str] = Form(None, description="對話 case_id，多輪要帶回來"),

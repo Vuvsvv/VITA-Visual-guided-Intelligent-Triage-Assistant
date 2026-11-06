@@ -709,6 +709,15 @@ class Phase4ChatGateTest(unittest.IsolatedAsyncioTestCase):
                         answer_assertion="absent",
                     ),
                 )
+            if interpretation_calls == 4:
+                # 耳鳴 was first said after the screen, so the screen is asked again (test_safety_gaps.py).
+                return RagTriageSuggestion(
+                    semantic_extractions=[],
+                    pending_answer=PendingAnswerInterpretation(
+                        answered_intent=SAFETY_PENDING_INTENT, answer_status="answered",
+                        answer_source_text="都沒有", answer_confidence=0.98, answer_assertion="absent",
+                    ),
+                )
             apply_semantic_extractions(case, a3_evidence, allow_red_flag_completion=False)
             return RagTriageSuggestion(
                 semantic_extractions=a3_evidence,
@@ -770,12 +779,15 @@ class Phase4ChatGateTest(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(a2["next_question"], hearing_question)
             self.assertEqual(a2["conversation_state"]["pending_clarification_intent"], hearing_key)
 
-            a3 = client.post("/chat", json={
+            rescreen = client.post("/chat", json={
                 "case_id": a1["case_id"],
                 "message": a3_text,
             }).json()
+            self.assertEqual(rescreen["conversation_state"]["reply_source"], "SAFETY_RESCREEN")
+            self.assertEqual(rescreen["conversation_state"]["clarification_evidence"][hearing_key], "沒有聽力下降")
+            a3 = client.post("/chat", json={"case_id": a1["case_id"], "message": "都沒有"}).json()
 
-        self.assertEqual(semantic.await_count, 3)
+        self.assertEqual(semantic.await_count, 4)
         self.assertEqual(department.await_count, 3)
         self.assertEqual(planner.await_count, 3)
         semantic_history = a3["triage_case"]["semantic_extractions"]

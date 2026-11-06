@@ -374,8 +374,10 @@ class ConversationState(BaseModel):
     consecutive_no_progress_turns: int = Field(default=0, ge=0)
     safety_answer_attempts: int = 0
     safety_answer_validation: Optional[str] = None
-    # An accepted positive answer in the current safety screen; only a revision clears it.
+    # An accepted positive answer in the current safety screen; it ends the case and nothing clears it.
     safety_positive_reported: bool = False
+    # New symptoms said after a completed safety screen; the reopened screen quotes them once.
+    safety_rescreen_sources: List[str] = Field(default_factory=list)
     # Diagnostic only: Backend-validated dialogue act value of this turn, never its source text.
     last_dialogue_act: Optional[str] = None
     reply_source: Optional[str] = None

@@ -106,6 +106,13 @@ def state_of(body):
     return body["conversation_state"]
 
 
+def deny_screen(case_id: str):
+    """A symptom first said after the safety screen reopens it (test_safety_gaps.py); answer it 「都沒有」."""
+    denial = dict(answered_intent="safety_screen", answer_status="answered", answer_assertion="absent",
+                  answer_source_text="都沒有", answer_confidence=0.95)
+    return turn(case_id, "都沒有", payload("都沒有", act="answer", pending=denial))
+
+
 def test_converged_department_asks_availability_before_confirmation():
     body = ask(ready_case("avail-ask").case_id)
     state = state_of(body)
@@ -157,8 +164,15 @@ def test_new_symptom_with_the_availability_answer_recomputes_the_department():
     ask(case_id)
     department = AsyncMock(side_effect=converge)
     text = "都可以，另外也會頭暈"
-    turn(case_id, text, payload(text, act="answer", pending=availability_answer("都可以"),
-                                extractions=[symptom("頭暈")]), department=department)
+    body, _ = turn(case_id, text, payload(text, act="answer", pending=availability_answer("都可以"),
+                                          extractions=[symptom("頭暈")]), department=department)
+    # A symptom first said after the safety screen reopens it before any department work
+    # (test_safety_gaps.py); the department is recomputed once the screen is answered.
+    assert state_of(body)["reply_source"] == "SAFETY_RESCREEN"
+    department.assert_not_awaited()
+    denial = dict(answered_intent="safety_screen", answer_status="answered", answer_assertion="absent",
+                  answer_source_text="都沒有", answer_confidence=0.95)
+    turn(case_id, "都沒有", payload("都沒有", act="answer", pending=denial), department=department)
     department.assert_awaited_once()
 
 
@@ -206,6 +220,8 @@ def test_revision_does_not_ask_availability_again():
     revision = TestClient(app).post("/chat", json={"case_id": case_id, "revision_requested": True})
     assert state_of(revision.json())["availability_status"] == "answered"
     body, _ = turn(case_id, "其實是右膝痛", payload("其實是右膝痛", extractions=[symptom("右膝痛")]))
+    assert state_of(body)["reply_source"] == "SAFETY_RESCREEN"
+    body, _ = deny_screen(case_id)
     state = state_of(body)
     assert state["availability_status"] == "answered" and state["availability_question_attempts"] == 1
     assert state["stage"] == "waiting_confirmation" and body["reply"] != AVAILABILITY_QUESTION
@@ -327,6 +343,8 @@ def test_revision_does_not_ask_the_settled_dimension_again():
     revision = TestClient(app).post("/chat", json={"case_id": case_id, "revision_requested": True})
     assert revision.status_code == 200
     body, _ = turn(case_id, "其實是右膝痛", payload("其實是右膝痛", extractions=[symptom("右膝痛")]))
+    assert state_of(body)["reply_source"] == "SAFETY_RESCREEN"
+    body, _ = deny_screen(case_id)
     state = state_of(body)
     assert body["reply"] == AVAILABILITY_SESSION_QUESTION and state["availability_pending_dimensions"] == ["session"]
     assert (state["availability_date_attempts"], state["availability_session_attempts"]) == (0, 2)

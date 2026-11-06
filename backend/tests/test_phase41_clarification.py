@@ -123,10 +123,13 @@ class Phase41ClarificationTest(unittest.IsolatedAsyncioTestCase):
         interpretation_prompt = semantic.await_args.args[0]
         self.assertIn(SEVERITY_QUESTION, interpretation_prompt)
         self.assertIn('"pending_clarification_intent": "severity"', interpretation_prompt)
-        self.assertEqual(planner.await_count, 1)
+        # 「灼熱感」 is first said after the safety screen, so the screen is asked again before any
+        # planner question (test_safety_gaps.py); the pending severity answer is still kept.
+        self.assertEqual(planner.await_count, 0)
+        self.assertEqual(second["conversation_state"]["reply_source"], "SAFETY_RESCREEN")
         self.assertIsNone(second["conversation_state"]["pending_clarification_intent"])
         self.assertEqual(second["conversation_state"]["clarification_evidence"]["severity"], "有血絲")
-        self.assertTrue(second["triage_case"]["patient_input"]["red_flags_checked"])
+        self.assertFalse(second["triage_case"]["patient_input"]["red_flags_checked"])
         self.assertEqual(second["triage_case"]["patient_input"]["red_flags"], [])
         self.assertIn("灼熱感", second["triage_case"]["patient_input"]["accompanying_symptoms"])
         self.assertEqual(second["department_result"]["dept_id"], 1242)

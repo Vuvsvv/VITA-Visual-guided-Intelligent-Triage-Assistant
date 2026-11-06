@@ -159,6 +159,11 @@ def test_companion_answer_with_a_new_scored_symptom_asks_once_more():
     case, _ = turn(case, "我肛裂", [symptom("肛裂", "肛裂")])
     # 「下腹痛」 is another official 直腸外科 concept, but it also brings other departments in.
     case, body = turn(case, "還有下腹痛", [symptom("肛裂", "肛裂"), symptom("下腹痛", "下腹痛")])
+    # A symptom first said after the safety screen reopens it (test_safety_gaps.py).
+    assert body["conversation_state"]["reply_source"] == "SAFETY_RESCREEN"
+    case, body = turn(case, "都沒有", answer=dict(
+        answered_intent="safety_screen", answer_status="answered", answer_assertion="absent",
+        answer_source_text="都沒有", answer_confidence=0.95))
     state = body["conversation_state"]
     if len([dept for dept in state["department_clue_candidates"] if dept != FAMILY]) == 1:
         assert body["next_question"] == conversation_service.COMPANION_FOLLOWUP_QUESTION
