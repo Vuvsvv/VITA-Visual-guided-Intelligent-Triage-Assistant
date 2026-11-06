@@ -302,7 +302,7 @@ def speed_supported() -> bool:
 
 
 # ── 核心合成 ──────────────────────────────────────────────────────────────────
-def _synth_chunk(text_bopomo: str, speaker_bopomo: str, speed: float = 1.0) -> np.ndarray:
+def _synth_chunk_unchecked(text_bopomo: str, speaker_bopomo: str, speed: float = 1.0) -> np.ndarray:
     import torch
 
     kwargs = {"speed": speed} if (_speed_supported and speed != 1.0) else {}
@@ -327,6 +327,47 @@ def _synth_chunk(text_bopomo: str, speaker_bopomo: str, speed: float = 1.0) -> n
         speech = speech.float()
     waveform = speech.numpy()
     return waveform.squeeze() if waveform.ndim > 1 else waveform
+
+
+# BREEZY_AUDIO_GUARD_V2
+class _BreezyInvalidAudio(RuntimeError):
+    """The model produced audio data that must not be published."""
+
+
+def _assert_valid_speech(waveform, stage):
+    """Catch NaN/Inf and almost-silent audio before normalisation/encoding."""
+    arr = np.asarray(waveform, dtype=np.float32).reshape(-1)
+    if not arr.size:
+        raise _BreezyInvalidAudio(f"{stage}: 空波形")
+    if not np.isfinite(arr).all():
+        n_nan = int(np.isnan(arr).sum())
+        n_inf = int(np.isinf(arr).sum())
+        raise _BreezyInvalidAudio(
+            f"{stage}: 非有限波形（NaN={n_nan}, Inf={n_inf}），拒絕產生無聲檔"
+        )
+    peak = float(np.max(np.abs(arr)))
+    rms = float(np.sqrt(np.mean(np.square(arr, dtype=np.float64))))
+    # Conservative level threshold, not a pronunciation/medical quality check.
+    if peak < 2e-4 or rms < 1e-4:
+        raise _BreezyInvalidAudio(
+            f"{stage}: 幾乎無聲（peak={peak:.6g}, rms={rms:.6g}）"
+        )
+
+
+def _synth_chunk(*args, **kwargs):
+    """Retry only invalid model audio, not arbitrary model/CUDA errors."""
+    for attempt in range(1, 4):
+        # Preserve the original implementation and all inference parameters.
+        waveform = _synth_chunk_unchecked(*args, **kwargs)
+        try:
+            _assert_valid_speech(waveform, "BreezyVoice 模型分段輸出")
+            return waveform
+        except _BreezyInvalidAudio as exc:
+            logger.warning("BreezyVoice 音訊無效，第 %d/3 次：%s", attempt, exc)
+            if attempt == 3:
+                raise _BreezyInvalidAudio(
+                    "模型連續三次輸出無效波形，拒絕生成損壞音檔"
+                ) from exc
 
 
 def synthesize(text: str, speed: float = 1.0):
@@ -360,7 +401,18 @@ def synthesize(text: str, speed: float = 1.0):
         logger.info(f"normalize {t_b-t_a:.2f}s | bopomofo {t_c-t_b:.2f}s | inference {t_d-t_c:.2f}s")
         parts.append(waveform)
 
-    combined   = np.concatenate(parts) if len(parts) > 1 else parts[0]
+    combined = np.concatenate(parts) if len(parts) > 1 else parts[0]
+    _assert_valid_speech(combined, "各段合併後，響度處理前")
+
+    # 所有分段合併後，統一對齊臺語音量
+    combined = match_taigi_loudness(
+        combined,
+        SAMPLE_RATE,
+        target_lufs=-14.89,
+        true_peak=-1.0,
+    )
+
+    _assert_valid_speech(combined, "響度處理後")
     elapsed_ms = int((time.time() - t0) * 1000)
     # 舊版這行把「音訊長度」寫成「總計」，與實際耗時混淆，故拆開標示
     logger.info(
@@ -368,8 +420,122 @@ def synthesize(text: str, speed: float = 1.0):
     )
     return combined, SAMPLE_RATE, elapsed_ms
 
+def match_taigi_loudness(
+    waveform: np.ndarray,
+    sr: int,
+    target_lufs: float = -14.89,
+    true_peak: float = -1.0,
+) -> np.ndarray:
+    """
+    將中文 BreezyVoice 響度對齊臺語 Chatterbox。
+
+    - 在所有分段合併後執行一次
+    - FFmpeg 兩階段 loudnorm
+    - 保留原本取樣率
+    - 失敗時保留原音訊並記錄警告
+    """
+    import json
+    import re
+
+    waveform = np.asarray(waveform, dtype=np.float32).reshape(-1)
+
+    if waveform.size == 0 or np.max(np.abs(waveform)) < 1e-6:
+        return waveform
+
+    start = time.perf_counter()
+    lra = 7.0
+
+    try:
+        wav_bytes = waveform_to_wav_bytes(waveform, sr)
+
+        # 第一次：量測原始響度
+        first_filter = (
+            f"loudnorm=I={target_lufs}:TP={true_peak}:"
+            f"LRA={lra}:print_format=json"
+        )
+
+        first = subprocess.run(
+            [
+                "ffmpeg", "-hide_banner", "-nostats",
+                "-loglevel", "info",
+                "-i", "pipe:0",
+                "-af", first_filter,
+                "-f", "null", "-"
+            ],
+            input=wav_bytes,
+            capture_output=True,
+            check=True,
+        )
+
+        log = first.stderr.decode("utf-8", errors="replace")
+
+        match = re.search(
+            r'\{\s*"input_i".*?\}',
+            log,
+            re.DOTALL,
+        )
+
+        if not match:
+            raise RuntimeError("FFmpeg 未回傳 LUFS 量測資料")
+
+        stats = json.loads(match.group(0))
+
+        # 第二次：使用量測結果進行響度標準化
+        second_filter = (
+            f"loudnorm=I={target_lufs}:"
+            f"TP={true_peak}:LRA={lra}:"
+            f"measured_I={stats['input_i']}:"
+            f"measured_TP={stats['input_tp']}:"
+            f"measured_LRA={stats['input_lra']}:"
+            f"measured_thresh={stats['input_thresh']}:"
+            f"offset={stats['target_offset']}:"
+            "linear=true"
+        )
+
+        second = subprocess.run(
+            [
+                "ffmpeg", "-hide_banner",
+                "-loglevel", "error",
+                "-i", "pipe:0",
+                "-af", second_filter,
+                "-ar", str(sr),
+                "-ac", "1",
+                "-c:a", "pcm_f32le",
+                "-f", "f32le",
+                "pipe:1"
+            ],
+            input=wav_bytes,
+            capture_output=True,
+            check=True,
+        )
+
+        normalized = np.frombuffer(
+            second.stdout,
+            dtype="<f4",
+        ).copy()
+
+        if normalized.size == 0 or not np.isfinite(normalized).all():
+            raise RuntimeError("音量標準化結果無效")
+
+        logger.info(
+            "中文響度標準化完成 | 目標 %.2f LUFS | "
+            "峰值限制 %.1f dBTP | 處理 %.2fs",
+            target_lufs,
+            true_peak,
+            time.perf_counter() - start,
+        )
+
+        return normalized
+
+    except Exception:
+        logger.exception(
+            "中文響度標準化失敗，保留原始音量"
+        )
+        return waveform
+
 
 def waveform_to_wav_bytes(waveform: np.ndarray, sr: int) -> bytes:
+    _assert_valid_speech(waveform, "WAV 編碼前")
     import scipy.io.wavfile as wav
     # 先 clip：超過 ±1.0 的樣本乘上 32767 之後會 int16 溢位翻號，聽起來就是爆音
     pcm = (np.clip(waveform, -1.0, 1.0) * 32767).astype(np.int16)

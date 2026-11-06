@@ -56,7 +56,8 @@ import httpx
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -77,7 +78,15 @@ CB_TIMEOUT = float(os.getenv("CB_TIMEOUT", "280"))
 PROMPT_PATH = Path(os.getenv("TAIGI_PROMPT_PATH", BASE_DIR / "prompts/taigi_tailo.txt"))
 REPLACE_PATH = Path(os.getenv("WORD_REPLACE_PATH", BASE_DIR / "data/word_replace.json"))
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-4-argon")
+# Gemini 3.8 Flash 不支援 minimal；Gemini 3.6 Flash 支援 minimal。
+_GEMINI_DEFAULT_THINKING = (
+    "minimal" if GEMINI_MODEL.startswith(("gemini-3.6-flash", "gemini-3.5-flash-lite"))
+    else "low"
+)
+GEMINI_THINKING_LEVEL = os.getenv("GEMINI_THINKING_LEVEL", _GEMINI_DEFAULT_THINKING)
+# 過低會截斷長句或思考輸出，先用 1024，後續以實際句長調整。
+GEMINI_MAX_OUTPUT_TOKENS = int(os.getenv("GEMINI_MAX_OUTPUT_TOKENS", "1024"))
 MAX_SEG_LEN = int(os.getenv("MAX_SEG_LEN", "70"))   # 台羅字元數；實測 80 內穩定，超過句尾聲調會失準
 SEG_GAP_SEC = float(os.getenv("SEG_GAP_SEC", "0.25"))
 SAMPLE_RATE = int(os.getenv("CB_SAMPLE_RATE", "24000"))    # Chatterbox 輸出
@@ -113,6 +122,7 @@ TARGET_SR = int(os.getenv("TTS_OUTPUT_SR", "22050"))   # 編碼時降採樣的�
 AAC_BITRATE = os.getenv("AAC_BITRATE", "64k")          # 語音用 64k 已充裕
 
 genai_configured = False
+_genai_client = None
 
 # 轉換快取：{中文原句: 本調台羅}。dict 保有插入順序，滿了就從最舊的開始丟。
 _taigi_cache: dict = {}
@@ -357,12 +367,75 @@ def _cache_put(key: str, value: str) -> None:
 
 # ───────────────────── 文字處理 ─────────────────────
 
+
+# CB_TRANSLATION_GUARD_V1: Gemini 翻譯校驗；不更動 TTS / Sandhi。
+try:
+    from .medical_tailo_guard import audit_translation
+except ImportError:
+    from medical_tailo_guard import audit_translation
+
+_GUARD_BLOCKING_WARNING_CODES = {
+    "HUMAN_BASELINE_MISMATCH", "MEDICAL_TERM_PARAPHRASE", "SEMANTIC_REVIEW",
+}
+
+def _translation_blocking_findings(chinese: str, tailo: str):
+    """格式/已知錯誤必須擋下；部分高風險醫療詞彙警告亦擋下。
+
+    info 訊息及其餘 warning 不會自動當作語意已通過人工確認。
+    """
+    return [
+        f for f in audit_translation(chinese, tailo)
+        if f.severity == "error" or f.code in _GUARD_BLOCKING_WARNING_CODES
+    ]
+
+# CB_GEMINI_STRUCTURED_OUTPUT_V1
+# 可在啟動 8003 前設 GEMINI_STRUCTURED_OUTPUT=0 回到原本純文字模式。
+GEMINI_STRUCTURED_OUTPUT = os.getenv("GEMINI_STRUCTURED_OUTPUT", "1").strip().lower() not in {
+    "0", "false", "off", "no"
+}
+
+class GeminiTailoResponse(BaseModel):
+    tailo_raw: str
+
+
+def _parse_gemini_tailo_json(raw_response: str) -> str:
+    """Strictly extract a single Tailo field. Invalid JSON is never sent to TTS."""
+    if not isinstance(raw_response, str) or not raw_response.strip():
+        raise ValueError("Gemini JSON 回應為空")
+    try:
+        obj = json.loads(raw_response)
+    except (TypeError, json.JSONDecodeError) as exc:
+        raise ValueError("Gemini 回應不是完整有效的 JSON") from exc
+    if not isinstance(obj, dict):
+        raise ValueError("Gemini JSON 最外層必須是物件")
+    if set(obj.keys()) != {"tailo_raw"}:
+        raise ValueError("Gemini JSON 必須且只能包含 tailo_raw 欄位")
+    tailo = obj["tailo_raw"]
+    if not isinstance(tailo, str) or not tailo.strip():
+        raise ValueError("Gemini JSON 的 tailo_raw 必須是非空字串")
+    return tailo
+
+
+_STRUCTURED_TAILO_INSTRUCTION = (
+    "\n\n回應由 API 的 JSON Schema 控制格式。"
+    "請只在 tailo_raw 欄位填寫純本調數字調臺羅（不做連讀變調），"
+    "每音節帶聲調數字，不可摻入中文、英文解釋、Markdown 或引用。"
+    "先前『只輸出台羅』的規則指欄位內容，而非取消 API 指定的 JSON 包裝。"
+    "原文中的否定、症狀、時間與嚴重程度必須保留。"
+)
+
+# CB_MEDICAL_PHRASE_BANK_V1: 只有人工核准的完整句子才能跳過 Gemini。
+try:
+    from .medical_phrase_bank import lookup_approved_phrase
+except ImportError:
+    from medical_phrase_bank import lookup_approved_phrase
+
 async def chinese_to_tailo(text: str) -> str:
     """
     中文 → 本調台羅數字調（Gemini，附快取）
 
-    `generate_content()` 是同步呼叫、要跑好幾秒，直接在 async endpoint 裡呼叫
-    會卡住整個 event loop（連 health check 都回不了），所以丟到 thread 執行。
+    使用新版 google-genai SDK 的原生非同步 API，避免阻塞 FastAPI event loop。
+    思考等級由 GEMINI_THINKING_LEVEL 控制，用以比較翻譯延遲與準確率。
 
     v5.0.0：Gemini 偶爾會夾帶漢字或改用調號，輸出一律先正規化再檢查；
     仍含漢字時附上錯誤提示重試一次，再失敗就報錯 —— 漢字送進 Chatterbox 一定念不出來。
@@ -374,16 +447,36 @@ async def chinese_to_tailo(text: str) -> str:
     global _cache_hits, _cache_misses, _dict_hits, _gemini_calls
 
     key = text.strip()
+    # CB_MEDICAL_PHRASE_BANK_V1: 先查人工審核話術，優先於舊翻譯快取與 Gemini。
+    fixed_tailo = lookup_approved_phrase(key)
+    if fixed_tailo is not None:
+        fixed_errors = _translation_blocking_findings(text, fixed_tailo)
+        if has_hanzi(fixed_tailo) or fixed_errors:
+            raise ValueError(
+                "固定醫療話術未通過 Guard，拒絕使用："
+                + "; ".join(f.code for f in fixed_errors)
+            )
+        logger.info("├ 人工審核固定話術命中，跳過 Gemini：%s", key[:45])
+        return fixed_tailo
+
     if TAIGI_CACHE_ENABLED and key in _taigi_cache:
-        _cache_hits += 1
-        logger.info(f"├ 快取命中（累計 {_cache_hits} 次，省下一次 Gemini 呼叫）")
-        return _taigi_cache[key]
+        cached = _taigi_cache[key]
+        cached_issues = _translation_blocking_findings(text, cached)
+        if cached and not has_hanzi(cached) and not cached_issues:
+            _cache_hits += 1
+            logger.info(f"├ 快取命中（累計 {_cache_hits} 次，省下一次 Gemini 呼叫）")
+            return cached
+        logger.warning("├ 舊翻譯快取未通過校驗，移除後重新翻譯：%s",
+                       [f.code for f in cached_issues])
+        _taigi_cache.pop(key, None)
+        await asyncio.to_thread(save_taigi_cache)
 
     # 字典（v5.0.0 預設停用）：只有 100% 覆蓋、且結果確實是台羅時才採用
     if TAIGI_DICT_ENABLED and _taigi_dict:
         converted, coverage, misses = dict_convert(key)
         converted = normalize_tailo(converted)
-        if coverage >= TAIGI_DICT_MIN_COVERAGE and not has_hanzi(converted):
+        if (coverage >= TAIGI_DICT_MIN_COVERAGE and not has_hanzi(converted)
+                and not _translation_blocking_findings(text, converted)):
             _dict_hits += 1
             logger.info("├ 字典轉換（完整覆蓋，未呼叫 Gemini）")
             return converted
@@ -393,24 +486,133 @@ async def chinese_to_tailo(text: str) -> str:
         )
 
     _cache_misses += 1
-    model = genai.GenerativeModel(GEMINI_MODEL)
+    if _genai_client is None:
+        raise RuntimeError("Gemini API client 尚未初始化")
     prompt = load_prompt().replace("{text}", text)
+    if GEMINI_STRUCTURED_OUTPUT:
+        prompt += _STRUCTURED_TAILO_INSTRUCTION
     out = ""
+    # Structured Output changes only the Gemini response envelope, not the API output.
+    _structured_args = (
+        {"response_mime_type": "application/json", "response_schema": GeminiTailoResponse}
+        if GEMINI_STRUCTURED_OUTPUT else {}
+    )
+    config = types.GenerateContentConfig(
+        thinking_config=types.ThinkingConfig(thinking_level=GEMINI_THINKING_LEVEL),
+        max_output_tokens=GEMINI_MAX_OUTPUT_TOKENS,
+        **_structured_args,
+    )
+    logger.info("├ Gemini 輸出格式：%s", "JSON Schema" if GEMINI_STRUCTURED_OUTPUT else "純文字")
     for attempt in range(2):
-        _gemini_calls += 1
-        response = await asyncio.to_thread(model.generate_content, prompt)
-        out = normalize_tailo(response.text)
-        if out and not has_hanzi(out):
-            break
-        logger.warning(f"├ Gemini 輸出夾帶漢字（第 {attempt + 1} 次）：{out[:60]}")
-        prompt += "\n\n（注意：上一次的輸出夾帶了漢字。請只輸出台羅數字調，不可有任何漢字。）"
-    else:
-        raise ValueError(f"Gemini 無法產生純台羅（仍含漢字）：{out[:80]}")
 
+        # 第一次使用 Low，失敗重試改用 Medium
+        current_thinking_level = (
+            "low" if attempt == 0 else "medium"
+        )
+
+        # 保留原本 JSON Schema、輸出 Token、
+        # system_instruction 等所有 GenerateContentConfig 設定
+        # 只修改這一次請求的 Thinking Level
+        request_config = config.model_copy(
+            update={
+                "thinking_config": types.ThinkingConfig(
+                    thinking_level=current_thinking_level
+                )
+            }
+        )
+
+        _gemini_calls += 1
+        api_start = time.perf_counter()
+
+        response = await _genai_client.aio.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=prompt,
+            config=request_config,
+        )
+
+        logger.info(
+            f"├ Gemini API {time.perf_counter() - api_start:.2f}s "
+            f"(model={GEMINI_MODEL}, "
+            f"thinking={current_thinking_level}, "
+            f"attempt={attempt + 1})"
+        )
+
+        # JSON 解析必須早於 normalize_tailo、Guard 和快取
+        structure_error = ""
+
+        if GEMINI_STRUCTURED_OUTPUT:
+            try:
+                out = normalize_tailo(
+                    _parse_gemini_tailo_json(
+                        response.text or ""
+                    )
+                )
+            except (ValueError, TypeError) as exc:
+                out = ""
+                structure_error = str(exc)
+        else:
+            out = normalize_tailo(response.text or "")
+
+        # 臺羅格式與已知錯誤拼音校驗
+        blocking = _translation_blocking_findings(text, out)
+
+        if out and not has_hanzi(out) and not blocking:
+            # 通過目前的硬性校驗，停止重試
+            # 不代表醫療語意已經人工確認
+            break
+
+        errors = [
+            f"{f.code}: {f.message}"
+            for f in blocking
+        ]
+
+        if structure_error:
+            errors.append(
+                "STRUCTURED_OUTPUT: " + structure_error
+            )
+
+        if not out:
+            errors.append("EMPTY_OUTPUT: 沒有翻譯內容")
+
+        if has_hanzi(out):
+            errors.append("HAS_HANZI: 臺羅裡仍含漢字")
+
+        # 校驗失敗時，不論有沒有漢字，都需要記錄錯誤
+        logger.warning(
+            "├ Gemini 臺羅校驗失敗 attempt=%s thinking=%s：%s；輸出=%r",
+            attempt + 1,
+            current_thinking_level,
+            errors,
+            out[:160],
+        )
+
+        # 將第一次的錯誤提供給第二次 Gemini
+        prompt += (
+            "\n\n前次輸出不合格，請重新翻譯原始中文，"
+            "且僅在指定資料欄位填寫本調數字調臺羅。"
+            "\n禁止輸出英文解釋、Markdown、括號、漢字或其他備註。"
+            "\n每個臺羅音節要附數字調（輕聲依既有 -- 規則），"
+            "不要輸出已經連讀變調的聲調。"
+            "\n不可更改原文的症狀、否定、嚴重程度和時間。"
+            "\n錯誤原因：" + "；".join(errors[:8])
+            + "\n前次錯誤輸出（勿模仿）：" + out[:200]
+        )
+
+    else:
+        # 注意：這個 else 必須與 for attempt 對齊
+        # 只有兩次都未通過校驗，才會執行
+        raise ValueError(
+            "Gemini 兩次輸出均未通過臺羅校驗，"
+            "停止合成且不寫入快取："
+            + "; ".join(errors[:8])
+        )
+
+    # Gemini 翻譯成功後才寫入快取
     if TAIGI_CACHE_ENABLED and key and out:
         _cache_put(key, out)
         await asyncio.to_thread(save_taigi_cache)
 
+    # 必須位於 for / else 外面
     return out
 
 
@@ -616,12 +818,14 @@ def to_m4a_bytes(wf: np.ndarray, sr: int, out_sr: int = None) -> bytes:
 
 @app.on_event("startup")
 async def startup():
-    global genai_configured
+    global genai_configured, _genai_client
     key = os.getenv("GEMINI_API_KEY")
     if key:
-        genai.configure(api_key=key)
+        _genai_client = genai.Client(api_key=key)
         genai_configured = True
-        logger.info("✅ Gemini API 配置成功")
+        logger.info(
+            f"✅ Gemini API 配置成功（{GEMINI_MODEL}, thinking={GEMINI_THINKING_LEVEL}）"
+        )
     else:
         logger.warning("⚠️ 未設定 GEMINI_API_KEY，只能用 skip_gemini=true 模式")
 
@@ -663,6 +867,8 @@ async def _warmup():
 async def shutdown():
     if _http_client is not None and not _http_client.is_closed:
         await _http_client.aclose()
+    if _genai_client is not None:
+        await _genai_client.aio.aclose()
 
 
 @app.get("/")

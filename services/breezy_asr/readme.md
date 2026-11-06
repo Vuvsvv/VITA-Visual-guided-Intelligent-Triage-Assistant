@@ -244,7 +244,7 @@ docker logs -f taiwanese-asr
 for i in 1 2 3; do
   echo "=== 第 $i 次 ==="
   curl -s -w "\n總耗時：%{time_total}s\n" \
-    -F "audio_file=@./test_tw.wav" \
+    -F "audio_file=@/home/tku/test_tw.wav" \
     http://localhost:8001/api/transcribe
 done
 ```

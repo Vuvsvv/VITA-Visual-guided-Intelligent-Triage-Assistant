@@ -17,6 +17,7 @@
 import inspect
 import torch
 import perth
+import time
 
 
 class _NoWatermark:
@@ -51,22 +52,140 @@ class TaigiTTS:
         t3 = resize_and_load_t3_weights(T3(hp=hp), state)
         del tmp, state
         t3.tfmr.config._attn_implementation = "eager"   # sdpa 不支援 output_attentions
+        
+
         t3.hp.speech_cond_prompt_len = PROMPT_LEN
         eng = ChatterboxTTS.from_local(_cfg.model_dir, device="cpu")
         eng.t3 = PeftModel.from_pretrained(t3, adapter, is_trainable=False)
+        import os
+
+        if os.environ.get("CB_MERGE_LORA", "0") == "1":
+            print("[LORA MERGE TEST] Starting merge", flush=True)
+
+            eng.t3.merge_adapter()
+
+            merged = sum(
+                bool(getattr(module, "merged", False))
+                for module in eng.t3.modules()
+            )
+
+            print(
+                f"[LORA MERGE TEST] Merged modules: {merged}",
+                flush=True
+            )
+
+            if merged == 0:
+                raise RuntimeError(
+                    "未偵測到成功合併的 LoRA 模組"
+                )
         eng.t3.to(device).eval()
         eng.s3gen.to(device).eval()
         eng.ve.to(device).eval()
         eng.device = device
+        eng.prepare_conditionals(
+        ref,
+        exaggeration=0.5
+        )
+        # generate() 不再傳入 audio_prompt_path
+        # 它會直接重用 eng.conds
         p = inspect.signature(eng.generate).parameters
-        self.kw = {k: v for k, v in dict(audio_prompt_path=ref, exaggeration=0.5,
-                                         cfg_weight=0.5).items() if k in p}
-        self.eng, self.sandhi, self.sr = eng, sandhi, eng.sr
+
+        self.kw = {
+        k: v
+        for k, v in {
+        "exaggeration": 0.5,
+        "cfg_weight": 0.5
+        }.items()
+        if k in p
+        }
+        self.eng = eng
+        self.sandhi = sandhi
+        self.sr = eng.sr
 
     def __call__(self, tailo, seed=2):
-        """tailo：本調數字調台羅。回傳 float32 單聲道波形（取樣率 self.sr）。"""
+        """tailo：本調數字調台羅"""
+        print("[TTS RAW]", repr(tailo), flush=True)
+
         text = convert(tailo) if self.sandhi else tailo
+
+        print("[TTS FINAL]", repr(text), flush=True)
+
         torch.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
-        w = self.eng.generate(text, **self.kw)
+
+        t3 = self.eng.t3.get_base_model()
+
+        def check_hooks(stage):
+            counts = {
+                i: len(t3.tfmr.layers[i].self_attn._forward_hooks)
+                for i in (9, 12, 13)
+            }
+            print(
+                f"[HOOK TEST] {stage}: {counts}",
+                flush=True
+            )
+
+        check_hooks("before")
+
+        import os
+        from torch.profiler import profile, ProfilerActivity
+
+        self._cb_profile_calls = getattr(
+            self, "_cb_profile_calls", 0
+        ) + 1
+
+        if (
+            os.environ.get("CB_T3_PROFILE") == "1"
+            and self._cb_profile_calls == 2
+        ):
+            activities = [ProfilerActivity.CPU]
+
+            if ProfilerActivity.CUDA in torch.profiler.supported_activities():
+                activities.append(ProfilerActivity.CUDA)
+
+            print("[T3 PROFILE] 開始分析第二段 TTS", flush=True)
+
+            with profile(
+                activities=activities,
+                record_shapes=False,
+                profile_memory=False
+            ) as prof:
+                w = self.eng.generate(text, **self.kw)
+
+            print("\n========== CPU TOP 20 ==========", flush=True)
+            print(
+                prof.key_averages().table(
+                    sort_by="self_cpu_time_total",
+                    row_limit=20
+                ),
+                flush=True
+            )
+
+            if ProfilerActivity.CUDA in activities:
+                print("\n========== CUDA TOP 20 ==========", flush=True)
+                print(
+                    prof.key_averages().table(
+                        sort_by="self_cuda_time_total",
+                        row_limit=20
+                    ),
+                    flush=True
+                )
+
+            trace_path = (
+                "/home/tku/chatterbox-finetuning/"
+                "t3_profile_trace.json"
+            )
+
+            try:
+                prof.export_chrome_trace(trace_path)
+                print("[T3 PROFILE] Trace:", trace_path, flush=True)
+            except Exception as exc:
+                print("[T3 PROFILE] Trace 匯出失敗:", exc, flush=True)
+
+        else:
+            w = self.eng.generate(text, **self.kw)
+
+        check_hooks("after")
+
         return w.squeeze().detach().cpu().numpy().astype("float32")
+

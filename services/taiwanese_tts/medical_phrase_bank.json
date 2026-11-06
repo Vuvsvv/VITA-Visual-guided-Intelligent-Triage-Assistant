@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "notes": "僅 status=approved 的完整中文句子會跳過 Gemini。候選資料仍須人工核對語意、臺羅與音檔。修改後重啟 8003。",
+  "phrases": [
+    {
+      "chinese": "大量出血",
+      "tailo_raw": "tai7-liong7 tshut4-hueh4.",
+      "status": "approved",
+      "note": "使用者已確認 01_hueh 獨立詞組發音最標準。正式應用仍須考量上下文。"
+    },
+    {
+      "chinese": "你現在哪裡不舒服？",
+      "tailo_raw": "li2 tsit4-ma2, to2-ui7 bo5-song2-khuai3?",
+      "status": "review",
+      "note": "單 BOS + pause 發音改善；本調變調域與完整問診語意尚待人工核准。"
+    },
+    {
+      "chinese": "你有沒有發燒？",
+      "tailo_raw": "li2 kam2 u7 huat4-sio1?",
+      "status": "review",
+      "note": "Gemini 歷史輸出，待人工校對。"
+    },
+    {
+      "chinese": "你有沒有呼吸困難？",
+      "tailo_raw": "li2 kam2 u7 hoo1-khip4 khun3-lan5?",
+      "status": "review",
+      "note": "符合現有 Guard 基準但未經整句人工語意與 TTS 聽測。"
+    },
+    {
+      "chinese": "你的症狀是什麼時候開始的？",
+      "tailo_raw": "li2 e5 tsing3-tsong7 si7 siann2-mih8 si5-tsun7 khai1-si2 e5?",
+      "status": "review",
+      "note": "Gemini 歷史輸出，待人工校對。"
+    },
+    {
+      "chinese": "我突然喘不過氣。",
+      "tailo_raw": "gua2 tut8-jian5 tshuan2 be7 kue3 khui3.",
+      "status": "review",
+      "note": "Guard 曾通過；急迫症狀與自然口語需人工審核。"
+    },
+    {
+      "chinese": "我現在沒有大量出血。",
+      "tailo_raw": "gua2 tsit4-ma2 bo5 tai7-liong7 tshut4-hueh4.",
+      "status": "review",
+      "note": "含否定語意，必須經人工確認才可核准。"
+    },
+    {
+      "chinese": "請問你現在有沒有頭痛？",
+      "tailo_raw": "tshiann2-mng7 li2 tsit4-ma2 kam2 u7 thau5-thiann3?",
+      "status": "review",
+      "note": "Gemini 歷史輸出，待人工校對。"
+    },
+    {
+      "chinese": "請問是否有突發胸痛、嚴重呼吸困難、意識不清、大量出血、半邊無力或劇烈頭痛等急迫症狀？",
+      "tailo_raw": "tshiann2-mng7 kam2 u7 tut8-huat4 hing1-thiann3, giam5-tiong7 hoo1-khip4 khun3-lan5, i3-sik4 put4-tsheng1, tai7-liong7 tshut4-hueh4, puann3-pinn1 bo5-lat8 ah8-si7 kek8-liat8 thau5-thiann3 ting2 kip4-phik4 tsing3-tsong7?",
+      "status": "review",
+      "note": "長句以前曾有吞字、重複、分段不自然；絕不可在未校正前標為 approved。"
+    }
+  ]
+}
